@@ -131,6 +131,19 @@
           "cssFilePath": "plasmic/jeffdo_es/PlasmicTooltip.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "x1wtGmTljS",
+          "name": "Design",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicDesign.jsx",
+          "importSpec": {
+            "modulePath": "../pages/design.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicDesign.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [

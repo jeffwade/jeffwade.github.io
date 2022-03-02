@@ -241,6 +241,16 @@
       }
     },
     {
+      "name": "triple-base-size",
+      "type": "fontsize",
+      "value": "3rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "HIMv0UPpo"
+      }
+    },
+    {
       "name": "white",
       "type": "color",
       "value": "#F0F2F2",

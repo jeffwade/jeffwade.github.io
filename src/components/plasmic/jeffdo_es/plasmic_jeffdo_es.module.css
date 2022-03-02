@@ -83,6 +83,10 @@
   --plasmic-token-grey-text: var(--token-HCE3dosEr);
   --token-HCE3dosEr: #f0f2f2;
   --plasmic-token-grey-text: var(--token-HCE3dosEr);
+  --token-HIMv0UPpo: 3rem;
+  --plasmic-token-triple-base-size: var(--token-HIMv0UPpo);
+  --token-HIMv0UPpo: 3rem;
+  --plasmic-token-triple-base-size: var(--token-HIMv0UPpo);
 }
 
 .plasmic_tokens:where(.global_mode_dark) {
@@ -149,9 +153,9 @@
   --mixin-Esv3YyrIlToA_letter-spacing: -4px;
   --mixin-Esv3YyrIlToA_line-height: 1;
   --mixin-Esv3YyrIlToA_font-style: normal;
-  --mixin-APJxu-1Aub9C_font-family: "Inter";
-  --mixin-APJxu-1Aub9C_color: #000000;
-  --mixin-APJxu-1Aub9C_font-size: 48px;
+  --mixin-APJxu-1Aub9C_font-family: "Rasa";
+  --mixin-APJxu-1Aub9C_color: var(--token-9BBOxo3h9);
+  --mixin-APJxu-1Aub9C_font-size: var(--token-HIMv0UPpo);
   --mixin-APJxu-1Aub9C_font-weight: 700;
   --mixin-APJxu-1Aub9C_letter-spacing: -1px;
   --mixin-APJxu-1Aub9C_line-height: 1.1;

@@ -41,7 +41,7 @@ import DayIcon from "./icons/PlasmicIcon__Day" // plasmic-import: 2cwRWiCxc/icon
 
 export const PlasmicHomepage__VariantProps = new Array()
 
-export const PlasmicHomepage__ArgProps = new Array()
+export const PlasmicHomepage__ArgProps = new Array("path")
 
 function PlasmicHomepage__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props
@@ -487,17 +487,23 @@ function PlasmicHomepage__RenderFunc(props) {
               />
 
               <p.PlasmicLink
-                data-plasmic-name={"link"}
-                data-plasmic-override={overrides.link}
-                className={classNames(projectcss.all, projectcss.a, sty.link, {
-                  [sty.linkglobal_mode_dark]: hasVariant(
+                data-plasmic-name={"home"}
+                data-plasmic-override={overrides.home}
+                className={classNames(projectcss.all, projectcss.a, sty.home, {
+                  [sty.homeglobal_mode_dark]: hasVariant(
                     globalVariants,
                     "mode",
                     "dark"
                   ),
+
+                  [sty.homeglobal_mode_reveal]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "reveal"
+                  ),
                 })}
                 component={Link}
-                href={"/"}
+                href={args.path !== undefined ? args.path : "/design"}
                 id={"logo"}
                 platform={"gatsby"}
                 title={"jeff wade"}
@@ -510,6 +516,12 @@ function PlasmicHomepage__RenderFunc(props) {
                       globalVariants,
                       "mode",
                       "dark"
+                    ),
+
+                    [sty.logoglobal_mode_reveal]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "reveal"
                     ),
                   })}
                   icon={
@@ -524,6 +536,12 @@ function PlasmicHomepage__RenderFunc(props) {
                           globalVariants,
                           "mode",
                           "dark"
+                        ),
+
+                        [sty.svgglobal_mode_reveal___1A3Bwv94Jk]: hasVariant(
+                          globalVariants,
+                          "mode",
+                          "reveal"
                         ),
                       })}
                       role={"img"}
@@ -602,7 +620,7 @@ const PlasmicDescendants = {
     "tracks",
     "freeBox",
     "reveal",
-    "link",
+    "home",
     "logo",
     "darkmode",
   ],
@@ -617,9 +635,9 @@ const PlasmicDescendants = {
   learnin: ["learnin"],
   workshops: ["workshops"],
   tracks: ["tracks"],
-  freeBox: ["freeBox", "reveal", "link", "logo", "darkmode"],
+  freeBox: ["freeBox", "reveal", "home", "logo", "darkmode"],
   reveal: ["reveal"],
-  link: ["link", "logo"],
+  home: ["home", "logo"],
   logo: ["logo"],
   darkmode: ["darkmode"],
 }
@@ -665,7 +683,7 @@ export const PlasmicHomepage = Object.assign(
     tracks: makeNodeComponent("tracks"),
     freeBox: makeNodeComponent("freeBox"),
     reveal: makeNodeComponent("reveal"),
-    link: makeNodeComponent("link"),
+    home: makeNodeComponent("home"),
     logo: makeNodeComponent("logo"),
     darkmode: makeNodeComponent("darkmode"),
     // Metadata about props expected for PlasmicHomepage

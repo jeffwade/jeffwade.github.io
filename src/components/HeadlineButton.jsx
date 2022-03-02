@@ -6,7 +6,7 @@ import useTooltip from "../hooks/useTooltip";
 function HeadlineButton_(props, ref) {
   const {color, label} = props;
   const [isHovered, setIsHovered] = useState(false);
-  const tooltip = useTooltip(color, label, true, false);
+  const tooltip = useTooltip(color, label, true, null, false);
 
   return (
     <>

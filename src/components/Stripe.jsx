@@ -29,7 +29,7 @@ function Stripe_(props, ref) {
 
   const tooltipLabel = [icon, icon, label, icon, icon];
 
-  const tooltip = useTooltip(color, tooltipLabel, labelIsVisible, true);
+  const tooltip = useTooltip(color, tooltipLabel, labelIsVisible, category, true);
 
   return (
     <>
@@ -45,6 +45,7 @@ function Stripe_(props, ref) {
         label={stripeLabel}
         onMouseOver={ () => setIsHovered(true) }
         onMouseOut={ () => setIsHovered(false) }
+        // onFocus={ () => showTooltip("nomouse")}
       />
     </>
   )

@@ -2,16 +2,23 @@ import * as React from 'react';
 import useMousePosition from "../hooks/useMousePosition";
 import Tooltip from "../components/Tooltip";
 
-const useTooltip = (bg, label, showLabel, showRest) => {
+const useTooltip = (bg, label, showLabel, content, showContent, noMouse) => {
   const mousePosition = useMousePosition();
 
-  let previewStyles = {
-    display: "block",
-    position: "fixed",
-    left: mousePosition.x + 15,
-    top: mousePosition.y + 15,
-    zIndex: 100,
-  };
+  let previewStyles = noMouse 
+    ? {
+      display: "block",
+      position: "fixed",
+      left: mousePosition.x + 15,
+      top: mousePosition.y + 15,
+      zIndex: 100,
+    } : {
+      display: "block",
+      position: "absolute",
+      left: "auto",
+      right: "auto",
+      zIndex: 100,
+    };
 
   const previewLabel = showLabel ? (
     <div
@@ -24,13 +31,17 @@ const useTooltip = (bg, label, showLabel, showRest) => {
     </div>
   ) : null;
 
-  const previewRest = showRest
-    ? "some extra words"
+  const previewContent = showContent
+    ? (
+      <div>
+        { content }
+      </div>
+    )
     : null;
 
-  const previewContent = [previewLabel, previewRest];
+  const preview = [previewLabel, previewContent];
 
-  return <Tooltip content={previewContent} bg={bg} style={previewStyles}/>;
+  return <Tooltip content={preview} bg={bg} style={previewStyles}/>;
 };
 
 export default useTooltip;
