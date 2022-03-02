@@ -1,0 +1,48 @@
+.root {
+  flex-direction: row;
+  display: flex;
+  width: auto;
+  height: auto;
+  background: var(--token-EkgtUgXeT);
+  box-shadow: 0px 4px 16px 0px #f0f2f27d;
+  position: relative;
+  padding: 0.5rem var(--token-T237bDoLkZ);
+}
+.root > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: calc(0px - var(--token-AXW6MdvYn));
+  width: calc(100% + var(--token-AXW6MdvYn));
+}
+.root > :global(.__wab_flex-container) > *,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.root > :global(.__wab_flex-container) > picture > img,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-left: var(--token-AXW6MdvYn);
+}
+.rootglobal_mode_dark {
+  background: var(--token-mfRasWXgp);
+}
+.iconButton___4ZFno:global(.__wab_instance) {
+  align-self: auto;
+}
+.svg__hhh7J {
+  object-fit: cover;
+  max-width: 100%;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.home {
+  align-self: flex-end;
+  display: flex;
+  cursor: pointer;
+}
+.svg___4VWmZ {
+  object-fit: cover;
+  max-width: 100%;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}

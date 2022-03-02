@@ -1,0 +1,49 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--token-tze2JIV_u);
+  border-radius: 2px;
+  padding: var(--token-2B3TB9Igd);
+}
+.rootbg_yellow {
+  background: var(--token-FpWQpvmos);
+}
+.rootbg_orange {
+  background: var(--token-pHc0CSHPE);
+}
+.rootbg_blue {
+  background: var(--token-rbxblu3Hd);
+}
+.rootbg_red {
+  background: var(--token-7y9V0dm0-);
+}
+.rootbg_purple {
+  background: var(--token-9BBOxo3h9);
+}
+.rootbg_grey {
+  background: var(--token-3F-Dll6EN);
+}
+.slotTargetContentbg_blue {
+  color: var(--token-EkgtUgXeT);
+}
+.slotTargetContentbg_red {
+  color: var(--token-EkgtUgXeT);
+}
+.slotTargetContentbg_purple {
+  color: var(--token-EkgtUgXeT);
+}
+.slotTargetContentbg_grey {
+  color: var(--token-HCE3dosEr);
+}
+.text___4Lrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  min-width: 0;
+}

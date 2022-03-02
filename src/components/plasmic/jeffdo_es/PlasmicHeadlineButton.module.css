@@ -1,0 +1,197 @@
+.root {
+  flex-direction: row;
+  display: inline-flex;
+  position: relative;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  margin-right: 0px;
+}
+.root > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+}
+.root > :global(.__wab_flex-container) > *,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.root > :global(.__wab_flex-container) > picture > img,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-left: 8px;
+}
+.root:hover {
+  transform: translateX(0px) translateY(-2px) translateZ(0px);
+}
+.root:focus-within {
+  transform: translateX(0px) translateY(-1px) translateZ(0px);
+  outline: none;
+}
+.root:active {
+  transform: translateX(0px) translateY(1px) translateZ(0px);
+}
+.h1__mLmRw {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.h1global_mode_dark__mLmRwjYvh {
+  color: #535353;
+}
+.slotTargetWord {
+  user-select: none;
+  text-transform: lowercase;
+}
+.slotTargetWordglobal_mode_dark {
+  color: var(--token-EkgtUgXeT);
+}
+.root:hover .slotTargetWord {
+  color: var(--token-tze2JIV_u);
+}
+.root:hover .slotTargetWord > .__wab_text,
+.root:hover .slotTargetWord > .__wab_slot-string-wrapper,
+.root:hover .slotTargetWord > .__wab_slot > .__wab_text,
+.root:hover .slotTargetWord > .__wab_slot > .__wab_slot-string-wrapper,
+.root:hover .slotTargetWord > .__wab_slot > .__wab_slot > .__wab_text,
+.root:hover
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot-string-wrapper,
+.root:hover
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_text,
+.root:hover
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot-string-wrapper {
+  text-decoration-line: underline;
+}
+.root:focus-within .slotTargetWord > .__wab_text,
+.root:focus-within .slotTargetWord > .__wab_slot-string-wrapper,
+.root:focus-within .slotTargetWord > .__wab_slot > .__wab_text,
+.root:focus-within .slotTargetWord > .__wab_slot > .__wab_slot-string-wrapper,
+.root:focus-within .slotTargetWord > .__wab_slot > .__wab_slot > .__wab_text,
+.root:focus-within
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot-string-wrapper,
+.root:focus-within
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_text,
+.root:focus-within
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot-string-wrapper {
+  text-decoration-line: underline;
+}
+.root:focus-within .slotTargetWord > *,
+.root:focus-within .slotTargetWord > .__wab_slot > *,
+.root:focus-within .slotTargetWord > .__wab_slot > .__wab_slot > *,
+.root:focus-within
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > *,
+.root:focus-within .slotTargetWord > picture > img,
+.root:focus-within .slotTargetWord > .__wab_slot > picture > img,
+.root:focus-within .slotTargetWord > .__wab_slot > .__wab_slot > picture > img,
+.root:focus-within
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > picture
+  > img {
+  outline: none;
+}
+.root:active .slotTargetWord {
+  color: var(--token-IIsLiXO8j);
+}
+.root:active .slotTargetWord > .__wab_text,
+.root:active .slotTargetWord > .__wab_slot-string-wrapper,
+.root:active .slotTargetWord > .__wab_slot > .__wab_text,
+.root:active .slotTargetWord > .__wab_slot > .__wab_slot-string-wrapper,
+.root:active .slotTargetWord > .__wab_slot > .__wab_slot > .__wab_text,
+.root:active
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot-string-wrapper,
+.root:active
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_text,
+.root:active
+  .slotTargetWord
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot-string-wrapper {
+  text-decoration-line: underline;
+}
+.h1__pd88E {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-right: 0px;
+}
+.slotTargetSymbol {
+  user-select: none;
+}
+.slotTargetSymbolglobal_mode_dark {
+  color: var(--token-EkgtUgXeT);
+}
+.root:hover .slotTargetSymbol {
+  color: var(--token-tze2JIV_u);
+}
+.root:focus-within .slotTargetSymbol {
+  color: var(--token-tze2JIV_u);
+}
+.root:focus-within .slotTargetSymbol > *,
+.root:focus-within .slotTargetSymbol > .__wab_slot > *,
+.root:focus-within .slotTargetSymbol > .__wab_slot > .__wab_slot > *,
+.root:focus-within
+  .slotTargetSymbol
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > *,
+.root:focus-within .slotTargetSymbol > picture > img,
+.root:focus-within .slotTargetSymbol > .__wab_slot > picture > img,
+.root:focus-within
+  .slotTargetSymbol
+  > .__wab_slot
+  > .__wab_slot
+  > picture
+  > img,
+.root:focus-within
+  .slotTargetSymbol
+  > .__wab_slot
+  > .__wab_slot
+  > .__wab_slot
+  > picture
+  > img {
+  outline: none;
+}
+.root:active .slotTargetSymbol {
+  color: var(--token-IIsLiXO8j);
+}
