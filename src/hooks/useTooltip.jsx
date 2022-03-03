@@ -2,10 +2,10 @@ import * as React from 'react';
 import useMousePosition from "../hooks/useMousePosition";
 import Tooltip from "../components/Tooltip";
 
-const useTooltip = (bg, label, showLabel, content, showContent, noMouse) => {
+const useTooltip = (bg, label, content, noMouse) => {
   const mousePosition = useMousePosition();
 
-  let previewStyles = noMouse 
+  let previewStyles = !noMouse 
     ? {
       display: "block",
       position: "fixed",
@@ -20,7 +20,7 @@ const useTooltip = (bg, label, showLabel, content, showContent, noMouse) => {
       zIndex: 100,
     };
 
-  const previewLabel = showLabel ? (
+  const previewLabel = label ? (
     <div
       style={{
         display: "flex",
@@ -31,7 +31,7 @@ const useTooltip = (bg, label, showLabel, content, showContent, noMouse) => {
     </div>
   ) : null;
 
-  const previewContent = showContent
+  const previewContent = content
     ? (
       <div>
         { content }

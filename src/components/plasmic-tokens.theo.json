@@ -1,6 +1,16 @@
 {
   "props": [
     {
+      "name": "UnnamedStyleToken",
+      "type": "color",
+      "value": "#2B393C",
+      "category": "color",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "f_iLC58jZ"
+      }
+    },
+    {
       "name": "base",
       "type": "spacing",
       "value": "1rem",
@@ -208,6 +218,26 @@
       "meta": {
         "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
         "id": "9BBOxo3h9"
+      }
+    },
+    {
+      "name": "purple-shadow",
+      "type": "color",
+      "value": "#BF69EA0D",
+      "category": "color",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "QMayuc102"
+      }
+    },
+    {
+      "name": "quadruple-base-font",
+      "type": "fontsize",
+      "value": "4rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "3pcCKdOkD"
       }
     },
     {

@@ -117,6 +117,12 @@ function PlasmicHomepage__RenderFunc(props) {
                 "about"
               ),
 
+              [sty.likenessglobal_highlight_work]: hasVariant(
+                globalVariants,
+                "highlight",
+                "work"
+              ),
+
               [sty.likenessglobal_mode_dark]: hasVariant(
                 globalVariants,
                 "mode",
@@ -146,6 +152,10 @@ function PlasmicHomepage__RenderFunc(props) {
               />
             }
             label={"a likeness"}
+            lowlighted={
+              hasVariant(globalVariants, "highlight", "work") ? true : undefined
+            }
+            name={"likeness"}
           />
 
           <Stripe
@@ -157,6 +167,12 @@ function PlasmicHomepage__RenderFunc(props) {
                 globalVariants,
                 "highlight",
                 "about"
+              ),
+
+              [sty.wordsglobal_highlight_work]: hasVariant(
+                globalVariants,
+                "highlight",
+                "work"
               ),
 
               [sty.wordsglobal_mode_dark]: hasVariant(
@@ -201,12 +217,22 @@ function PlasmicHomepage__RenderFunc(props) {
                 {"some words"}
               </div>
             }
+            lowlighted={
+              hasVariant(globalVariants, "highlight", "work") ? true : undefined
+            }
+            name={"words"}
           />
 
           <Headline
             data-plasmic-name={"headline"}
             data-plasmic-override={overrides.headline}
             className={classNames("__wab_instance", sty.headline, {
+              [sty.headlineglobal_highlight_about]: hasVariant(
+                globalVariants,
+                "highlight",
+                "about"
+              ),
+
               [sty.headlineglobal_mode_dark]: hasVariant(
                 globalVariants,
                 "mode",
@@ -224,6 +250,12 @@ function PlasmicHomepage__RenderFunc(props) {
                 data-plasmic-name={"design"}
                 data-plasmic-override={overrides.design}
                 className={classNames("__wab_instance", sty.design, {
+                  [sty.designglobal_highlight_about]: hasVariant(
+                    globalVariants,
+                    "highlight",
+                    "about"
+                  ),
+
                   [sty.designglobal_mode_reveal]: hasVariant(
                     globalVariants,
                     "mode",
@@ -238,7 +270,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 label={
                   hasVariant(globalVariants, "mode", "reveal")
                     ? "†work samples"
-                    : "†case studies"
+                    : "† case studies"
                 }
                 symbol={"†"}
                 word={"design"}
@@ -263,7 +295,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 label={
                   hasVariant(globalVariants, "mode", "reveal")
                     ? "*about jeff"
-                    : "*about jeff"
+                    : "* about jeff"
                 }
                 word={"Jeff"}
               />
@@ -275,6 +307,12 @@ function PlasmicHomepage__RenderFunc(props) {
             data-plasmic-override={overrides.pwc}
             category={"work"}
             className={classNames("__wab_instance", sty.pwc, {
+              [sty.pwcglobal_highlight_about]: hasVariant(
+                globalVariants,
+                "highlight",
+                "about"
+              ),
+
               [sty.pwcglobal_highlight_work]: hasVariant(
                 globalVariants,
                 "highlight",
@@ -298,6 +336,12 @@ function PlasmicHomepage__RenderFunc(props) {
               />
             }
             label={"navigating brands"}
+            lowlighted={
+              hasVariant(globalVariants, "highlight", "about")
+                ? true
+                : undefined
+            }
+            name={"pwc"}
           />
 
           <Stripe
@@ -305,6 +349,12 @@ function PlasmicHomepage__RenderFunc(props) {
             data-plasmic-override={overrides.orglab}
             category={"work"}
             className={classNames("__wab_instance", sty.orglab, {
+              [sty.orglabglobal_highlight_about]: hasVariant(
+                globalVariants,
+                "highlight",
+                "about"
+              ),
+
               [sty.orglabglobal_highlight_work]: hasVariant(
                 globalVariants,
                 "highlight",
@@ -340,6 +390,12 @@ function PlasmicHomepage__RenderFunc(props) {
                 </div>
               ) : null
             }
+            lowlighted={
+              hasVariant(globalVariants, "highlight", "about")
+                ? true
+                : undefined
+            }
+            name={"orglab"}
           />
 
           <Stripe
@@ -351,6 +407,12 @@ function PlasmicHomepage__RenderFunc(props) {
                 globalVariants,
                 "highlight",
                 "about"
+              ),
+
+              [sty.learninglobal_highlight_work]: hasVariant(
+                globalVariants,
+                "highlight",
+                "work"
               ),
 
               [sty.learninglobal_mode_reveal]: hasVariant(
@@ -372,23 +434,33 @@ function PlasmicHomepage__RenderFunc(props) {
               />
             }
             label={"tools and learnins"}
+            lowlighted={
+              hasVariant(globalVariants, "highlight", "work") ? true : undefined
+            }
+            name={"learnin"}
             revealed={
               hasVariant(globalVariants, "mode", "reveal") ? true : undefined
             }
           />
 
           <Stripe
-            data-plasmic-name={"workshops"}
-            data-plasmic-override={overrides.workshops}
+            data-plasmic-name={"sprints"}
+            data-plasmic-override={overrides.sprints}
             category={"work"}
-            className={classNames("__wab_instance", sty.workshops, {
-              [sty.workshopsglobal_highlight_work]: hasVariant(
+            className={classNames("__wab_instance", sty.sprints, {
+              [sty.sprintsglobal_highlight_about]: hasVariant(
+                globalVariants,
+                "highlight",
+                "about"
+              ),
+
+              [sty.sprintsglobal_highlight_work]: hasVariant(
                 globalVariants,
                 "highlight",
                 "work"
               ),
 
-              [sty.workshopsglobal_mode_reveal]: hasVariant(
+              [sty.sprintsglobal_mode_reveal]: hasVariant(
                 globalVariants,
                 "mode",
                 "reveal"
@@ -405,6 +477,12 @@ function PlasmicHomepage__RenderFunc(props) {
               />
             }
             label={"facilitating workshops"}
+            lowlighted={
+              hasVariant(globalVariants, "highlight", "about")
+                ? true
+                : undefined
+            }
+            name={"sprints"}
           />
 
           <Stripe
@@ -416,6 +494,12 @@ function PlasmicHomepage__RenderFunc(props) {
                 globalVariants,
                 "highlight",
                 "about"
+              ),
+
+              [sty.tracksglobal_highlight_work]: hasVariant(
+                globalVariants,
+                "highlight",
+                "work"
               ),
 
               [sty.tracksglobal_mode_reveal]: hasVariant(
@@ -437,6 +521,10 @@ function PlasmicHomepage__RenderFunc(props) {
               />
             }
             label={"leaving tracks"}
+            lowlighted={
+              hasVariant(globalVariants, "highlight", "work") ? true : undefined
+            }
+            name={"tracks"}
           />
 
           {true ? (
@@ -616,7 +704,7 @@ const PlasmicDescendants = {
     "pwc",
     "orglab",
     "learnin",
-    "workshops",
+    "sprints",
     "tracks",
     "freeBox",
     "reveal",
@@ -633,7 +721,7 @@ const PlasmicDescendants = {
   pwc: ["pwc"],
   orglab: ["orglab"],
   learnin: ["learnin"],
-  workshops: ["workshops"],
+  sprints: ["sprints"],
   tracks: ["tracks"],
   freeBox: ["freeBox", "reveal", "home", "logo", "darkmode"],
   reveal: ["reveal"],
@@ -679,7 +767,7 @@ export const PlasmicHomepage = Object.assign(
     pwc: makeNodeComponent("pwc"),
     orglab: makeNodeComponent("orglab"),
     learnin: makeNodeComponent("learnin"),
-    workshops: makeNodeComponent("workshops"),
+    sprints: makeNodeComponent("sprints"),
     tracks: makeNodeComponent("tracks"),
     freeBox: makeNodeComponent("freeBox"),
     reveal: makeNodeComponent("reveal"),

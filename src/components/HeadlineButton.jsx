@@ -4,13 +4,13 @@ import { useState } from "react";
 import useTooltip from "../hooks/useTooltip";
 
 function HeadlineButton_(props, ref) {
-  const {color, label} = props;
+  const { color, label } = props;
   const [isHovered, setIsHovered] = useState(false);
-  const tooltip = useTooltip(color, label, true, null, false);
+  const tooltip = useTooltip(color, label, null);
 
   return (
     <>
-      {isHovered ? tooltip : null}
+      { isHovered && tooltip }
       <PlasmicHeadlineButton
         root={{ ref }}
         {...props}

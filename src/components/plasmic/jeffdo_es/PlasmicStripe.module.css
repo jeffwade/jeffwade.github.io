@@ -20,6 +20,10 @@
   backdrop-filter: blur(15px);
   opacity: 1;
 }
+.rootlowlighted {
+  opacity: 0.3;
+  width: 120px;
+}
 .root:hover {
   transform: translateX(0px) translateY(-1px) translateZ(0px);
   box-shadow: 0px 4px 11px 0px #bf69ea26;
@@ -77,6 +81,9 @@
 }
 .titlecolor_grey {
   background: var(--token-3F-Dll6EN);
+}
+.titlelowlighted {
+  pointer-events: none;
 }
 .titlecolor_red {
   background: var(--token-7y9V0dm0-);

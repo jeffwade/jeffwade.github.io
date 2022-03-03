@@ -27,10 +27,16 @@ import WiggleArrowIcon from "./icons/PlasmicIcon__WiggleArrow" // plasmic-import
 export const PlasmicStripe__VariantProps = new Array(
   "color",
   "revealed",
-  "highlighted"
+  "highlighted",
+  "lowlighted"
 )
 
-export const PlasmicStripe__ArgProps = new Array("label", "icon", "category")
+export const PlasmicStripe__ArgProps = new Array(
+  "label",
+  "icon",
+  "category",
+  "name"
+)
 
 function PlasmicStripe__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props
@@ -95,9 +101,16 @@ function PlasmicStripe__RenderFunc(props) {
             "highlighted"
           ),
 
+          [sty.rootlowlighted]: hasVariant(
+            variants,
+            "lowlighted",
+            "lowlighted"
+          ),
+
           [sty.rootrevealed]: hasVariant(variants, "revealed", "revealed"),
         }
       )}
+      tabIndex={2}
       data-plasmic-trigger-props={[
         triggerRootFocusVisibleWithinProps,
         triggerRootHoverProps,
@@ -137,9 +150,14 @@ function PlasmicStripe__RenderFunc(props) {
             "highlighted"
           ),
 
+          [sty.titlelowlighted]: hasVariant(
+            variants,
+            "lowlighted",
+            "lowlighted"
+          ),
+
           [sty.titlerevealed]: hasVariant(variants, "revealed", "revealed"),
         })}
-        tabIndex={0}
       >
         {(
           triggers.focusVisibleWithin_root

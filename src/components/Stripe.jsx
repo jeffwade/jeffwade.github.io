@@ -3,6 +3,7 @@ import { useState } from "react";
 import { PlasmicStripe } from "./plasmic/jeffdo_es/PlasmicStripe";
 import useTooltip from "../hooks/useTooltip";
 import useMousePosition from "../hooks/useMousePosition";
+import HeadlineButton from "../components/HeadlineButton";
 
 function Stripe_(props, ref) {
   const {label, labelIsVisible, icon, category, color, mode, revealed, highlighted, ...rest} = props;
@@ -27,13 +28,14 @@ function Stripe_(props, ref) {
     </div>
   );
 
-  const tooltipLabel = [icon, icon, label, icon, icon];
-
-  const tooltip = useTooltip(color, tooltipLabel, labelIsVisible, category, true);
+  const tooltipLabel = labelIsVisible ? [icon, icon, label, icon, icon] : null;
+  // const content = <Preview variant={}/>;
+  const content = "content coming soon";
+  const tooltip = useTooltip(color, tooltipLabel, content);
 
   return (
     <>
-      {isHovered ? tooltip : null}
+      { isHovered && tooltip }
       <PlasmicStripe
         root={{ ref }}
         color={color}

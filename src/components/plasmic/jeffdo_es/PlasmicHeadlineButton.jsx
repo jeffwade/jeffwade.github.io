@@ -65,7 +65,7 @@ function PlasmicHeadlineButton__RenderFunc(props) {
           ),
         }
       )}
-      tabIndex={0}
+      tabIndex={1}
     >
       <h1
         className={classNames(projectcss.all, projectcss.h1, sty.h1__mLmRw, {

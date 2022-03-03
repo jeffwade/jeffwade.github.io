@@ -2,8 +2,11 @@
 // This file is owned by you, feel free to edit as you see fit.
 import * as React from "react"
 import { PlasmicIconButton } from "./plasmic/jeffdo_es/PlasmicIconButton"
+import useTooltip from "../hooks/useTooltip";
 
 function IconButton_(props, ref) {
+  const { label } = props;
+  const tooltip = useTooltip("mint", label, null);
   return <PlasmicIconButton root={{ ref }} {...props} render="bleh"/>
 }
 

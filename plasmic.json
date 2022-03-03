@@ -144,6 +144,32 @@
           "cssFilePath": "plasmic/jeffdo_es/PlasmicDesign.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "zPZ01Sff-L",
+          "name": "_404",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/Plasmic_404.jsx",
+          "importSpec": {
+            "modulePath": "../pages/404.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/Plasmic_404.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "owBVWJcT4K",
+          "name": "Preview",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicPreview.jsx",
+          "importSpec": {
+            "modulePath": "Preview.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicPreview.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -213,6 +239,11 @@
           "id": "BJ4znGHN7D",
           "name": "self-portrait",
           "filePath": "plasmic/jeffdo_es/images/selfPortrait.png"
+        },
+        {
+          "id": "8HSCguIpl",
+          "name": "image",
+          "filePath": "plasmic/jeffdo_es/images/image.png"
         }
       ],
       "indirect": false,

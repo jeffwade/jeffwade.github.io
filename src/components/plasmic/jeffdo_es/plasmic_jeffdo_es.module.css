@@ -87,6 +87,14 @@
   --plasmic-token-triple-base-size: var(--token-HIMv0UPpo);
   --token-HIMv0UPpo: 3rem;
   --plasmic-token-triple-base-size: var(--token-HIMv0UPpo);
+  --token-QMayuc102: #bf69ea0d;
+  --plasmic-token-purple-shadow: var(--token-QMayuc102);
+  --token-QMayuc102: #bf69ea0d;
+  --plasmic-token-purple-shadow: var(--token-QMayuc102);
+  --token-3pcCKdOkD: 4rem;
+  --plasmic-token-quadruple-base-font: var(--token-3pcCKdOkD);
+  --token-3pcCKdOkD: 4rem;
+  --plasmic-token-quadruple-base-font: var(--token-3pcCKdOkD);
 }
 
 .plasmic_tokens:where(.global_mode_dark) {
@@ -154,8 +162,8 @@
   --mixin-Esv3YyrIlToA_line-height: 1;
   --mixin-Esv3YyrIlToA_font-style: normal;
   --mixin-APJxu-1Aub9C_font-family: "Rasa";
-  --mixin-APJxu-1Aub9C_color: var(--token-9BBOxo3h9);
-  --mixin-APJxu-1Aub9C_font-size: var(--token-HIMv0UPpo);
+  --mixin-APJxu-1Aub9C_color: var(--token-3F-Dll6EN);
+  --mixin-APJxu-1Aub9C_font-size: var(--token-3pcCKdOkD);
   --mixin-APJxu-1Aub9C_font-weight: 700;
   --mixin-APJxu-1Aub9C_letter-spacing: -1px;
   --mixin-APJxu-1Aub9C_line-height: 1.1;
@@ -235,6 +243,7 @@
   .plasmic_default_styles:where(.global_highlight_about),
   .plasmic_default_styles:where(.global_highlight_work) {
     --mixin-Esv3YyrIlToA_font-size: var(--token-1VSMIXpjx);
+    --mixin-APJxu-1Aub9C_font-size: var(--token-1VSMIXpjx);
   }
 }
 :where(.all) {

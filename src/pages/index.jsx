@@ -2,13 +2,14 @@ import * as React from "react"
 import { useState } from 'react';
 
 import { ModeContext } from "../components/plasmic/jeffdo_es/PlasmicGlobalVariant__Mode"
+import { HighlightContext } from "../components/plasmic/jeffdo_es/PlasmicGlobalVariant__Highlight"
 
 import { PlasmicHomepage } from "../components/plasmic/jeffdo_es/PlasmicHomepage"
 
 function Homepage() {
   const [mode, setMode] = useState([]);
   const [showLabel, setShowLabel] = useState(true);
-  const [highlight, setHighlight] = useState({about: false, work: false});
+  const [highlight, setHighlight] = useState(undefined);
 
   const toggleDarkMode = () => {
     const newMode = [...mode];
@@ -23,13 +24,13 @@ function Homepage() {
   const toggleHighlight = (cat) => {
     switch (cat) {
       case "about":
-        setHighlight({about: !highlight.about, work: highlight.work});
+        setHighlight("about");
         break;
       case "work":
-        setHighlight({about: highlight.about, work: !highlight.work});
+        setHighlight("work");
         break;
       default:
-        setHighlight({about: false, work: false});
+        setHighlight(undefined);
     }
   };
 
@@ -47,12 +48,15 @@ function Homepage() {
 
   return (
     <ModeContext.Provider value={mode}>
+      <HighlightContext.Provider value={highlight}>
         <PlasmicHomepage 
-          first={{
-            onClick: () => toggleHighlight("about"),
+          jeff={{
+            onFocus: () => toggleHighlight("about"),
+            onBlur: () => toggleHighlight(),
           }}
-          end={{
-            onClick: () => toggleHighlight("work"),
+          design={{
+            onFocus: () => toggleHighlight("work"),
+            onBlur: () => toggleHighlight(),
           }}
 
           reveal={{
@@ -64,33 +68,27 @@ function Homepage() {
 
           likeness={{
             labelIsVisible: showLabel,
-            highlighted: highlight.about,
           }}
           words={{
             labelIsVisible: showLabel,
-            highlighted: highlight.about,
           }}
           pwc={{
             labelIsVisible: showLabel,
-            highlighted: highlight.work,
           }}
           orglab={{
             labelIsVisible: showLabel,
-            highlighted: highlight.work,
           }}
           learnin={{
             labelIsVisible: showLabel,
-            highlighted: highlight.about,
           }}
-          workshops={{
+          sprints={{
             labelIsVisible: showLabel,
-            highlighted: highlight.work,
           }}
           tracks={{
             labelIsVisible: showLabel,
-            highlighted: highlight.about,
           }}
         />
+      </HighlightContext.Provider>
     </ModeContext.Provider>
   )
 }
