@@ -100,7 +100,7 @@
           "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
           "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicOrgDesign.jsx",
           "importSpec": {
-            "modulePath": "../pages/case-study/org-design.jsx"
+            "modulePath": "../pages/remember/org-design.jsx"
           },
           "cssFilePath": "plasmic/jeffdo_es/PlasmicOrgDesign.module.css",
           "scheme": "blackbox",
@@ -182,16 +182,6 @@
           "id": "BZoH_3Sy18",
           "name": "FaceIcon",
           "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Face.jsx"
-        },
-        {
-          "id": "KcRc2-NEk",
-          "name": "AxIcon",
-          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Ax.jsx"
-        },
-        {
-          "id": "kGBtHRJJh",
-          "name": "LearninIcon",
-          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Learnin.jsx"
         },
         {
           "id": "PH_4kYBwV",
