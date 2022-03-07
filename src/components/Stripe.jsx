@@ -1,10 +1,9 @@
-import * as React from "react";
-import { useEffect, useState } from "react";
-import { PlasmicStripe } from "./plasmic/jeffdo_es/PlasmicStripe";
-import useTooltip from "../hooks/useTooltip";
-import useMousePosition from "../hooks/useMousePosition";
-import HeadlineButton from "../components/HeadlineButton";
-import Preview from "../components/Preview";
+import * as React from "react"
+import { useEffect, useState } from "react"
+import { PlasmicStripe } from "./plasmic/jeffdo_es/PlasmicStripe"
+import useTooltip from "../hooks/useTooltip"
+import useMousePosition from "../hooks/useMousePosition"
+import Preview from "../components/Preview"
 
 function Stripe_(props, ref) {
   const {
@@ -18,14 +17,18 @@ function Stripe_(props, ref) {
     lowlighted,
     revealed,
     labelIsVisible,
-    ...rest} = props;
-  const [isHovered, setIsHovered] = useState(false);
+    ...rest
+  } = props
+  const [isHovered, setIsHovered] = useState(false)
+  const isBrowser = typeof window !== "undefined";
+  const mousePosition = useMousePosition()
+  const [mobile, setMobile] = useState(undefined)
 
-  const mousePosition = useMousePosition();
-
-  const mediaQuery = window.matchMedia("(max-width: 768px)")
-  const [mobile, setMobile] = useState(mediaQuery.matches)
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)")
+    window.addEventListener("mousemove", () => setMobile(mediaQuery.matches), {
+      once: true,
+    })
     mediaQuery.addEventListener("change", e => setMobile(e.matches))
   }, [])
 
@@ -36,37 +39,46 @@ function Stripe_(props, ref) {
     alignItems: "center",
     overflow: "hidden",
     whiteSpace: "nowrap",
-  };
+  }
 
-  if (!mobile) {
-    if (mousePosition.x > window.innerWidth / 2) {
-      labelStyles["left"] = "auto";
-      labelStyles["right"] = window.innerWidth - mousePosition.x + 15;
-      labelStyles["flexDirection"] = "row-reverse";
+  if (isBrowser) {
+    if (!mobile) {
+      if (mousePosition.x > window.innerWidth / 2) {
+        labelStyles["left"] = "auto"
+        labelStyles["right"] = window.innerWidth - mousePosition.x + 15
+        labelStyles["flexDirection"] = "row-reverse"
+      } else {
+        labelStyles["left"] = mousePosition.x + 15
+        labelStyles["right"] = "auto"
+        labelStyles["flexDirection"] = "row"
+      }
     } else {
-      labelStyles["left"] = mousePosition.x + 15;
-      labelStyles["right"] = "auto";
-      labelStyles["flexDirection"] = "row";
+      labelStyles["left"] = "auto"
+      labelStyles["right"] = "auto"
     }
-  } else {
-    labelStyles["left"] = "auto";
-    labelStyles["right"] = "auto";
   }
 
   const stripeLabel = (
     <div style={labelStyles}>
-      { icon }
-      { label }
+      {icon}
+      {label}
     </div>
-  );
+  )
 
-  const tooltipLabel = labelIsVisible ? [icon, label, icon] : null;
-  const content = <Preview name={name}/>;
-  const tooltip = useTooltip(color, tooltipLabel, content, "334", "480px", false);
+  const tooltipLabel = labelIsVisible ? [icon, label, icon] : null
+  const content = <Preview name={name} />
+  const tooltip = useTooltip(
+    color,
+    tooltipLabel,
+    content,
+    "334",
+    "480px",
+    false
+  )
 
   return (
     <>
-      { isHovered && tooltip }
+      {isHovered && tooltip}
       <PlasmicStripe
         root={{ ref }}
         name={name}
@@ -78,16 +90,15 @@ function Stripe_(props, ref) {
         lowlighted={lowlighted}
         {...rest}
         label={stripeLabel}
-
-        onMouseOver={ () => setIsHovered(true) }
-        onFocus={ () => setIsHovered(true) }
-        onMouseOut={ () => setIsHovered(false) }
-        onBlur={ () => setIsHovered(false) }
+        onMouseOver={() => setIsHovered(true)}
+        onFocus={() => setIsHovered(true)}
+        onMouseOut={() => setIsHovered(false)}
+        onBlur={() => setIsHovered(false)}
       />
     </>
   )
 }
 
-const Stripe = React.forwardRef(Stripe_);
+const Stripe = React.forwardRef(Stripe_)
 
-export default Stripe;
+export default Stripe
