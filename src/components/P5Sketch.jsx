@@ -13,6 +13,4 @@ function P5Sketch({ sketch, sketchDiv, ref, ...rest }) {
   );
 }
 
-// const P5Sketch = React.forwardRef(P5Sketch_)
-
 export default P5Sketch

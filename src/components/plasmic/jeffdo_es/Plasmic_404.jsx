@@ -77,6 +77,12 @@ function Plasmic_404__RenderFunc(props) {
                 "reveal"
               ),
 
+              [sty.rootglobal_mode_dark]: hasVariant(
+                globalVariants,
+                "mode",
+                "dark"
+              ),
+
               [sty.rootglobal_mode_reveal]: hasVariant(
                 globalVariants,
                 "mode",
@@ -193,17 +199,6 @@ function Plasmic_404__RenderFunc(props) {
                       ? "controls"
                       : "Enter some text"}
                   </h3>
-
-                  <svg
-                    className={classNames(projectcss.all, sty.svg__s1HoT, {
-                      [sty.svgglobal_mode_reveal__s1HoTv94Jk]: hasVariant(
-                        globalVariants,
-                        "mode",
-                        "reveal"
-                      ),
-                    })}
-                    role={"img"}
-                  />
                 </div>
               ) : null}
               {(hasVariant(globalVariants, "mode", "reveal") ? true : true) ? (
@@ -218,6 +213,57 @@ function Plasmic_404__RenderFunc(props) {
                     ),
                   })}
                 >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__gWlBb, {
+                      [sty.freeBoxglobal_mode_reveal__gWlBBv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__hl30A,
+                        {
+                          [sty.textglobal_mode_reveal__hl30Av94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal") &&
+                      hasVariant(globalVariants, "screen", "desktopOnly")
+                        ? "click"
+                        : hasVariant(globalVariants, "mode", "reveal")
+                        ? "tap"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zKrYn,
+                        {
+                          [sty.textglobal_mode_reveal__zKrYnv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "randomize number of points, circles, & reflections"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
                   <div
                     className={classNames(projectcss.all, sty.freeBox__lsdS8, {
                       [sty.freeBoxglobal_mode_reveal__lsdS8V94Jk]: hasVariant(
@@ -905,55 +951,7 @@ function Plasmic_404__RenderFunc(props) {
                       )}
                     >
                       {hasVariant(globalVariants, "mode", "reveal")
-                        ? "toggle straight / curved paths"
-                        : "Enter some text"}
-                    </div>
-                  </div>
-
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__gWlBb, {
-                      [sty.freeBoxglobal_mode_reveal__gWlBBv94Jk]: hasVariant(
-                        globalVariants,
-                        "mode",
-                        "reveal"
-                      ),
-                    })}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__hl30A,
-                        {
-                          [sty.textglobal_mode_reveal__hl30Av94Jk]: hasVariant(
-                            globalVariants,
-                            "mode",
-                            "reveal"
-                          ),
-                        }
-                      )}
-                    >
-                      {hasVariant(globalVariants, "mode", "reveal")
-                        ? "tap"
-                        : "Enter some text"}
-                    </div>
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__zKrYn,
-                        {
-                          [sty.textglobal_mode_reveal__zKrYnv94Jk]: hasVariant(
-                            globalVariants,
-                            "mode",
-                            "reveal"
-                          ),
-                        }
-                      )}
-                    >
-                      {hasVariant(globalVariants, "mode", "reveal")
-                        ? "randomize points, circles, & reflections"
+                        ? "toggle straight or curved paths"
                         : "Enter some text"}
                     </div>
                   </div>
@@ -1011,8 +1009,8 @@ function Plasmic_404__RenderFunc(props) {
                 }
                 label={
                   hasVariant(globalVariants, "mode", "reveal")
-                    ? "hide labels"
-                    : "reveal labels"
+                    ? "hide controls"
+                    : "show controls"
                 }
               />
 
@@ -1151,10 +1149,10 @@ function Plasmic_404__RenderFunc(props) {
                 }
                 label={
                   hasVariant(globalVariants, "mode", "reveal")
-                    ? "enable darkmode"
+                    ? "skitch to light mode"
                     : hasVariant(globalVariants, "mode", "dark")
-                    ? "disable darkmode"
-                    : "enable darkmode"
+                    ? "switch to light mode"
+                    : "switch to darkmode"
                 }
               />
             </div>

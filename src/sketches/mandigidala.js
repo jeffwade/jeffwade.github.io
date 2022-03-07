@@ -45,10 +45,18 @@ const sketch = (p) => {
   //key controls
   let isPlaying = true;
 
-  // 'setup
-  p.setup = () => {
+  const initializeCanvas = () => {
     const frameSize = (p.windowWidth > p.windowHeight) ? 0.6*p.windowHeight : 0.6*p.windowWidth;
     let cnvs = p.createCanvas(frameSize, frameSize);
+
+    // 'initializations
+    margin = p.width/marginScalar;
+    amplitude = p.width/2 - margin;
+  };
+
+  // 'setup
+  p.setup = () => {
+    initializeCanvas();
 
     // initialize colors
     p.colorMode(p.HSB, 360, 100, 100, 100);
@@ -56,11 +64,7 @@ const sketch = (p) => {
     strokeColor= p.color(_stroke.h, _stroke.s, _stroke.b, _stroke.a);
     bgColor = p.color(_secondary.h, _secondary.s, _secondary.b, 100);
 
-    // 'initializations
-    margin = p.width/marginScalar;
-    amplitude = p.width/2 - margin;
     rotation = initRotation;
-
     reset();
 
     p.frameRate(FR);
@@ -200,13 +204,17 @@ const sketch = (p) => {
     (( p.keyCode === 38 ) && changePoints(1) );
     (( p.keyCode === 40 ) && changePoints(-1) );
 
-    // left and right arrows to change the size of the movers
-    (( p.keyCode === p.LEFT_ARROW ) && changeRadius(-1) );
-    (( p.keyCode === p.RIGHT_ARROW ) && changeRadius(1) );
-
     // + (=) and - to change complications
     (( p.keyCode === 187 ) && changeComplications(1) );
     (( p.keyCode === 189 ) && changeComplications(-1) );
+
+    // < (,) and > (.) to change complications
+    (( p.keyCode === 188 ) && changeReflections(-1) );
+    (( p.keyCode === 190 ) && changeReflections(1) );
+
+    // left and right arrows to change the size of the movers
+    (( p.keyCode === p.LEFT_ARROW ) && changeRadius(-1) );
+    (( p.keyCode === p.RIGHT_ARROW ) && changeRadius(1) );
 
     // [ and ] to change the rotation
     (( p.keyCode === 221 ) && changeRotation(Math.PI/60) );
@@ -309,6 +317,11 @@ const sketch = (p) => {
     complications = p.map(newComplications, 1, 50, 1, 50, true);
   };
 
+  const changeReflections = (delta) => {
+    let newReflections = reflections + delta;
+    reflections = p.map(newReflections, 0, 2, 0, 2, true);
+  };
+
   const changePoints = (delta) => {
     let newPoints = points + delta;
     points = p.map(newPoints, 1, 50, 1, 50, true);
@@ -333,8 +346,8 @@ const sketch = (p) => {
   }
 
   p.windowResized = () => {
-    const frameSize = (p.windowWidth > p.windowHeight) ? 0.6*p.windowHeight : 0.6*p.windowWidth;
-    let cnvs = p.createCanvas(frameSize, frameSize);
+    initializeCanvas();
+    reset();
   }
 
 };

@@ -4,6 +4,7 @@ import { ModeContext } from "../components/plasmic/jeffdo_es/PlasmicGlobalVarian
 import { HighlightContext } from "../components/plasmic/jeffdo_es/PlasmicGlobalVariant__Highlight"
 import { Plasmic_404 } from "../components/plasmic/jeffdo_es/Plasmic_404"
 import sketch from '../sketches/mandigidala';
+import letterA from '../../../../36dot22/src/sketches/letterA';
 
 function _404() {
   const [mode, setMode] = useState([]);
