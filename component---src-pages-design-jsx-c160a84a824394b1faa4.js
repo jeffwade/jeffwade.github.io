@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjeffdoes=self.webpackChunkjeffdoes||[]).push([[719],{4628:function(e,f,t){t.r(f);var n=t(7294),u=t(629);f.default=function(){return n.createElement(u.default,{path:"/design"})}}}]);
-//# sourceMappingURL=component---src-pages-design-jsx-c160a84a824394b1faa4.js.map
