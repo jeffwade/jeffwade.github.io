@@ -313,6 +313,11 @@
           "id": "fNKpYQeP9",
           "name": "LinkedinIcon",
           "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Linkedin.jsx"
+        },
+        {
+          "id": "KHmeucXbCp",
+          "name": "CloseIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Close.jsx"
         }
       ],
       "images": [

@@ -1,25 +1,57 @@
 import * as React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PlasmicStripe } from "./plasmic/jeffdo_es/PlasmicStripe";
 import useTooltip from "../hooks/useTooltip";
 import useMousePosition from "../hooks/useMousePosition";
 import HeadlineButton from "../components/HeadlineButton";
+import Preview from "../components/Preview";
 
 function Stripe_(props, ref) {
-  const {label, labelIsVisible, icon, category, color, mode, revealed, highlighted, ...rest} = props;
+  const {
+    name,
+    label,
+    icon,
+    category,
+    color,
+    mode,
+    highlighted,
+    lowlighted,
+    revealed,
+    labelIsVisible,
+    ...rest} = props;
   const [isHovered, setIsHovered] = useState(false);
 
   const mousePosition = useMousePosition();
+
+  const mediaQuery = window.matchMedia("(max-width: 768px)")
+  const [mobile, setMobile] = useState(mediaQuery.matches)
+  useEffect(() => {
+    mediaQuery.addEventListener("change", e => setMobile(e.matches))
+  }, [])
 
   const labelStyles = {
     position: "absolute",
     display: "flex",
     gap: "1rem",
     alignItems: "center",
-    left: mousePosition.x - 32,
     overflow: "hidden",
     whiteSpace: "nowrap",
   };
+
+  if (!mobile) {
+    if (mousePosition.x > window.innerWidth / 2) {
+      labelStyles["left"] = "auto";
+      labelStyles["right"] = window.innerWidth - mousePosition.x + 15;
+      labelStyles["flexDirection"] = "row-reverse";
+    } else {
+      labelStyles["left"] = mousePosition.x + 15;
+      labelStyles["right"] = "auto";
+      labelStyles["flexDirection"] = "row";
+    }
+  } else {
+    labelStyles["left"] = "auto";
+    labelStyles["right"] = "auto";
+  }
 
   const stripeLabel = (
     <div style={labelStyles}>
@@ -28,26 +60,29 @@ function Stripe_(props, ref) {
     </div>
   );
 
-  const tooltipLabel = labelIsVisible ? [icon, icon, label, icon, icon] : null;
-  // const content = <Preview variant={}/>;
-  const content = "content coming soon";
-  const tooltip = useTooltip(color, tooltipLabel, content);
+  const tooltipLabel = labelIsVisible ? [icon, label, icon] : null;
+  const content = <Preview name={name}/>;
+  const tooltip = useTooltip(color, tooltipLabel, content, "334", "480px", false);
 
   return (
     <>
       { isHovered && tooltip }
       <PlasmicStripe
         root={{ ref }}
+        name={name}
         color={color}
         icon={null}
         category={category}
         mode={mode}
         highlighted={highlighted}
+        lowlighted={lowlighted}
         {...rest}
         label={stripeLabel}
+
         onMouseOver={ () => setIsHovered(true) }
+        onFocus={ () => setIsHovered(true) }
         onMouseOut={ () => setIsHovered(false) }
-        // onFocus={ () => showTooltip("nomouse")}
+        onBlur={ () => setIsHovered(false) }
       />
     </>
   )

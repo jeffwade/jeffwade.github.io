@@ -725,7 +725,7 @@ function PlasmicHomepage__RenderFunc(props) {
                       role={"img"}
                     />
                   }
-                  label={"jeff wade"}
+                  label={""}
                 />
               </p.PlasmicLink>
 

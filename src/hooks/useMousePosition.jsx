@@ -5,8 +5,8 @@ const useMousePosition = () => {
 
   const handleMouseMove = (e) => {
     setMousePosition({
-      x: e.pageX,
-      y: e.pageY,
+      x: e.clientX,
+      y: e.clientY,
     });
   };
 

@@ -53,7 +53,7 @@
     {
       "name": "blue",
       "type": "color",
-      "value": "#41AAEC",
+      "value": "#71BDED",
       "category": "color",
       "meta": {
         "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
@@ -68,6 +68,26 @@
       "meta": {
         "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
         "id": "aIpMqmzUJ"
+      }
+    },
+    {
+      "name": "caption",
+      "type": "fontsize",
+      "value": "0.75rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "l-9eGbyVG"
+      }
+    },
+    {
+      "name": "caption 2",
+      "type": "fontsize",
+      "value": "0.75rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "MK6oiEiEz"
       }
     },
     {
@@ -258,6 +278,16 @@
       "meta": {
         "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
         "id": "7y9V0dm0-"
+      }
+    },
+    {
+      "name": "scrim",
+      "type": "color",
+      "value": "#2B393CD9",
+      "category": "color",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "-b5osXx1K"
       }
     },
     {
