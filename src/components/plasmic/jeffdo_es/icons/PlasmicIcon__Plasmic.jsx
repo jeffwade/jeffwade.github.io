@@ -5,7 +5,7 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function LocationIcon(props) {
+export function PlasmicIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
@@ -27,7 +27,25 @@ export function LocationIcon(props) {
         fillRule={"evenodd"}
         clipRule={"evenodd"}
         d={
-          "M11.108 8.74c.805-1.35 1.267-2.124 1.267-3.365a4.375 4.375 0 00-8.75 0c0 1.241.462 2.016 1.267 3.365C5.654 10.017 6.724 11.81 8 15c1.276-3.19 2.346-4.983 3.108-6.26zM8 8a2.333 2.333 0 100-4.667A2.333 2.333 0 008 8z"
+          "M.889 12c-.49 0-.894-.4-.84-.887a8 8 0 0115.902 0c.053.488-.35.887-.84.887h-.889a6.222 6.222 0 10-12.444 0h-.89z"
+        }
+        fill={"currentColor"}
+      ></path>
+
+      <path
+        fillRule={"evenodd"}
+        clipRule={"evenodd"}
+        d={
+          "M2.667 12a5.333 5.333 0 0110.666 0h-1.777a3.555 3.555 0 10-7.112 0H2.667z"
+        }
+        fill={"currentColor"}
+      ></path>
+
+      <path
+        fillRule={"evenodd"}
+        clipRule={"evenodd"}
+        d={
+          "M5.333 12a2.667 2.667 0 015.334 0H9.333c-.245 0-.435-.21-.553-.427a.89.89 0 00-1.56 0c-.118.217-.308.427-.553.427H5.333z"
         }
         fill={"currentColor"}
       ></path>
@@ -35,5 +53,5 @@ export function LocationIcon(props) {
   )
 }
 
-export default LocationIcon
+export default PlasmicIcon
 /* prettier-ignore-end */

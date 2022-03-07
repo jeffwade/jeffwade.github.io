@@ -7,14 +7,16 @@
   justify-content: flex-start;
   align-items: flex-start;
   background: var(--token-tze2JIV_u);
+  box-shadow: 0px 4px 16px 0px var(--token-QMayuc102);
   border-radius: 2px;
-  padding: var(--token-2B3TB9Igd);
+  padding: var(--token-jA840K8cs);
 }
 .rootbg_yellow {
   background: var(--token-FpWQpvmos);
 }
 .rootbg_orange {
   background: var(--token-pHc0CSHPE);
+  min-width: 312px;
 }
 .rootbg_blue {
   background: var(--token-rbxblu3Hd);

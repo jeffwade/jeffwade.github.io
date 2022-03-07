@@ -5,7 +5,7 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function LocationIcon(props) {
+export function OrgtreeIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
@@ -27,7 +27,7 @@ export function LocationIcon(props) {
         fillRule={"evenodd"}
         clipRule={"evenodd"}
         d={
-          "M11.108 8.74c.805-1.35 1.267-2.124 1.267-3.365a4.375 4.375 0 00-8.75 0c0 1.241.462 2.016 1.267 3.365C5.654 10.017 6.724 11.81 8 15c1.276-3.19 2.346-4.983 3.108-6.26zM8 8a2.333 2.333 0 100-4.667A2.333 2.333 0 008 8z"
+          "M9.5 12.706c0-1.267 1.007-2.294 2.25-2.294S14 11.439 14 12.706C14 13.973 12.993 15 11.75 15S9.5 13.973 9.5 12.706zM5.75 3.294C5.75 2.027 6.757 1 8 1s2.25 1.027 2.25 2.294c0 1.267-1.007 2.294-2.25 2.294S5.75 4.561 5.75 3.294zm-1.5 7.118c-1.243 0-2.25 1.027-2.25 2.294C2 13.973 3.007 15 4.25 15s2.25-1.027 2.25-2.294c0-1.267-1.007-2.294-2.25-2.294zm3-4.441h1.5v.764h3.75v3.294H11V8.265H5v1.764H3.5V6.735h3.75v-.764z"
         }
         fill={"currentColor"}
       ></path>
@@ -35,5 +35,5 @@ export function LocationIcon(props) {
   )
 }
 
-export default LocationIcon
+export default OrgtreeIcon
 /* prettier-ignore-end */

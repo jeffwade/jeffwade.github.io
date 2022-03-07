@@ -51,11 +51,13 @@ function Plasmic_404__RenderFunc(props) {
       `}</style>
 
       <div className={projectcss.plasmic_page_wrapper}>
-        <div
+        <p.Stack
+          as={"div"}
           data-plasmic-name={"root"}
           data-plasmic-override={overrides.root}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
+          hasGap={true}
           className={classNames(
             projectcss.all,
             projectcss.root_reset,
@@ -68,14 +70,32 @@ function Plasmic_404__RenderFunc(props) {
                 "mode",
                 "dark"
               ),
+
+              [projectcss.global_mode_reveal]: hasVariant(
+                globalVariants,
+                "mode",
+                "reveal"
+              ),
+
+              [sty.rootglobal_mode_reveal]: hasVariant(
+                globalVariants,
+                "mode",
+                "reveal"
+              ),
             }
           )}
         >
-          {true ? (
+          {(hasVariant(globalVariants, "mode", "reveal") ? true : true) ? (
             <p.Stack
               as={"div"}
               hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__b1Tf7)}
+              className={classNames(projectcss.all, sty.freeBox__b1Tf7, {
+                [sty.freeBoxglobal_mode_reveal__b1Tf7V94Jk]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
+                ),
+              })}
             >
               <h2
                 data-plasmic-name={"h2"}
@@ -119,9 +139,828 @@ function Plasmic_404__RenderFunc(props) {
           <P5Sketch
             data-plasmic-name={"p5Sketch"}
             data-plasmic-override={overrides.p5Sketch}
-            className={classNames("__wab_instance", sty.p5Sketch)}
+            className={classNames("__wab_instance", sty.p5Sketch, {
+              [sty.p5Sketchglobal_mode_reveal]: hasVariant(
+                globalVariants,
+                "mode",
+                "reveal"
+              ),
+            })}
           />
 
+          {(hasVariant(globalVariants, "mode", "reveal") ? true : true) ? (
+            <p.Stack
+              as={"div"}
+              data-plasmic-name={"controls"}
+              data-plasmic-override={overrides.controls}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.controls, {
+                [sty.controlsglobal_mode_reveal]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
+                ),
+              })}
+            >
+              {(hasVariant(globalVariants, "mode", "reveal") ? true : true) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__p2Zdo, {
+                    [sty.freeBoxglobal_mode_reveal__p2Zdov94Jk]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "reveal"
+                    ),
+                  })}
+                >
+                  <h3
+                    data-plasmic-name={"h3"}
+                    data-plasmic-override={overrides.h3}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h3,
+                      projectcss.__wab_text,
+                      sty.h3,
+                      {
+                        [sty.h3global_mode_reveal]: hasVariant(
+                          globalVariants,
+                          "mode",
+                          "reveal"
+                        ),
+                      }
+                    )}
+                  >
+                    {hasVariant(globalVariants, "mode", "reveal")
+                      ? "controls"
+                      : "Enter some text"}
+                  </h3>
+
+                  <svg
+                    className={classNames(projectcss.all, sty.svg__s1HoT, {
+                      [sty.svgglobal_mode_reveal__s1HoTv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                    role={"img"}
+                  />
+                </div>
+              ) : null}
+              {(hasVariant(globalVariants, "mode", "reveal") ? true : true) ? (
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox___3ZKp, {
+                    [sty.freeBoxglobal_mode_reveal___3ZKpv94Jk]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "reveal"
+                    ),
+                  })}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__lsdS8, {
+                      [sty.freeBoxglobal_mode_reveal__lsdS8V94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__yuaCy,
+                        {
+                          [sty.textglobal_mode_reveal__yuaCyv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "press"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___46OTd,
+                        {
+                          [sty.textglobal_mode_reveal___46OTdv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "& this'll happen"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__wUgE, {
+                      [sty.freeBoxglobal_mode_reveal__wUgEv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__su7Mj,
+                        {
+                          [sty.textglobal_mode_reveal__su7Mjv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "← / →"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__dVEf6,
+                        {
+                          [sty.textglobal_mode_reveal__dVEf6V94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change circle radius [1, w/6]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__a1Adx, {
+                      [sty.freeBoxglobal_mode_reveal__a1AdXv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__jx42,
+                        {
+                          [sty.textglobal_mode_reveal__jx42V94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "↑ / ↓"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__mWhT,
+                        {
+                          [sty.textglobal_mode_reveal__mWhTv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change # of points [1, 50]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jQbp4, {
+                      [sty.freeBoxglobal_mode_reveal__jQbp4V94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__fmI7Z,
+                        {
+                          [sty.textglobal_mode_reveal__fmI7Zv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "+ / -"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zPsps,
+                        {
+                          [sty.textglobal_mode_reveal__zPspSv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change circles/point [1, 50]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jQik0, {
+                      [sty.freeBoxglobal_mode_reveal__jQik0V94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___85W5,
+                        {
+                          [sty.textglobal_mode_reveal___85W5V94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "↑ / ↓"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vYtl,
+                        {
+                          [sty.textglobal_mode_reveal__vYtlv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change # of points [1, 50]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__z6H, {
+                      [sty.freeBoxglobal_mode_reveal__z6HV94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___9GMvN,
+                        {
+                          [sty.textglobal_mode_reveal___9GMvNv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "< / >"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__mn9Sz,
+                        {
+                          [sty.textglobal_mode_reveal__mn9Szv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change reflections [0, 1, 2]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__aH8Rt, {
+                      [sty.freeBoxglobal_mode_reveal__aH8Rtv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vzP53,
+                        {
+                          [sty.textglobal_mode_reveal__vzP53V94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "[ / ]"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zh0O8,
+                        {
+                          [sty.textglobal_mode_reveal__zh0O8V94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change rotation [0, 360]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__xAxfb, {
+                      [sty.freeBoxglobal_mode_reveal__xAxfbv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___7YKxL,
+                        {
+                          [sty.textglobal_mode_reveal___7YKxLv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "enter"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__wDfxb,
+                        {
+                          [sty.textglobal_mode_reveal__wDfxBv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "swap fore/background colors"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__bgG2A, {
+                      [sty.freeBoxglobal_mode_reveal__bgG2Av94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__lQvEg,
+                        {
+                          [sty.textglobal_mode_reveal__lQvEGv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "j / u"
+                        : "Enter some text"}
+                    </div>
+
+                    {(
+                      hasVariant(globalVariants, "mode", "reveal") ? true : true
+                    ) ? (
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___8EXrt,
+                          {
+                            [sty.textglobal_mode_reveal___8EXrTv94Jk]:
+                              hasVariant(globalVariants, "mode", "reveal"),
+                          }
+                        )}
+                      >
+                        {hasVariant(globalVariants, "mode", "reveal")
+                          ? "swap fore/background colors"
+                          : "Enter some text"}
+                      </div>
+                    ) : null}
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__uXlNh,
+                        {
+                          [sty.textglobal_mode_reveal__uXlNhv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change hue [0, 360]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___7FyTr, {
+                      [sty.freeBoxglobal_mode_reveal___7FyTRv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vezl8,
+                        {
+                          [sty.textglobal_mode_reveal__vezl8V94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "k / i"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xnpu3,
+                        {
+                          [sty.textglobal_mode_reveal__xnpu3V94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change saturation [0, 100]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__fmXd, {
+                      [sty.freeBoxglobal_mode_reveal__fmXdv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__lTgew,
+                        {
+                          [sty.textglobal_mode_reveal__lTgewv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "l / o"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xtRf,
+                        {
+                          [sty.textglobal_mode_reveal__xtRfV94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "Change brightness [0, 100]"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hGUoi, {
+                      [sty.freeBoxglobal_mode_reveal__hGUoiv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__he3Bq,
+                        {
+                          [sty.textglobal_mode_reveal__he3Bqv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "shift"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__tu3Yb,
+                        {
+                          [sty.textglobal_mode_reveal__tu3YBv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "toggle edit secondary color"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sBt4N, {
+                      [sty.freeBoxglobal_mode_reveal__sBt4Nv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___1Vvnc,
+                        {
+                          [sty.textglobal_mode_reveal___1Vvncv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "space"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__s0KEd,
+                        {
+                          [sty.textglobal_mode_reveal__s0KEdv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "fresh canvas (paint bg color)"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___3H9Oi, {
+                      [sty.freeBoxglobal_mode_reveal___3H9Oiv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__yTgCr,
+                        {
+                          [sty.textglobal_mode_reveal__yTgCRv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "alt / option"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___7TmOv,
+                        {
+                          [sty.textglobal_mode_reveal___7TmOVv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "toggle straight / curved paths"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__gWlBb, {
+                      [sty.freeBoxglobal_mode_reveal__gWlBBv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__hl30A,
+                        {
+                          [sty.textglobal_mode_reveal__hl30Av94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "tap"
+                        : "Enter some text"}
+                    </div>
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__zKrYn,
+                        {
+                          [sty.textglobal_mode_reveal__zKrYnv94Jk]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "reveal"
+                          ),
+                        }
+                      )}
+                    >
+                      {hasVariant(globalVariants, "mode", "reveal")
+                        ? "randomize points, circles, & reflections"
+                        : "Enter some text"}
+                    </div>
+                  </div>
+                </p.Stack>
+              ) : null}
+            </p.Stack>
+          ) : null}
           {(hasVariant(globalVariants, "mode", "dark") ? true : true) ? (
             <div
               className={classNames(projectcss.all, sty.freeBox__hxHbG, {
@@ -129,6 +968,12 @@ function Plasmic_404__RenderFunc(props) {
                   globalVariants,
                   "mode",
                   "dark"
+                ),
+
+                [sty.freeBoxglobal_mode_reveal__hxHbGv94Jk]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
                 ),
               })}
             >
@@ -314,16 +1159,29 @@ function Plasmic_404__RenderFunc(props) {
               />
             </div>
           ) : null}
-        </div>
+        </p.Stack>
       </div>
     </React.Fragment>
   )
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h2", "p5Sketch", "reveal", "home", "logo", "darkmode"],
+  root: [
+    "root",
+    "h2",
+    "p5Sketch",
+    "controls",
+    "h3",
+    "reveal",
+    "home",
+    "logo",
+    "darkmode",
+  ],
+
   h2: ["h2"],
   p5Sketch: ["p5Sketch"],
+  controls: ["controls", "h3"],
+  h3: ["h3"],
   reveal: ["reveal"],
   home: ["home", "logo"],
   logo: ["logo"],
@@ -361,6 +1219,8 @@ export const Plasmic_404 = Object.assign(
     // Helper components rendering sub-elements
     h2: makeNodeComponent("h2"),
     p5Sketch: makeNodeComponent("p5Sketch"),
+    controls: makeNodeComponent("controls"),
+    h3: makeNodeComponent("h3"),
     reveal: makeNodeComponent("reveal"),
     home: makeNodeComponent("home"),
     logo: makeNodeComponent("logo"),

@@ -51,9 +51,9 @@
   --plasmic-token-green: var(--token-hBS1SvodX);
   --token-hBS1SvodX: #36f53a;
   --plasmic-token-green: var(--token-hBS1SvodX);
-  --token-rbxblu3Hd: #41aaec;
+  --token-rbxblu3Hd: #71bded;
   --plasmic-token-blue: var(--token-rbxblu3Hd);
-  --token-rbxblu3Hd: #41aaec;
+  --token-rbxblu3Hd: #71bded;
   --plasmic-token-blue: var(--token-rbxblu3Hd);
   --token-9BBOxo3h9: #bf69ea;
   --plasmic-token-purple: var(--token-9BBOxo3h9);
@@ -95,6 +95,12 @@
   --plasmic-token-quadruple-base-font: var(--token-3pcCKdOkD);
   --token-3pcCKdOkD: 4rem;
   --plasmic-token-quadruple-base-font: var(--token-3pcCKdOkD);
+  --token-l-9eGbyVG: 0.75rem;
+  --plasmic-token-caption: var(--token-l-9eGbyVG);
+  --token-l-9eGbyVG: 0.75rem;
+  --plasmic-token-caption: var(--token-l-9eGbyVG);
+  --token--b5osXx1K: #2b393cd9;
+  --plasmic-token-scrim: var(--token--b5osXx1K);
 }
 
 .plasmic_tokens:where(.global_mode_dark) {
@@ -113,11 +119,17 @@
   }
 }
 
+.plasmic_tokens:where(.global_mode_reveal) {
+  --token--b5osXx1K: #2b393cd9;
+  --plasmic-token-scrim: var(--token--b5osXx1K);
+}
+
 .plasmic_default_styles,
 .plasmic_default_styles:where(.global_mode_dark),
 .plasmic_default_styles:where(.global_mode_reveal),
 .plasmic_default_styles:where(.global_highlight_about),
-.plasmic_default_styles:where(.global_highlight_work) {
+.plasmic_default_styles:where(.global_highlight_work),
+.plasmic_default_styles:where(.global_arrangement_float) {
   --mixin-tb6NxDygU-ES_font-family: "IBM Plex Mono";
   --mixin-tb6NxDygU-ES_font-size: var(--token-rLN83stw2);
   --mixin-tb6NxDygU-ES_font-weight: 500;
@@ -167,12 +179,13 @@
   --mixin-APJxu-1Aub9C_font-weight: 700;
   --mixin-APJxu-1Aub9C_letter-spacing: -1px;
   --mixin-APJxu-1Aub9C_line-height: 1.1;
-  --mixin-BooxIwPQZw5R_font-family: "Inter";
+  --mixin-BooxIwPQZw5R_font-family: "Rasa";
   --mixin-BooxIwPQZw5R_color: #000000;
   --mixin-BooxIwPQZw5R_font-size: 32px;
   --mixin-BooxIwPQZw5R_font-weight: 600;
   --mixin-BooxIwPQZw5R_letter-spacing: -0.8px;
   --mixin-BooxIwPQZw5R_line-height: 1.2;
+  --mixin-BooxIwPQZw5R_font-style: normal;
   --mixin-fS07USrhc1gQk_background: linear-gradient(#f8f8f8, #f8f8f8);
   --mixin-fS07USrhc1gQk_border-bottom-color: #dddddd;
   --mixin-fS07USrhc1gQk_border-bottom-style: solid;
@@ -241,7 +254,8 @@
   .plasmic_default_styles:where(.global_mode_dark),
   .plasmic_default_styles:where(.global_mode_reveal),
   .plasmic_default_styles:where(.global_highlight_about),
-  .plasmic_default_styles:where(.global_highlight_work) {
+  .plasmic_default_styles:where(.global_highlight_work),
+  .plasmic_default_styles:where(.global_arrangement_float) {
     --mixin-Esv3YyrIlToA_font-size: var(--token-1VSMIXpjx);
     --mixin-APJxu-1Aub9C_font-size: var(--token-1VSMIXpjx);
   }
@@ -482,6 +496,7 @@
   font-weight: var(--mixin-BooxIwPQZw5R_font-weight);
   letter-spacing: var(--mixin-BooxIwPQZw5R_letter-spacing);
   line-height: var(--mixin-BooxIwPQZw5R_line-height);
+  font-style: var(--mixin-BooxIwPQZw5R_font-style);
 }
 
 :where(.root_reset .plasmic_default__code),

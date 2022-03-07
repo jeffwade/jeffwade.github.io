@@ -5,7 +5,7 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function LocationIcon(props) {
+export function ProcessingIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
@@ -27,13 +27,30 @@ export function LocationIcon(props) {
         fillRule={"evenodd"}
         clipRule={"evenodd"}
         d={
-          "M11.108 8.74c.805-1.35 1.267-2.124 1.267-3.365a4.375 4.375 0 00-8.75 0c0 1.241.462 2.016 1.267 3.365C5.654 10.017 6.724 11.81 8 15c1.276-3.19 2.346-4.983 3.108-6.26zM8 8a2.333 2.333 0 100-4.667A2.333 2.333 0 008 8z"
+          "M12.683 10.31C11.62 11.375 10.097 12 8.248 12V9c1.15 0 1.878-.374 2.314-.81.45-.451.686-1.061.686-1.69s-.236-1.239-.686-1.69C10.126 4.375 9.398 4 8.248 4V1c1.85 0 3.372.626 4.435 1.69a5.378 5.378 0 011.565 3.81 5.378 5.378 0 01-1.565 3.81z"
         }
+        fill={"currentColor"}
+      ></path>
+
+      <path
+        d={
+          "M2.245 10.004L1.048 11.6l2.4 1.8 6-8-2.4-1.8L4.35 7.196 5.683 9.86l-2.808 1.405-.63-1.26z"
+        }
+        fill={"currentColor"}
+      ></path>
+
+      <path
+        d={"M2.338 9.879l.6 1.198 2.557-1.28-1.238-2.476-1.919 2.558z"}
+        fill={"currentColor"}
+      ></path>
+
+      <path
+        d={"M1 7.202l2.558-1.279 1.937 3.875-2.558 1.279L1 7.202z"}
         fill={"currentColor"}
       ></path>
     </svg>
   )
 }
 
-export default LocationIcon
+export default ProcessingIcon
 /* prettier-ignore-end */

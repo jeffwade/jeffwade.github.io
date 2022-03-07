@@ -57,7 +57,7 @@ function PlasmicHeadline__RenderFunc(props) {
           ),
         }
       )}
-      tabIndex={1}
+      tabIndex={-1}
     >
       {p.renderPlasmicSlot({
         defaultContents: (

@@ -62,13 +62,14 @@ function PlasmicStripe__RenderFunc(props) {
   })
 
   return true ? (
-    <div
+    <button
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
         projectcss.all,
+        projectcss.button,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_tokens,
@@ -110,7 +111,8 @@ function PlasmicStripe__RenderFunc(props) {
           [sty.rootrevealed]: hasVariant(variants, "revealed", "revealed"),
         }
       )}
-      tabIndex={2}
+      id={args.name}
+      tabIndex={0}
       data-plasmic-trigger-props={[
         triggerRootFocusVisibleWithinProps,
         triggerRootHoverProps,
@@ -326,7 +328,7 @@ function PlasmicStripe__RenderFunc(props) {
             })
           : null}
       </p.Stack>
-    </div>
+    </button>
   ) : null
 }
 

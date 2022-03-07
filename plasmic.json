@@ -94,19 +94,6 @@
           "componentType": "component"
         },
         {
-          "id": "tKqf7q97A-",
-          "name": "OrgDesign",
-          "type": "managed",
-          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
-          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicOrgDesign.jsx",
-          "importSpec": {
-            "modulePath": "../pages/remember/org-design.jsx"
-          },
-          "cssFilePath": "plasmic/jeffdo_es/PlasmicOrgDesign.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "ZbI4Qm1ePM",
           "name": "P5Sketch",
           "type": "managed",
@@ -170,6 +157,45 @@
           "cssFilePath": "plasmic/jeffdo_es/PlasmicPreview.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "lqv31eB-tK",
+          "name": "Tag",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicTag.jsx",
+          "importSpec": {
+            "modulePath": "Tag.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicTag.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "SiSovdu-fA",
+          "name": "CaseStudy",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicCaseStudy.jsx",
+          "importSpec": {
+            "modulePath": "CaseStudy.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicCaseStudy.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "tKqf7q97A-",
+          "name": "OrgTool",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicOrgTool.jsx",
+          "importSpec": {
+            "modulePath": "../pages/remember/org-tool.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicOrgTool.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -222,6 +248,71 @@
           "id": "2cwRWiCxc",
           "name": "DayIcon",
           "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Day.jsx"
+        },
+        {
+          "id": "GuFQhLpY5",
+          "name": "TrackIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Track.jsx"
+        },
+        {
+          "id": "i-ZGrNlsT",
+          "name": "MapIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Map.jsx"
+        },
+        {
+          "id": "j92l7Cm_Yv",
+          "name": "OrgtreeIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Orgtree.jsx"
+        },
+        {
+          "id": "0hscHUcbO",
+          "name": "SprintsIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Sprints.jsx"
+        },
+        {
+          "id": "-Sn3oKbpj",
+          "name": "DuoIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Duo.jsx"
+        },
+        {
+          "id": "0E6VNpvfVZ",
+          "name": "FigmaIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Figma.jsx"
+        },
+        {
+          "id": "vdZN0hmLgA",
+          "name": "NeovimIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Neovim.jsx"
+        },
+        {
+          "id": "brPKQ_p-dZ",
+          "name": "PlasmicIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Plasmic.jsx"
+        },
+        {
+          "id": "fhhpKKup_h",
+          "name": "ProcessingIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Processing.jsx"
+        },
+        {
+          "id": "ihEMujSlj",
+          "name": "DribbbleIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Dribbble.jsx"
+        },
+        {
+          "id": "AUjVyYf1-",
+          "name": "TwitterIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Twitter.jsx"
+        },
+        {
+          "id": "CEDPVo8n8",
+          "name": "GithubIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Github.jsx"
+        },
+        {
+          "id": "fNKpYQeP9",
+          "name": "LinkedinIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Linkedin.jsx"
         }
       ],
       "images": [
@@ -234,6 +325,16 @@
           "id": "8HSCguIpl",
           "name": "image",
           "filePath": "plasmic/jeffdo_es/images/image.png"
+        },
+        {
+          "id": "9E8fl55ys",
+          "name": "info-architecture",
+          "filePath": "plasmic/jeffdo_es/images/infoArchitecture.png"
+        },
+        {
+          "id": "meo1PxVZ7",
+          "name": "org-design",
+          "filePath": "plasmic/jeffdo_es/images/orgDesign.png"
         }
       ],
       "indirect": false,
@@ -260,12 +361,18 @@
         "name": "Highlight",
         "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
         "contextFilePath": "plasmic/jeffdo_es/PlasmicGlobalVariant__Highlight.jsx"
+      },
+      {
+        "id": "hhgYSeu_QK",
+        "name": "Arrangement",
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "contextFilePath": "plasmic/jeffdo_es/PlasmicGlobalVariant__Arrangement.jsx"
       }
     ]
   },
   "gatsbyConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.171",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.171/dist/plasmic.schema.json"
+  "cliVersion": "0.1.173",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.173/dist/plasmic.schema.json"
 }

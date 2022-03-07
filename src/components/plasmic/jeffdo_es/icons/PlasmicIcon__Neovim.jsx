@@ -5,7 +5,7 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function LocationIcon(props) {
+export function NeovimIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
@@ -24,10 +24,17 @@ export function LocationIcon(props) {
       {title && <title>{title}</title>}
 
       <path
+        d={
+          "M3 4.182L5.308 2 13 11.818 10.692 14 3 4.182zm10 .363L10.308 2v6L13 11.454V4.545z"
+        }
+        fill={"currentColor"}
+      ></path>
+
+      <path
         fillRule={"evenodd"}
         clipRule={"evenodd"}
         d={
-          "M11.108 8.74c.805-1.35 1.267-2.124 1.267-3.365a4.375 4.375 0 00-8.75 0c0 1.241.462 2.016 1.267 3.365C5.654 10.017 6.724 11.81 8 15c1.276-3.19 2.346-4.983 3.108-6.26zM8 8a2.333 2.333 0 100-4.667A2.333 2.333 0 008 8z"
+          "M5.692 14V8L3 4.545v6.91L5.692 14zm-.769-1.756V8.24L3.77 6.759v4.394l1.154 1.091z"
         }
         fill={"currentColor"}
       ></path>
@@ -35,5 +42,5 @@ export function LocationIcon(props) {
   )
 }
 
-export default LocationIcon
+export default NeovimIcon
 /* prettier-ignore-end */

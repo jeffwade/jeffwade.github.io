@@ -5,7 +5,7 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function LocationIcon(props) {
+export function FigmaIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
@@ -15,7 +15,7 @@ export function LocationIcon(props) {
       height={"1em"}
       width={"1em"}
       style={{
-        fill: "currentcolor",
+        stroke: "currentcolor",
         ...(style || {}),
       }}
       className={classNames("plasmic-default__svg", className)}
@@ -24,16 +24,14 @@ export function LocationIcon(props) {
       {title && <title>{title}</title>}
 
       <path
-        fillRule={"evenodd"}
-        clipRule={"evenodd"}
         d={
-          "M11.108 8.74c.805-1.35 1.267-2.124 1.267-3.365a4.375 4.375 0 00-8.75 0c0 1.241.462 2.016 1.267 3.365C5.654 10.017 6.724 11.81 8 15c1.276-3.19 2.346-4.983 3.108-6.26zM8 8a2.333 2.333 0 100-4.667A2.333 2.333 0 008 8z"
+          "M7.533 8A1.833 1.833 0 1111.2 8a1.833 1.833 0 01-3.667 0zm-3.196 5.963a1.833 1.833 0 011.296-3.13h1.834v1.834a1.833 1.833 0 01-3.13 1.296zm5.03-8.796H7.533V1.5h1.834a1.833 1.833 0 110 3.667zm-5.03-.537A1.833 1.833 0 015.633 1.5h1.834v3.667H5.633c-.486 0-.952-.193-1.296-.537zm0 4.666a1.833 1.833 0 011.296-3.13h1.834v3.667H5.633c-.486 0-.952-.193-1.296-.537z"
         }
-        fill={"currentColor"}
+        stroke={"currentColor"}
       ></path>
     </svg>
   )
 }
 
-export default LocationIcon
+export default FigmaIcon
 /* prettier-ignore-end */

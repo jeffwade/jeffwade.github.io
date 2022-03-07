@@ -72,7 +72,7 @@
   > .__wab_slot
   > .__wab_slot
   > .__wab_slot-string-wrapper {
-  text-decoration-line: underline;
+  text-decoration-line: line-through;
 }
 .root:focus-within .slotTargetWord > .__wab_text,
 .root:focus-within .slotTargetWord > .__wab_slot-string-wrapper,

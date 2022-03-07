@@ -5,7 +5,7 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function LocationIcon(props) {
+export function LinkedinIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
@@ -24,10 +24,8 @@ export function LocationIcon(props) {
       {title && <title>{title}</title>}
 
       <path
-        fillRule={"evenodd"}
-        clipRule={"evenodd"}
         d={
-          "M11.108 8.74c.805-1.35 1.267-2.124 1.267-3.365a4.375 4.375 0 00-8.75 0c0 1.241.462 2.016 1.267 3.365C5.654 10.017 6.724 11.81 8 15c1.276-3.19 2.346-4.983 3.108-6.26zM8 8a2.333 2.333 0 100-4.667A2.333 2.333 0 008 8z"
+          "M13.633 13.633h-2.37V9.92c0-.885-.017-2.025-1.234-2.025-1.235 0-1.424.965-1.424 1.96v3.778h-2.37V5.998H8.51V7.04h.031a2.494 2.494 0 012.246-1.233c2.403 0 2.846 1.58 2.846 3.637l-.001 4.188zM3.56 4.954a1.376 1.376 0 110-2.751 1.376 1.376 0 010 2.751zm1.185 8.68H2.372V5.997h2.373v7.635zM14.815 0H1.18A1.168 1.168 0 000 1.154v13.691A1.168 1.168 0 001.18 16h13.635A1.17 1.17 0 0016 14.845V1.153A1.17 1.17 0 0014.815 0"
         }
         fill={"currentColor"}
       ></path>
@@ -35,5 +33,5 @@ export function LocationIcon(props) {
   )
 }
 
-export default LocationIcon
+export default LinkedinIcon
 /* prettier-ignore-end */
