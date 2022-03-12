@@ -5,33 +5,38 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function IconIcon(props) {
+export function ThirtysixIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
       xmlns={"http://www.w3.org/2000/svg"}
-      stroke={"currentColor"}
-      fill={"currentColor"}
-      strokeWidth={"0"}
+      fill={"none"}
       viewBox={"0 0 16 16"}
       height={"1em"}
       width={"1em"}
+      style={{
+        fill: "currentcolor",
+        ...(style || {}),
+      }}
       className={classNames("plasmic-default__svg", className)}
-      style={style}
       {...restProps}
     >
       {title && <title>{title}</title>}
 
       <path
         fillRule={"evenodd"}
-        d={
-          "M1 8a.5.5 0 01.5-.5h11.793l-3.147-3.146a.5.5 0 01.708-.708l4 4a.5.5 0 010 .708l-4 4a.5.5 0 01-.708-.708L13.293 8.5H1.5A.5.5 0 011 8z"
-        }
-        stroke={"none"}
+        clipRule={"evenodd"}
+        d={"M15 0v5h-3V3h-1v3h4v10H8V0h7zm-4 9h1v4h-1V9z"}
+        fill={"currentColor"}
+      ></path>
+
+      <path
+        d={"M0 5V0h7v16H0v-5h3v2h1V9H1V6h3V3H3v2H0z"}
+        fill={"currentColor"}
       ></path>
     </svg>
   )
 }
 
-export default IconIcon
+export default ThirtysixIcon
 /* prettier-ignore-end */

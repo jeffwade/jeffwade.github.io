@@ -196,6 +196,20 @@
           "cssFilePath": "plasmic/jeffdo_es/PlasmicOrgTool.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "9yKLngp1XNu",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicButton.jsx",
+          "importSpec": {
+            "modulePath": "Button.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
         }
       ],
       "icons": [
@@ -226,8 +240,8 @@
         },
         {
           "id": "iZuEl1jiaD",
-          "name": "WiggleArrowIcon",
-          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__WiggleArrow.jsx"
+          "name": "ArrowRightIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__ArrowRight.jsx"
         },
         {
           "id": "DCl8WunXZe",
@@ -318,6 +332,31 @@
           "id": "KHmeucXbCp",
           "name": "CloseIcon",
           "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Close.jsx"
+        },
+        {
+          "id": "9deESLzdtBn",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Checksvg.jsx"
+        },
+        {
+          "id": "ykJmUC__Ykl",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Icon.jsx"
+        },
+        {
+          "id": "GP0PpNpUV",
+          "name": "ArrowLeftIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__ArrowLeft.jsx"
+        },
+        {
+          "id": "PiVIGAVUm",
+          "name": "ThirtysixIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Thirtysix.jsx"
+        },
+        {
+          "id": "4vkcnz2Ax",
+          "name": "TwentytwoIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Twentytwo.jsx"
         }
       ],
       "images": [

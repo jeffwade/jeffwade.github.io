@@ -46,7 +46,7 @@ const sketch = (p) => {
   let isPlaying = true;
 
   const initializeCanvas = () => {
-    const frameSize = (p.windowWidth > p.windowHeight) ? 0.6*p.windowHeight : 0.6*p.windowWidth;
+    const frameSize = (p.windowWidth > p.windowHeight) ? 0.6*p.windowHeight : 0.8*p.windowWidth;
     let cnvs = p.createCanvas(frameSize, frameSize);
 
     // 'initializations

@@ -29,6 +29,9 @@ import { useScreenVariants as useScreenVariantsekypzdksLjd0F } from "./PlasmicGl
 import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_jeffdo_es.module.css" // plasmic-import: mujoL4gD3qd1ezKDLZ31rZ/projectcss
 import * as sty from "./PlasmicHomepage.module.css" // plasmic-import: ZgtgOwq6J5gf/css
+import ThirtysixIcon from "./icons/PlasmicIcon__Thirtysix" // plasmic-import: PiVIGAVUm/icon
+import TwentytwoIcon from "./icons/PlasmicIcon__Twentytwo" // plasmic-import: 4vkcnz2Ax/icon
+import ArrowRightIcon from "./icons/PlasmicIcon__ArrowRight" // plasmic-import: iZuEl1jiaD/icon
 import FaceIcon from "./icons/PlasmicIcon__Face" // plasmic-import: BZoH_3Sy18/icon
 import InfoIcon from "./icons/PlasmicIcon__Info" // plasmic-import: 5Sy2g4y6V/icon
 import MapIcon from "./icons/PlasmicIcon__Map" // plasmic-import: i-ZGrNlsT/icon
@@ -78,6 +81,12 @@ function PlasmicHomepage__RenderFunc(props) {
             projectcss.plasmic_tokens,
             sty.root,
             {
+              [projectcss.global_highlight_work]: hasVariant(
+                globalVariants,
+                "highlight",
+                "work"
+              ),
+
               [projectcss.global_mode_dark]: hasVariant(
                 globalVariants,
                 "mode",
@@ -116,6 +125,107 @@ function PlasmicHomepage__RenderFunc(props) {
             }
           )}
         >
+          <p.PlasmicLink
+            data-plasmic-name={"link"}
+            data-plasmic-override={overrides.link}
+            className={classNames(projectcss.all, projectcss.a, sty.link, {
+              [sty.linkglobal_highlight_work]: hasVariant(
+                globalVariants,
+                "highlight",
+                "work"
+              ),
+            })}
+            component={Link}
+            href={
+              hasVariant(globalVariants, "highlight", "work")
+                ? "/36dot22"
+                : undefined
+            }
+            platform={"gatsby"}
+          >
+            {(hasVariant(globalVariants, "highlight", "work") ? true : true) ? (
+              <p.Stack
+                as={"div"}
+                data-plasmic-name={"callout"}
+                data-plasmic-override={overrides.callout}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.callout, {
+                  [sty.calloutglobal_highlight_about]: hasVariant(
+                    globalVariants,
+                    "highlight",
+                    "about"
+                  ),
+
+                  [sty.calloutglobal_highlight_work]: hasVariant(
+                    globalVariants,
+                    "highlight",
+                    "work"
+                  ),
+                })}
+              >
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__aoj9Y, {
+                    [sty.freeBoxglobal_highlight_work__aoj9YjCUoz]: hasVariant(
+                      globalVariants,
+                      "highlight",
+                      "work"
+                    ),
+                  })}
+                >
+                  <ThirtysixIcon
+                    className={classNames(projectcss.all, sty.svg__kiQg6, {
+                      [sty.svgglobal_highlight_work__kiQg6JCUoz]: hasVariant(
+                        globalVariants,
+                        "highlight",
+                        "work"
+                      ),
+                    })}
+                    role={"img"}
+                  />
+
+                  <TwentytwoIcon
+                    className={classNames(projectcss.all, sty.svg__iqt6V, {
+                      [sty.svgglobal_highlight_work__iqt6VjCUoz]: hasVariant(
+                        globalVariants,
+                        "highlight",
+                        "work"
+                      ),
+                    })}
+                    role={"img"}
+                  />
+                </div>
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__ym5Bc,
+                    {
+                      [sty.textglobal_highlight_work__ym5BcjCUoz]: hasVariant(
+                        globalVariants,
+                        "highlight",
+                        "work"
+                      ),
+                    }
+                  )}
+                >
+                  {"Now serving \n36 days of type"}
+                </div>
+
+                <ArrowRightIcon
+                  className={classNames(projectcss.all, sty.svg__hdgd, {
+                    [sty.svgglobal_highlight_work__hdgdjCUoz]: hasVariant(
+                      globalVariants,
+                      "highlight",
+                      "work"
+                    ),
+                  })}
+                  role={"img"}
+                />
+              </p.Stack>
+            ) : null}
+          </p.PlasmicLink>
+
           <Stripe
             data-plasmic-name={"likeness"}
             data-plasmic-override={overrides.likeness}
@@ -515,53 +625,73 @@ function PlasmicHomepage__RenderFunc(props) {
             }
           />
 
-          <Stripe
-            data-plasmic-name={"sprints"}
-            data-plasmic-override={overrides.sprints}
-            category={"work"}
-            className={classNames("__wab_instance", sty.sprints, {
-              [sty.sprintsglobal_arrangement_float]: hasVariant(
-                globalVariants,
-                "arrangement",
-                "float"
-              ),
+          {true ? (
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__yi9K, {
+                [sty.freeBoxglobal_arrangement_float__yi9KZZfig]: hasVariant(
+                  globalVariants,
+                  "arrangement",
+                  "float"
+                ),
+              })}
+            >
+              <Stripe
+                data-plasmic-name={"sprints"}
+                data-plasmic-override={overrides.sprints}
+                category={"work"}
+                className={classNames("__wab_instance", sty.sprints, {
+                  [sty.sprintsglobal_arrangement_float]: hasVariant(
+                    globalVariants,
+                    "arrangement",
+                    "float"
+                  ),
 
-              [sty.sprintsglobal_highlight_about]: hasVariant(
-                globalVariants,
-                "highlight",
-                "about"
-              ),
+                  [sty.sprintsglobal_highlight_about]: hasVariant(
+                    globalVariants,
+                    "highlight",
+                    "about"
+                  ),
 
-              [sty.sprintsglobal_highlight_work]: hasVariant(
-                globalVariants,
-                "highlight",
-                "work"
-              ),
+                  [sty.sprintsglobal_highlight_work]: hasVariant(
+                    globalVariants,
+                    "highlight",
+                    "work"
+                  ),
 
-              [sty.sprintsglobal_mode_reveal]: hasVariant(
-                globalVariants,
-                "mode",
-                "reveal"
-              ),
-            })}
-            color={"grey"}
-            highlighted={
-              hasVariant(globalVariants, "highlight", "work") ? true : undefined
-            }
-            icon={
-              <SprintsIcon
-                className={classNames(projectcss.all, sty.svg__hgkau)}
-                role={"img"}
+                  [sty.sprintsglobal_mode_reveal]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "reveal"
+                  ),
+                })}
+                color={"grey"}
+                highlighted={
+                  hasVariant(globalVariants, "highlight", "work")
+                    ? true
+                    : undefined
+                }
+                icon={
+                  <SprintsIcon
+                    className={classNames(projectcss.all, sty.svg__hgkau)}
+                    role={"img"}
+                  />
+                }
+                label={
+                  hasVariant(globalVariants, "highlight", "work")
+                    ? "workshops"
+                    : "sprints & workshops"
+                }
+                lowlighted={
+                  hasVariant(globalVariants, "highlight", "about")
+                    ? true
+                    : undefined
+                }
+                name={"sprints"}
               />
-            }
-            label={"sprints & workshops"}
-            lowlighted={
-              hasVariant(globalVariants, "highlight", "about")
-                ? true
-                : undefined
-            }
-            name={"sprints"}
-          />
+            </p.Stack>
+          ) : null}
 
           <Stripe
             data-plasmic-name={"tracks"}
@@ -613,16 +743,20 @@ function PlasmicHomepage__RenderFunc(props) {
 
           {true ? (
             <div
-              data-plasmic-name={"freeBox"}
-              data-plasmic-override={overrides.freeBox}
-              className={classNames(projectcss.all, sty.freeBox, {
-                [sty.freeBoxglobal_arrangement_float]: hasVariant(
+              className={classNames(projectcss.all, sty.freeBox__qLuNm, {
+                [sty.freeBoxglobal_arrangement_float__qLuNmzZfig]: hasVariant(
                   globalVariants,
                   "arrangement",
                   "float"
                 ),
 
-                [sty.freeBoxglobal_mode_dark]: hasVariant(
+                [sty.freeBoxglobal_highlight_work__qLuNMjCUoz]: hasVariant(
+                  globalVariants,
+                  "highlight",
+                  "work"
+                ),
+
+                [sty.freeBoxglobal_mode_dark__qLuNmjYvh]: hasVariant(
                   globalVariants,
                   "mode",
                   "dark"
@@ -633,6 +767,12 @@ function PlasmicHomepage__RenderFunc(props) {
                 data-plasmic-name={"reveal"}
                 data-plasmic-override={overrides.reveal}
                 className={classNames("__wab_instance", sty.reveal, {
+                  [sty.revealglobal_highlight_work]: hasVariant(
+                    globalVariants,
+                    "highlight",
+                    "work"
+                  ),
+
                   [sty.revealglobal_mode_reveal]: hasVariant(
                     globalVariants,
                     "mode",
@@ -786,6 +926,8 @@ function PlasmicHomepage__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "link",
+    "callout",
     "likeness",
     "words",
     "headline",
@@ -796,13 +938,14 @@ const PlasmicDescendants = {
     "learnin",
     "sprints",
     "tracks",
-    "freeBox",
     "reveal",
     "home",
     "logo",
     "darkmode",
   ],
 
+  link: ["link", "callout"],
+  callout: ["callout"],
   likeness: ["likeness"],
   words: ["words"],
   headline: ["headline", "design", "jeff"],
@@ -813,7 +956,6 @@ const PlasmicDescendants = {
   learnin: ["learnin"],
   sprints: ["sprints"],
   tracks: ["tracks"],
-  freeBox: ["freeBox", "reveal", "home", "logo", "darkmode"],
   reveal: ["reveal"],
   home: ["home", "logo"],
   logo: ["logo"],
@@ -849,6 +991,8 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    link: makeNodeComponent("link"),
+    callout: makeNodeComponent("callout"),
     likeness: makeNodeComponent("likeness"),
     words: makeNodeComponent("words"),
     headline: makeNodeComponent("headline"),
@@ -859,7 +1003,6 @@ export const PlasmicHomepage = Object.assign(
     learnin: makeNodeComponent("learnin"),
     sprints: makeNodeComponent("sprints"),
     tracks: makeNodeComponent("tracks"),
-    freeBox: makeNodeComponent("freeBox"),
     reveal: makeNodeComponent("reveal"),
     home: makeNodeComponent("home"),
     logo: makeNodeComponent("logo"),

@@ -91,6 +91,16 @@
       }
     },
     {
+      "name": "caption 2",
+      "type": "fontsize",
+      "value": "16px",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "UVOVaEprM"
+      }
+    },
+    {
       "name": "dark-mint",
       "type": "color",
       "value": "#1D7B75",
@@ -151,6 +161,16 @@
       }
     },
     {
+      "name": "grey-haze",
+      "type": "color",
+      "value": "#FFFFFF40",
+      "category": "color",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "R8vy1i-sY"
+      }
+    },
+    {
       "name": "grey-text",
       "type": "color",
       "value": "#F0F2F2",
@@ -173,7 +193,7 @@
     {
       "name": "haze",
       "type": "color",
-      "value": "#FFFFFF1A",
+      "value": "#FFFFFF40",
       "category": "color",
       "meta": {
         "projectId": "mujoL4gD3qd1ezKDLZ31rZ",

@@ -5,33 +5,35 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function IconIcon(props) {
+export function ChecksvgIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
       xmlns={"http://www.w3.org/2000/svg"}
-      stroke={"currentColor"}
-      fill={"currentColor"}
-      strokeWidth={"0"}
-      viewBox={"0 0 16 16"}
+      fill={"none"}
+      viewBox={"0 0 24 24"}
       height={"1em"}
       width={"1em"}
+      style={{
+        fill: "currentcolor",
+        ...(style || {}),
+      }}
       className={classNames("plasmic-default__svg", className)}
-      style={style}
       {...restProps}
     >
       {title && <title>{title}</title>}
 
       <path
         fillRule={"evenodd"}
+        clipRule={"evenodd"}
         d={
-          "M1 8a.5.5 0 01.5-.5h11.793l-3.147-3.146a.5.5 0 01.708-.708l4 4a.5.5 0 010 .708l-4 4a.5.5 0 01-.708-.708L13.293 8.5H1.5A.5.5 0 011 8z"
+          "M18.416 5.876a.75.75 0 01.208 1.04L11.42 17.721a1.75 1.75 0 01-2.871.06l-3.156-4.34a.75.75 0 111.214-.882l3.155 4.339a.25.25 0 00.41-.009l7.204-10.805a.75.75 0 011.04-.208z"
         }
-        stroke={"none"}
+        fill={"currentColor"}
       ></path>
     </svg>
   )
 }
 
-export default IconIcon
+export default ChecksvgIcon
 /* prettier-ignore-end */

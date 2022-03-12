@@ -22,7 +22,7 @@ import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_jeffdo_es.module.css" // plasmic-import: mujoL4gD3qd1ezKDLZ31rZ/projectcss
 import * as sty from "./PlasmicTag.module.css" // plasmic-import: lqv31eB-tK/css
 
-export const PlasmicTag__VariantProps = new Array("stroke")
+export const PlasmicTag__VariantProps = new Array("stroke", "flippabble")
 
 export const PlasmicTag__ArgProps = new Array("label")
 
@@ -51,6 +51,12 @@ function PlasmicTag__RenderFunc(props) {
             "dark"
           ),
 
+          [sty.rootflippabble]: hasVariant(
+            variants,
+            "flippabble",
+            "flippabble"
+          ),
+
           [sty.rootstroke]: hasVariant(variants, "stroke", "stroke"),
         }
       )}
@@ -69,7 +75,13 @@ function PlasmicTag__RenderFunc(props) {
         ),
 
         value: args.label,
-        className: classNames(sty.slotTargetLabel),
+        className: classNames(sty.slotTargetLabel, {
+          [sty.slotTargetLabelflippabble]: hasVariant(
+            variants,
+            "flippabble",
+            "flippabble"
+          ),
+        }),
       })}
     </div>
   )

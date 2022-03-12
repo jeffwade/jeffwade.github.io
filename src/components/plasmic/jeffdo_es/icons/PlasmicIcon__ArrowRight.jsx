@@ -5,7 +5,7 @@
 import React from "react"
 import { classNames } from "@plasmicapp/react-web"
 
-export function WiggleArrowIcon(props) {
+export function ArrowRightIcon(props) {
   const { className, style, title, ...restProps } = props
   return (
     <svg
@@ -33,5 +33,5 @@ export function WiggleArrowIcon(props) {
   )
 }
 
-export default WiggleArrowIcon
+export default ArrowRightIcon
 /* prettier-ignore-end */

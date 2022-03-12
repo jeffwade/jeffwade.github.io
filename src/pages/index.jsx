@@ -8,7 +8,7 @@ import { ArrangementContext } from "../components/plasmic/jeffdo_es/PlasmicGloba
 import { PlasmicHomepage } from "../components/plasmic/jeffdo_es/PlasmicHomepage"
 
 function Homepage() {
-  const [mode, setMode] = useState([])
+  const [mode, setMode] = useState(["dark"])
   const [showLabel, setShowLabel] = useState(true)
   const [highlight, setHighlight] = useState(undefined)
 

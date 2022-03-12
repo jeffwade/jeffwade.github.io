@@ -22,7 +22,7 @@ import { useMode } from "./PlasmicGlobalVariant__Mode" // plasmic-import: zulsK3
 import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_jeffdo_es.module.css" // plasmic-import: mujoL4gD3qd1ezKDLZ31rZ/projectcss
 import * as sty from "./PlasmicStripe.module.css" // plasmic-import: JaZPnDe4BQ/css
-import WiggleArrowIcon from "./icons/PlasmicIcon__WiggleArrow" // plasmic-import: iZuEl1jiaD/icon
+import ArrowRightIcon from "./icons/PlasmicIcon__ArrowRight" // plasmic-import: iZuEl1jiaD/icon
 
 export const PlasmicStripe__VariantProps = new Array(
   "color",
@@ -261,7 +261,7 @@ function PlasmicStripe__RenderFunc(props) {
         )
           ? p.renderPlasmicSlot({
               defaultContents: (
-                <WiggleArrowIcon
+                <ArrowRightIcon
                   className={classNames(projectcss.all, sty.svg__rm0Cy)}
                   role={"img"}
                 />

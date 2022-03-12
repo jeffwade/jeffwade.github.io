@@ -3,12 +3,11 @@
   flex-direction: row;
   position: relative;
   width: auto;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
-  background: var(--token-HCE3dosEr);
+  background: var(--token-kfE5AuMht);
   margin-right: 8px;
-  min-height: 0;
   border-radius: 1px;
   padding: var(--token-jA840K8cs) var(--token-2B3TB9Igd);
 }
@@ -16,6 +15,9 @@
   background: none;
   border-width: 1px;
   border-style: solid;
+}
+.rootflippabble {
+  background: var(--token-R8vy1i-sY);
 }
 .slotTargetLabel {
   font-size: var(--token-l-9eGbyVG);
@@ -25,7 +27,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  color: var(--token-3F-Dll6EN);
+  color: var(--token-HCE3dosEr);
   font-size: var(--token-l-9eGbyVG);
   min-width: 0;
 }
