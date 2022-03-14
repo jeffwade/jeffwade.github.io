@@ -34,8 +34,8 @@ import TwentytwoIcon from "./icons/PlasmicIcon__Twentytwo" // plasmic-import: 4v
 import ArrowRightIcon from "./icons/PlasmicIcon__ArrowRight" // plasmic-import: iZuEl1jiaD/icon
 import FaceIcon from "./icons/PlasmicIcon__Face" // plasmic-import: BZoH_3Sy18/icon
 import InfoIcon from "./icons/PlasmicIcon__Info" // plasmic-import: 5Sy2g4y6V/icon
+import PaintIcon from "./icons/PlasmicIcon__Paint" // plasmic-import: iy4A9uBWD/icon
 import MapIcon from "./icons/PlasmicIcon__Map" // plasmic-import: i-ZGrNlsT/icon
-import OrgtreeIcon from "./icons/PlasmicIcon__Orgtree" // plasmic-import: j92l7Cm_Yv/icon
 import LearnaxIcon from "./icons/PlasmicIcon__Learnax" // plasmic-import: PH_4kYBwV/icon
 import SprintsIcon from "./icons/PlasmicIcon__Sprints" // plasmic-import: 0hscHUcbO/icon
 import TrackIcon from "./icons/PlasmicIcon__Track" // plasmic-import: GuFQhLpY5/icon
@@ -519,29 +519,29 @@ function PlasmicHomepage__RenderFunc(props) {
           />
 
           <Stripe
-            data-plasmic-name={"brandtool"}
-            data-plasmic-override={overrides.brandtool}
+            data-plasmic-name={"ui"}
+            data-plasmic-override={overrides.ui}
             category={"work"}
-            className={classNames("__wab_instance", sty.brandtool, {
-              [sty.brandtoolglobal_arrangement_float]: hasVariant(
+            className={classNames("__wab_instance", sty.ui, {
+              [sty.uiglobal_arrangement_float]: hasVariant(
                 globalVariants,
                 "arrangement",
                 "float"
               ),
 
-              [sty.brandtoolglobal_highlight_about]: hasVariant(
+              [sty.uiglobal_highlight_about]: hasVariant(
                 globalVariants,
                 "highlight",
                 "about"
               ),
 
-              [sty.brandtoolglobal_highlight_work]: hasVariant(
+              [sty.uiglobal_highlight_work]: hasVariant(
                 globalVariants,
                 "highlight",
                 "work"
               ),
 
-              [sty.brandtoolglobal_mode_reveal]: hasVariant(
+              [sty.uiglobal_mode_reveal]: hasVariant(
                 globalVariants,
                 "mode",
                 "reveal"
@@ -552,50 +552,50 @@ function PlasmicHomepage__RenderFunc(props) {
               hasVariant(globalVariants, "highlight", "work") ? true : undefined
             }
             icon={
-              <MapIcon
+              <PaintIcon
                 className={classNames(projectcss.all, sty.svg__laIzF)}
                 role={"img"}
               />
             }
-            label={"brand navigator"}
+            label={"ui design"}
             lowlighted={
               hasVariant(globalVariants, "highlight", "about")
                 ? true
                 : undefined
             }
-            name={"brandtool"}
+            name={"ui"}
           />
 
           <Stripe
-            data-plasmic-name={"orgtool"}
-            data-plasmic-override={overrides.orgtool}
+            data-plasmic-name={"ux"}
+            data-plasmic-override={overrides.ux}
             category={"work"}
-            className={classNames("__wab_instance", sty.orgtool, {
-              [sty.orgtoolglobal_arrangement_float]: hasVariant(
+            className={classNames("__wab_instance", sty.ux, {
+              [sty.uxglobal_arrangement_float]: hasVariant(
                 globalVariants,
                 "arrangement",
                 "float"
               ),
 
-              [sty.orgtoolglobal_highlight_about]: hasVariant(
+              [sty.uxglobal_highlight_about]: hasVariant(
                 globalVariants,
                 "highlight",
                 "about"
               ),
 
-              [sty.orgtoolglobal_highlight_work]: hasVariant(
+              [sty.uxglobal_highlight_work]: hasVariant(
                 globalVariants,
                 "highlight",
                 "work"
               ),
 
-              [sty.orgtoolglobal_mode_dark]: hasVariant(
+              [sty.uxglobal_mode_dark]: hasVariant(
                 globalVariants,
                 "mode",
                 "dark"
               ),
 
-              [sty.orgtoolglobal_mode_reveal]: hasVariant(
+              [sty.uxglobal_mode_reveal]: hasVariant(
                 globalVariants,
                 "mode",
                 "reveal"
@@ -606,7 +606,7 @@ function PlasmicHomepage__RenderFunc(props) {
               hasVariant(globalVariants, "highlight", "work") ? true : undefined
             }
             icon={
-              <OrgtreeIcon
+              <MapIcon
                 className={classNames(projectcss.all, sty.svg__ff02)}
                 role={"img"}
               />
@@ -620,7 +620,7 @@ function PlasmicHomepage__RenderFunc(props) {
                     sty.text__raQdW
                   )}
                 >
-                  {"org-design tool"}
+                  {"ux design"}
                 </div>
               ) : null
             }
@@ -629,7 +629,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 ? true
                 : undefined
             }
-            name={"orgtool"}
+            name={"ux"}
           />
 
           <Stripe
@@ -681,29 +681,35 @@ function PlasmicHomepage__RenderFunc(props) {
           />
 
           <Stripe
-            data-plasmic-name={"sprints"}
-            data-plasmic-override={overrides.sprints}
+            data-plasmic-name={"service"}
+            data-plasmic-override={overrides.service}
             category={"work"}
-            className={classNames("__wab_instance", sty.sprints, {
-              [sty.sprintsglobal_arrangement_float]: hasVariant(
+            className={classNames("__wab_instance", sty.service, {
+              [sty.serviceglobal_arrangement_float]: hasVariant(
                 globalVariants,
                 "arrangement",
                 "float"
               ),
 
-              [sty.sprintsglobal_highlight_about]: hasVariant(
+              [sty.serviceglobal_highlight_about]: hasVariant(
                 globalVariants,
                 "highlight",
                 "about"
               ),
 
-              [sty.sprintsglobal_highlight_work]: hasVariant(
+              [sty.serviceglobal_highlight_work]: hasVariant(
                 globalVariants,
                 "highlight",
                 "work"
               ),
 
-              [sty.sprintsglobal_mode_reveal]: hasVariant(
+              [sty.serviceglobal_mode_dark]: hasVariant(
+                globalVariants,
+                "mode",
+                "dark"
+              ),
+
+              [sty.serviceglobal_mode_reveal]: hasVariant(
                 globalVariants,
                 "mode",
                 "reveal"
@@ -720,16 +726,29 @@ function PlasmicHomepage__RenderFunc(props) {
               />
             }
             label={
-              hasVariant(globalVariants, "highlight", "work")
-                ? "workshops"
-                : "sprints & workshops"
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__e0Mp7,
+                  {
+                    [sty.textglobal_highlight_work__e0Mp7JCUoz]: hasVariant(
+                      globalVariants,
+                      "highlight",
+                      "work"
+                    ),
+                  }
+                )}
+              >
+                {"service design"}
+              </div>
             }
             lowlighted={
               hasVariant(globalVariants, "highlight", "about")
                 ? true
                 : undefined
             }
-            name={"sprints"}
+            name={"service"}
           />
 
           <Stripe
@@ -981,10 +1000,10 @@ const PlasmicDescendants = {
     "headline",
     "design",
     "jeff",
-    "brandtool",
-    "orgtool",
+    "ui",
+    "ux",
     "learnin",
-    "sprints",
+    "service",
     "tracks",
     "nav",
     "reveal",
@@ -1001,10 +1020,10 @@ const PlasmicDescendants = {
   headline: ["headline", "design", "jeff"],
   design: ["design"],
   jeff: ["jeff"],
-  brandtool: ["brandtool"],
-  orgtool: ["orgtool"],
+  ui: ["ui"],
+  ux: ["ux"],
   learnin: ["learnin"],
-  sprints: ["sprints"],
+  service: ["service"],
   tracks: ["tracks"],
   nav: ["nav", "reveal", "home", "logo", "darkmode"],
   reveal: ["reveal"],
@@ -1050,10 +1069,10 @@ export const PlasmicHomepage = Object.assign(
     headline: makeNodeComponent("headline"),
     design: makeNodeComponent("design"),
     jeff: makeNodeComponent("jeff"),
-    brandtool: makeNodeComponent("brandtool"),
-    orgtool: makeNodeComponent("orgtool"),
+    ui: makeNodeComponent("ui"),
+    ux: makeNodeComponent("ux"),
     learnin: makeNodeComponent("learnin"),
-    sprints: makeNodeComponent("sprints"),
+    service: makeNodeComponent("service"),
     tracks: makeNodeComponent("tracks"),
     nav: makeNodeComponent("nav"),
     reveal: makeNodeComponent("reveal"),

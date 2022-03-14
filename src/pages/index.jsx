@@ -9,7 +9,8 @@ import { PlasmicHomepage } from "../components/plasmic/jeffdo_es/PlasmicHomepage
 
 function Homepage() {
   const [mode, setMode] = useState(["dark"])
-  const [showLabel, setShowLabel] = useState(true)
+  const [reveal, setReveal] = useState(true)
+  const [prevReveal, setPrevReveal] = useState(reveal)
   const [highlight, setHighlight] = useState(undefined)
 
   const toggleDarkMode = () => {
@@ -23,29 +24,54 @@ function Homepage() {
   }
 
   const toggleHighlight = cat => {
-    switch (cat) {
-      case "about":
-        setHighlight("about")
-        break
-      case "work":
-        setHighlight("work")
-        break
-      default:
-        setHighlight(undefined)
+    let hl = highlight
+    const newMode = [...mode]
+
+    if (hl === cat) {
+      setHighlight(undefined)
+      if (prevReveal && !newMode.includes("reveal")) {
+        newMode.push("reveal")
+      } else if (!prevReveal && newMode.includes("reveal")) {
+        newMode.pop()
+      }
+      setReveal(prevReveal)
+
+    } else {
+      setPrevReveal(reveal)
+      switch (cat) {
+        case "about":
+          setHighlight("about")
+          if (!mode.includes("reveal")) {
+            newMode.push("reveal")
+            setReveal(true)
+          }
+          break
+        case "work":
+          setHighlight("work")
+          if (!mode.includes("reveal")) {
+            newMode.push("reveal")
+            setReveal(true)
+          }
+          break
+        default:
+          setHighlight(undefined)
+      }
     }
+    setMode(newMode)
   }
 
   const toggleReveal = () => {
     const newMode = [...mode]
     if (newMode.includes("reveal")) {
       newMode.pop()
-      setShowLabel(true)
+      setReveal(false)
+      setPrevReveal(false)
     } else {
       newMode.push("reveal")
-      setShowLabel(false)
+      setReveal(true)
+      setPrevReveal(true)
     }
     setMode(newMode)
-    document.body.focus()
   }
 
   return (
@@ -53,13 +79,14 @@ function Homepage() {
       <HighlightContext.Provider value={highlight}>
         <ArrangementContext.Provider value={undefined}>
           <PlasmicHomepage
+            // onClick={( highlight !== undefined ) && ( () => toggleHighlight() )}
             jeff={{
-              onFocus: () => toggleHighlight("about"),
-              onBlur: () => toggleHighlight(),
+              onClick: () => toggleHighlight("about"),
+              label: highlight === "about" ? "* reset" : "* about jeff",
             }}
             design={{
-              onFocus: () => toggleHighlight("work"),
-              onBlur: () => toggleHighlight(),
+              onClick: () => toggleHighlight("work"),
+              label: highlight === "work" ? "* reset" : "† product design",
             }}
             reveal={{
               onClick: () => toggleReveal(),
@@ -68,25 +95,25 @@ function Homepage() {
               onClick: () => toggleDarkMode(),
             }}
             likeness={{
-              labelIsVisible: showLabel,
+              labelIsVisible: reveal,
             }}
             words={{
-              labelIsVisible: showLabel,
+              labelIsVisible: reveal,
             }}
-            brandtool={{
-              labelIsVisible: showLabel,
+            ui={{
+              labelIsVisible: reveal,
             }}
-            orgtool={{
-              labelIsVisible: showLabel,
+            ux={{
+              labelIsVisible: reveal,
             }}
             learnin={{
-              labelIsVisible: showLabel,
+              labelIsVisible: reveal,
             }}
-            sprints={{
-              labelIsVisible: showLabel,
+            service={{
+              labelIsVisible: reveal,
             }}
             tracks={{
-              labelIsVisible: showLabel,
+              labelIsVisible: reveal,
             }}
           />
         </ArrangementContext.Provider>

@@ -31,6 +31,16 @@
       }
     },
     {
+      "name": "base-font-150",
+      "type": "fontsize",
+      "value": "1.5rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "HFErqa_jH"
+      }
+    },
+    {
       "name": "base-font-size",
       "type": "fontsize",
       "value": "1rem",
@@ -101,6 +111,16 @@
       }
     },
     {
+      "name": "case study title",
+      "type": "fontsize",
+      "value": "4rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "t636xv2AQ"
+      }
+    },
+    {
       "name": "dark-mint",
       "type": "color",
       "value": "#1D7B75",
@@ -118,6 +138,16 @@
       "meta": {
         "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
         "id": "T237bDoLkZ"
+      }
+    },
+    {
+      "name": "double-font-size",
+      "type": "fontsize",
+      "value": "2rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+        "id": "OLqLhQML_"
       }
     },
     {

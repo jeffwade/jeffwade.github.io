@@ -64,21 +64,21 @@ function PlasmicPreview__RenderFunc(props) {
             "dark"
           ),
 
-          [sty.rootname_brandtool]: hasVariant(variants, "name", "brandtool"),
           [sty.rootname_learnin]: hasVariant(variants, "name", "learnin"),
           [sty.rootname_likeness]: hasVariant(variants, "name", "likeness"),
-          [sty.rootname_orgtool]: hasVariant(variants, "name", "orgtool"),
-          [sty.rootname_sprints]: hasVariant(variants, "name", "sprints"),
+          [sty.rootname_service]: hasVariant(variants, "name", "service"),
           [sty.rootname_tracks]: hasVariant(variants, "name", "tracks"),
+          [sty.rootname_ui]: hasVariant(variants, "name", "ui"),
+          [sty.rootname_ux]: hasVariant(variants, "name", "ux"),
           [sty.rootname_words]: hasVariant(variants, "name", "words"),
         }
       )}
       id={hasVariant(variants, "name", "tracks") ? "contact" : undefined}
     >
       {(
-        hasVariant(variants, "name", "orgtool")
+        hasVariant(variants, "name", "ux")
           ? true
-          : hasVariant(variants, "name", "brandtool")
+          : hasVariant(variants, "name", "ui")
           ? true
           : hasVariant(variants, "name", "words")
           ? true
@@ -90,14 +90,9 @@ function PlasmicPreview__RenderFunc(props) {
           data-plasmic-name={"words"}
           data-plasmic-override={overrides.words}
           className={classNames(projectcss.all, sty.words, {
-            [sty.wordsname_brandtool]: hasVariant(
-              variants,
-              "name",
-              "brandtool"
-            ),
-
             [sty.wordsname_likeness]: hasVariant(variants, "name", "likeness"),
-            [sty.wordsname_orgtool]: hasVariant(variants, "name", "orgtool"),
+            [sty.wordsname_ui]: hasVariant(variants, "name", "ui"),
+            [sty.wordsname_ux]: hasVariant(variants, "name", "ux"),
             [sty.wordsname_words]: hasVariant(variants, "name", "words"),
           })}
         >
@@ -111,7 +106,7 @@ function PlasmicPreview__RenderFunc(props) {
                     sty.text__tUkGt
                   )}
                 >
-                  {"only a few, 'cause i'm not a fan of using many."}
+                  {"only a few. i'm not a fan of using a lot."}
                 </div>
 
                 <div
@@ -157,7 +152,7 @@ function PlasmicPreview__RenderFunc(props) {
                     sty.text__jmRsy
                   )}
                 >
-                  {"i'm a fan of that."}
+                  {"i am a fan of that."}
                 </div>
               </React.Fragment>
             ),
@@ -169,11 +164,11 @@ function PlasmicPreview__RenderFunc(props) {
       {(
         hasVariant(variants, "name", "tracks")
           ? true
-          : hasVariant(variants, "name", "sprints")
+          : hasVariant(variants, "name", "service")
           ? true
-          : hasVariant(variants, "name", "orgtool")
+          : hasVariant(variants, "name", "ux")
           ? true
-          : hasVariant(variants, "name", "brandtool")
+          : hasVariant(variants, "name", "ui")
           ? true
           : hasVariant(variants, "name", "learnin")
           ? true
@@ -186,12 +181,6 @@ function PlasmicPreview__RenderFunc(props) {
           data-plasmic-override={overrides.likeness}
           alt={""}
           className={classNames(sty.likeness, {
-            [sty.likenessname_brandtool]: hasVariant(
-              variants,
-              "name",
-              "brandtool"
-            ),
-
             [sty.likenessname_learnin]: hasVariant(variants, "name", "learnin"),
             [sty.likenessname_likeness]: hasVariant(
               variants,
@@ -199,9 +188,10 @@ function PlasmicPreview__RenderFunc(props) {
               "likeness"
             ),
 
-            [sty.likenessname_orgtool]: hasVariant(variants, "name", "orgtool"),
-            [sty.likenessname_sprints]: hasVariant(variants, "name", "sprints"),
+            [sty.likenessname_service]: hasVariant(variants, "name", "service"),
             [sty.likenessname_tracks]: hasVariant(variants, "name", "tracks"),
+            [sty.likenessname_ui]: hasVariant(variants, "name", "ui"),
+            [sty.likenessname_ux]: hasVariant(variants, "name", "ux"),
             [sty.likenessname_words]: hasVariant(variants, "name", "words"),
           })}
           displayHeight={"auto"}
@@ -219,59 +209,76 @@ function PlasmicPreview__RenderFunc(props) {
           }}
         />
       ) : null}
-      {(hasVariant(variants, "name", "orgtool") ? true : true) ? (
+      {(hasVariant(variants, "name", "ux") ? true : true) ? (
         <p.Stack
           as={"div"}
           data-plasmic-name={"orgtool"}
           data-plasmic-override={overrides.orgtool}
           hasGap={true}
           className={classNames(projectcss.all, sty.orgtool, {
-            [sty.orgtoolname_orgtool]: hasVariant(variants, "name", "orgtool"),
+            [sty.orgtoolname_ux]: hasVariant(variants, "name", "ux"),
           })}
         >
           <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__vluzm,
+              {
+                [sty.textname_ux__vluzmMi7Gi]: hasVariant(
+                  variants,
+                  "name",
+                  "ux"
+                ),
+              }
+            )}
+          >
+            {"centering people in all i create"}
+          </div>
+
+          <div
             className={classNames(projectcss.all, sty.columns__fKfqK, {
-              [sty.columnsname_brandtool__fKfqK02Dcx]: hasVariant(
+              [sty.columnsname_ui__fKfqK02Dcx]: hasVariant(
                 variants,
                 "name",
-                "brandtool"
+                "ui"
               ),
 
-              [sty.columnsname_orgtool__fKfqKmi7Gi]: hasVariant(
+              [sty.columnsname_ux__fKfqKmi7Gi]: hasVariant(
                 variants,
                 "name",
-                "orgtool"
+                "ux"
               ),
             })}
           >
             {(
-              hasVariant(variants, "name", "orgtool")
+              hasVariant(variants, "name", "ux")
                 ? true
-                : hasVariant(variants, "name", "brandtool")
+                : hasVariant(variants, "name", "ui")
                 ? true
                 : true
             ) ? (
               <div
                 className={classNames(projectcss.all, sty.column__czaT, {
-                  [sty.columnname_brandtool__czaT02Dcx]: hasVariant(
+                  [sty.columnname_ui__czaT02Dcx]: hasVariant(
                     variants,
                     "name",
-                    "brandtool"
+                    "ui"
                   ),
 
-                  [sty.columnname_orgtool__czaTmi7Gi]: hasVariant(
+                  [sty.columnname_ux__czaTmi7Gi]: hasVariant(
                     variants,
                     "name",
-                    "orgtool"
+                    "ux"
                   ),
                 })}
               >
                 <Tag
                   className={classNames("__wab_instance", sty.tag__jlXbo, {
-                    [sty.tagname_orgtool__jlXbomi7Gi]: hasVariant(
+                    [sty.tagname_ux__jlXbomi7Gi]: hasVariant(
                       variants,
                       "name",
-                      "orgtool"
+                      "ux"
                     ),
                   })}
                   label={
@@ -282,40 +289,72 @@ function PlasmicPreview__RenderFunc(props) {
                         sty.text__oMpwN
                       )}
                     >
-                      {"ux research"}
+                      {"user research"}
+                    </div>
+                  }
+                />
+              </div>
+            ) : null}
+            {(hasVariant(variants, "name", "ux") ? true : true) ? (
+              <div
+                className={classNames(projectcss.all, sty.column__vlSb0, {
+                  [sty.columnname_ux__vlSb0Mi7Gi]: hasVariant(
+                    variants,
+                    "name",
+                    "ux"
+                  ),
+                })}
+              >
+                <Tag
+                  className={classNames("__wab_instance", sty.tag___3Z4Ni, {
+                    [sty.tagname_ux___3Z4NiMi7Gi]: hasVariant(
+                      variants,
+                      "name",
+                      "ux"
+                    ),
+                  })}
+                  label={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qHpmv
+                      )}
+                    >
+                      {"user testing"}
                     </div>
                   }
                 />
               </div>
             ) : null}
             {(
-              hasVariant(variants, "name", "orgtool")
+              hasVariant(variants, "name", "ux")
                 ? true
-                : hasVariant(variants, "name", "brandtool")
+                : hasVariant(variants, "name", "ui")
                 ? true
                 : true
             ) ? (
               <div
                 className={classNames(projectcss.all, sty.column__ltGx2, {
-                  [sty.columnname_brandtool__ltGx202Dcx]: hasVariant(
+                  [sty.columnname_ui__ltGx202Dcx]: hasVariant(
                     variants,
                     "name",
-                    "brandtool"
+                    "ui"
                   ),
 
-                  [sty.columnname_orgtool__ltGx2Mi7Gi]: hasVariant(
+                  [sty.columnname_ux__ltGx2Mi7Gi]: hasVariant(
                     variants,
                     "name",
-                    "orgtool"
+                    "ux"
                   ),
                 })}
               >
                 <Tag
                   className={classNames("__wab_instance", sty.tag___80Bgw, {
-                    [sty.tagname_orgtool___80BgwMi7Gi]: hasVariant(
+                    [sty.tagname_ux___80BgwMi7Gi]: hasVariant(
                       variants,
                       "name",
-                      "orgtool"
+                      "ux"
                     ),
                   })}
                   label={
@@ -326,52 +365,12 @@ function PlasmicPreview__RenderFunc(props) {
                         sty.text__eJah
                       )}
                     >
-                      {"agile workflow"}
-                    </div>
-                  }
-                />
-
-                <Tag
-                  className={classNames("__wab_instance", sty.tag__vtN2U, {
-                    [sty.tagname_orgtool__vtN2UMi7Gi]: hasVariant(
-                      variants,
-                      "name",
-                      "orgtool"
-                    ),
-                  })}
-                  label={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__elYh9
-                      )}
-                    >
-                      {"ux/ui design"}
+                      {"information architecture"}
                     </div>
                   }
                 />
               </div>
             ) : null}
-          </div>
-
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__vluzm,
-              {
-                [sty.textname_orgtool__vluzmMi7Gi]: hasVariant(
-                  variants,
-                  "name",
-                  "orgtool"
-                ),
-              }
-            )}
-          >
-            {
-              "robust organizational structure-mapping and transformation planning for enterprise clients"
-            }
           </div>
         </p.Stack>
       ) : null}
@@ -816,9 +815,9 @@ function PlasmicPreview__RenderFunc(props) {
         </div>
       ) : null}
       {(
-        hasVariant(variants, "name", "sprints")
+        hasVariant(variants, "name", "service")
           ? true
-          : hasVariant(variants, "name", "orgtool")
+          : hasVariant(variants, "name", "ux")
           ? true
           : false
       ) ? (
@@ -828,67 +827,90 @@ function PlasmicPreview__RenderFunc(props) {
           data-plasmic-override={overrides.sprints}
           hasGap={true}
           className={classNames(projectcss.all, sty.sprints, {
-            [sty.sprintsname_orgtool]: hasVariant(variants, "name", "orgtool"),
-            [sty.sprintsname_sprints]: hasVariant(variants, "name", "sprints"),
+            [sty.sprintsname_service]: hasVariant(variants, "name", "service"),
+            [sty.sprintsname_ux]: hasVariant(variants, "name", "ux"),
           })}
         >
           <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__jtaLp,
+              {
+                [sty.textname_service__jtaLp9XxcC]: hasVariant(
+                  variants,
+                  "name",
+                  "service"
+                ),
+
+                [sty.textname_ux__jtaLpMi7Gi]: hasVariant(
+                  variants,
+                  "name",
+                  "ux"
+                ),
+              }
+            )}
+          >
+            {"taking a holistic, end-to-end approach "}
+          </div>
+
+          <div
             className={classNames(projectcss.all, sty.columns__chWye, {
-              [sty.columnsname_brandtool__chWye02Dcx]: hasVariant(
+              [sty.columnsname_service__chWye9XxcC]: hasVariant(
                 variants,
                 "name",
-                "brandtool"
+                "service"
               ),
 
-              [sty.columnsname_orgtool__chWyeMi7Gi]: hasVariant(
+              [sty.columnsname_ui__chWye02Dcx]: hasVariant(
                 variants,
                 "name",
-                "orgtool"
+                "ui"
               ),
 
-              [sty.columnsname_sprints__chWye9XxcC]: hasVariant(
+              [sty.columnsname_ux__chWyeMi7Gi]: hasVariant(
                 variants,
                 "name",
-                "sprints"
+                "ux"
               ),
             })}
           >
             {(
-              hasVariant(variants, "name", "sprints")
+              hasVariant(variants, "name", "service")
                 ? true
-                : hasVariant(variants, "name", "orgtool")
+                : hasVariant(variants, "name", "ux")
                 ? true
-                : hasVariant(variants, "name", "brandtool")
+                : hasVariant(variants, "name", "ui")
                 ? true
                 : true
             ) ? (
               <div
                 className={classNames(projectcss.all, sty.column__uozKt, {
-                  [sty.columnname_brandtool__uozKt02Dcx]: hasVariant(
+                  [sty.columnname_service__uozKt9XxcC]: hasVariant(
                     variants,
                     "name",
-                    "brandtool"
+                    "service"
                   ),
 
-                  [sty.columnname_orgtool__uozKtMi7Gi]: hasVariant(
+                  [sty.columnname_ui__uozKt02Dcx]: hasVariant(
                     variants,
                     "name",
-                    "orgtool"
+                    "ui"
                   ),
 
-                  [sty.columnname_sprints__uozKt9XxcC]: hasVariant(
+                  [sty.columnname_ux__uozKtMi7Gi]: hasVariant(
                     variants,
                     "name",
-                    "sprints"
+                    "ux"
                   ),
                 })}
               >
                 <Tag
                   className={classNames("__wab_instance", sty.tag__nAeA4, {
-                    [sty.tagname_orgtool__nAeA4Mi7Gi]: hasVariant(
+                    [sty.tagname_ux__nAeA4Mi7Gi]: hasVariant(
                       variants,
                       "name",
-                      "orgtool"
+                      "ux"
                     ),
                   })}
                   flippabble={true}
@@ -900,48 +922,48 @@ function PlasmicPreview__RenderFunc(props) {
                         sty.text__oOtr7
                       )}
                     >
-                      {"facilitation"}
+                      {"workshop facilitation"}
                     </div>
                   }
                 />
               </div>
             ) : null}
             {(
-              hasVariant(variants, "name", "sprints")
+              hasVariant(variants, "name", "service")
                 ? true
-                : hasVariant(variants, "name", "orgtool")
+                : hasVariant(variants, "name", "ux")
                 ? true
-                : hasVariant(variants, "name", "brandtool")
+                : hasVariant(variants, "name", "ui")
                 ? true
                 : true
             ) ? (
               <div
                 className={classNames(projectcss.all, sty.column__hg2Hk, {
-                  [sty.columnname_brandtool__hg2Hk02Dcx]: hasVariant(
+                  [sty.columnname_service__hg2Hk9XxcC]: hasVariant(
                     variants,
                     "name",
-                    "brandtool"
+                    "service"
                   ),
 
-                  [sty.columnname_orgtool__hg2Hkmi7Gi]: hasVariant(
+                  [sty.columnname_ui__hg2Hk02Dcx]: hasVariant(
                     variants,
                     "name",
-                    "orgtool"
+                    "ui"
                   ),
 
-                  [sty.columnname_sprints__hg2Hk9XxcC]: hasVariant(
+                  [sty.columnname_ux__hg2Hkmi7Gi]: hasVariant(
                     variants,
                     "name",
-                    "sprints"
+                    "ux"
                   ),
                 })}
               >
                 <Tag
                   className={classNames("__wab_instance", sty.tag__c7IVv, {
-                    [sty.tagname_orgtool__c7IVvMi7Gi]: hasVariant(
+                    [sty.tagname_ux__c7IVvMi7Gi]: hasVariant(
                       variants,
                       "name",
-                      "orgtool"
+                      "ux"
                     ),
                   })}
                   flippabble={true}
@@ -953,48 +975,48 @@ function PlasmicPreview__RenderFunc(props) {
                         sty.text__v9MUp
                       )}
                     >
-                      {"prototyping"}
+                      {"personas + \njourney mapping"}
                     </div>
                   }
                 />
               </div>
             ) : null}
             {(
-              hasVariant(variants, "name", "sprints")
+              hasVariant(variants, "name", "service")
                 ? true
-                : hasVariant(variants, "name", "orgtool")
+                : hasVariant(variants, "name", "ux")
                 ? true
-                : hasVariant(variants, "name", "brandtool")
+                : hasVariant(variants, "name", "ui")
                 ? true
                 : true
             ) ? (
               <div
                 className={classNames(projectcss.all, sty.column__kcC5, {
-                  [sty.columnname_brandtool__kcC502Dcx]: hasVariant(
+                  [sty.columnname_service__kcC59XxcC]: hasVariant(
                     variants,
                     "name",
-                    "brandtool"
+                    "service"
                   ),
 
-                  [sty.columnname_orgtool__kcC5Mi7Gi]: hasVariant(
+                  [sty.columnname_ui__kcC502Dcx]: hasVariant(
                     variants,
                     "name",
-                    "orgtool"
+                    "ui"
                   ),
 
-                  [sty.columnname_sprints__kcC59XxcC]: hasVariant(
+                  [sty.columnname_ux__kcC5Mi7Gi]: hasVariant(
                     variants,
                     "name",
-                    "sprints"
+                    "ux"
                   ),
                 })}
               >
                 <Tag
                   className={classNames("__wab_instance", sty.tag__v3NoT, {
-                    [sty.tagname_orgtool__v3NoTmi7Gi]: hasVariant(
+                    [sty.tagname_ux__v3NoTmi7Gi]: hasVariant(
                       variants,
                       "name",
-                      "orgtool"
+                      "ux"
                     ),
                   })}
                   flippabble={true}
@@ -1006,44 +1028,19 @@ function PlasmicPreview__RenderFunc(props) {
                         sty.text__oTmx5
                       )}
                     >
-                      {"user testing"}
+                      {"agile development"}
                     </div>
                   }
                 />
               </div>
             ) : null}
           </div>
-
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__jtaLp,
-              {
-                [sty.textname_orgtool__jtaLpMi7Gi]: hasVariant(
-                  variants,
-                  "name",
-                  "orgtool"
-                ),
-
-                [sty.textname_sprints__jtaLp9XxcC]: hasVariant(
-                  variants,
-                  "name",
-                  "sprints"
-                ),
-              }
-            )}
-          >
-            {
-              "robust organizational structure-mapping and team planning for enterprise clients"
-            }
-          </div>
         </p.Stack>
       ) : null}
       {(
-        hasVariant(variants, "name", "orgtool")
+        hasVariant(variants, "name", "ux")
           ? true
-          : hasVariant(variants, "name", "brandtool")
+          : hasVariant(variants, "name", "ui")
           ? true
           : false
       ) ? (
@@ -1053,68 +1050,84 @@ function PlasmicPreview__RenderFunc(props) {
           data-plasmic-override={overrides.brandtool}
           hasGap={true}
           className={classNames(projectcss.all, sty.brandtool, {
-            [sty.brandtoolname_brandtool]: hasVariant(
-              variants,
-              "name",
-              "brandtool"
-            ),
-
-            [sty.brandtoolname_orgtool]: hasVariant(
-              variants,
-              "name",
-              "orgtool"
-            ),
+            [sty.brandtoolname_ui]: hasVariant(variants, "name", "ui"),
+            [sty.brandtoolname_ux]: hasVariant(variants, "name", "ux"),
           })}
         >
           <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__yFoO8,
+              {
+                [sty.textname_ui__yFoO802Dcx]: hasVariant(
+                  variants,
+                  "name",
+                  "ui"
+                ),
+
+                [sty.textname_ux__yFoO8Mi7Gi]: hasVariant(
+                  variants,
+                  "name",
+                  "ux"
+                ),
+              }
+            )}
+          >
+            {hasVariant(variants, "name", "ui")
+              ? "making products look good."
+              : "robust organizational structure-mapping and transformation planning for enterprise clients"}
+          </div>
+
+          <div
             className={classNames(projectcss.all, sty.columns__gt8Ac, {
-              [sty.columnsname_brandtool__gt8Ac02Dcx]: hasVariant(
+              [sty.columnsname_ui__gt8Ac02Dcx]: hasVariant(
                 variants,
                 "name",
-                "brandtool"
+                "ui"
               ),
 
-              [sty.columnsname_orgtool__gt8Acmi7Gi]: hasVariant(
+              [sty.columnsname_ux__gt8Acmi7Gi]: hasVariant(
                 variants,
                 "name",
-                "orgtool"
+                "ux"
               ),
             })}
           >
             {(
-              hasVariant(variants, "name", "orgtool")
+              hasVariant(variants, "name", "ux")
                 ? true
-                : hasVariant(variants, "name", "brandtool")
+                : hasVariant(variants, "name", "ui")
                 ? true
                 : true
             ) ? (
               <div
                 className={classNames(projectcss.all, sty.column__pc6K5, {
-                  [sty.columnname_brandtool__pc6K502Dcx]: hasVariant(
+                  [sty.columnname_ui__pc6K502Dcx]: hasVariant(
                     variants,
                     "name",
-                    "brandtool"
+                    "ui"
                   ),
 
-                  [sty.columnname_orgtool__pc6K5Mi7Gi]: hasVariant(
+                  [sty.columnname_ux__pc6K5Mi7Gi]: hasVariant(
                     variants,
                     "name",
-                    "orgtool"
+                    "ux"
                   ),
                 })}
               >
                 <Tag
                   className={classNames("__wab_instance", sty.tag__aS62V, {
-                    [sty.tagname_brandtool__aS62V02Dcx]: hasVariant(
+                    [sty.tagname_ui__aS62V02Dcx]: hasVariant(
                       variants,
                       "name",
-                      "brandtool"
+                      "ui"
                     ),
 
-                    [sty.tagname_orgtool__aS62Vmi7Gi]: hasVariant(
+                    [sty.tagname_ux__aS62Vmi7Gi]: hasVariant(
                       variants,
                       "name",
-                      "orgtool"
+                      "ux"
                     ),
                   })}
                   label={
@@ -1124,16 +1137,16 @@ function PlasmicPreview__RenderFunc(props) {
                         projectcss.__wab_text,
                         sty.text__bjBvD,
                         {
-                          [sty.textname_brandtool__bjBvD02Dcx]: hasVariant(
+                          [sty.textname_ui__bjBvD02Dcx]: hasVariant(
                             variants,
                             "name",
-                            "brandtool"
+                            "ui"
                           ),
                         }
                       )}
                     >
-                      {hasVariant(variants, "name", "brandtool")
-                        ? "information design"
+                      {hasVariant(variants, "name", "ui")
+                        ? "design systems"
                         : "ux research"}
                     </div>
                   }
@@ -1141,39 +1154,39 @@ function PlasmicPreview__RenderFunc(props) {
               </div>
             ) : null}
             {(
-              hasVariant(variants, "name", "orgtool")
+              hasVariant(variants, "name", "ux")
                 ? true
-                : hasVariant(variants, "name", "brandtool")
+                : hasVariant(variants, "name", "ui")
                 ? true
                 : true
             ) ? (
               <div
                 className={classNames(projectcss.all, sty.column__rgUz1, {
-                  [sty.columnname_brandtool__rgUz102Dcx]: hasVariant(
+                  [sty.columnname_ui__rgUz102Dcx]: hasVariant(
                     variants,
                     "name",
-                    "brandtool"
+                    "ui"
                   ),
 
-                  [sty.columnname_orgtool__rgUz1Mi7Gi]: hasVariant(
+                  [sty.columnname_ux__rgUz1Mi7Gi]: hasVariant(
                     variants,
                     "name",
-                    "orgtool"
+                    "ux"
                   ),
                 })}
               >
                 <Tag
                   className={classNames("__wab_instance", sty.tag__bfqLc, {
-                    [sty.tagname_brandtool__bfqLc02Dcx]: hasVariant(
+                    [sty.tagname_ui__bfqLc02Dcx]: hasVariant(
                       variants,
                       "name",
-                      "brandtool"
+                      "ui"
                     ),
 
-                    [sty.tagname_orgtool__bfqLcmi7Gi]: hasVariant(
+                    [sty.tagname_ux__bfqLcmi7Gi]: hasVariant(
                       variants,
                       "name",
-                      "orgtool"
+                      "ux"
                     ),
                   })}
                   label={
@@ -1183,16 +1196,16 @@ function PlasmicPreview__RenderFunc(props) {
                         projectcss.__wab_text,
                         sty.text___4AXb2,
                         {
-                          [sty.textname_brandtool___4AXb202Dcx]: hasVariant(
+                          [sty.textname_ui___4AXb202Dcx]: hasVariant(
                             variants,
                             "name",
-                            "brandtool"
+                            "ui"
                           ),
                         }
                       )}
                     >
-                      {hasVariant(variants, "name", "brandtool")
-                        ? "micro-interactions"
+                      {hasVariant(variants, "name", "ui")
+                        ? "prototyping"
                         : "agile workflow"}
                     </div>
                   }
@@ -1200,39 +1213,39 @@ function PlasmicPreview__RenderFunc(props) {
               </div>
             ) : null}
             {(
-              hasVariant(variants, "name", "orgtool")
+              hasVariant(variants, "name", "ux")
                 ? true
-                : hasVariant(variants, "name", "brandtool")
+                : hasVariant(variants, "name", "ui")
                 ? true
                 : true
             ) ? (
               <div
                 className={classNames(projectcss.all, sty.column__xwus4, {
-                  [sty.columnname_brandtool__xwus402Dcx]: hasVariant(
+                  [sty.columnname_ui__xwus402Dcx]: hasVariant(
                     variants,
                     "name",
-                    "brandtool"
+                    "ui"
                   ),
 
-                  [sty.columnname_orgtool__xwus4Mi7Gi]: hasVariant(
+                  [sty.columnname_ux__xwus4Mi7Gi]: hasVariant(
                     variants,
                     "name",
-                    "orgtool"
+                    "ux"
                   ),
                 })}
               >
                 <Tag
                   className={classNames("__wab_instance", sty.tag__oB0D, {
-                    [sty.tagname_brandtool__oB0D02Dcx]: hasVariant(
+                    [sty.tagname_ui__oB0D02Dcx]: hasVariant(
                       variants,
                       "name",
-                      "brandtool"
+                      "ui"
                     ),
 
-                    [sty.tagname_orgtool__oB0DMi7Gi]: hasVariant(
+                    [sty.tagname_ux__oB0DMi7Gi]: hasVariant(
                       variants,
                       "name",
-                      "orgtool"
+                      "ux"
                     ),
                   })}
                   label={
@@ -1242,47 +1255,22 @@ function PlasmicPreview__RenderFunc(props) {
                         projectcss.__wab_text,
                         sty.text__c1Qk,
                         {
-                          [sty.textname_brandtool__c1Qk02Dcx]: hasVariant(
+                          [sty.textname_ui__c1Qk02Dcx]: hasVariant(
                             variants,
                             "name",
-                            "brandtool"
+                            "ui"
                           ),
                         }
                       )}
                     >
-                      {hasVariant(variants, "name", "brandtool")
-                        ? "design system"
+                      {hasVariant(variants, "name", "ui")
+                        ? "micro-interactions"
                         : "ux/ui design"}
                     </div>
                   }
                 />
               </div>
             ) : null}
-          </div>
-
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__yFoO8,
-              {
-                [sty.textname_brandtool__yFoO802Dcx]: hasVariant(
-                  variants,
-                  "name",
-                  "brandtool"
-                ),
-
-                [sty.textname_orgtool__yFoO8Mi7Gi]: hasVariant(
-                  variants,
-                  "name",
-                  "orgtool"
-                ),
-              }
-            )}
-          >
-            {hasVariant(variants, "name", "brandtool")
-              ? "helping global brand leaders discover, manage and implement brand assets consistently"
-              : "robust organizational structure-mapping and transformation planning for enterprise clients"}
           </div>
         </p.Stack>
       ) : null}

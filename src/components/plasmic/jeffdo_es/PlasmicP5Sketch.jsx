@@ -21,7 +21,7 @@ import { useMode } from "./PlasmicGlobalVariant__Mode" // plasmic-import: zulsK3
 import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_jeffdo_es.module.css" // plasmic-import: mujoL4gD3qd1ezKDLZ31rZ/projectcss
 import * as sty from "./PlasmicP5Sketch.module.css" // plasmic-import: ZbI4Qm1ePM/css
-import image8HsCguIpl from "./images/image.png" // plasmic-import: 8HSCguIpl/picture
+import mandigidala8HsCguIpl from "./images/mandigidala.png" // plasmic-import: 8HSCguIpl/picture
 
 export const PlasmicP5Sketch__VariantProps = new Array()
 
@@ -69,7 +69,7 @@ function PlasmicP5Sketch__RenderFunc(props) {
             displayWidth={"auto"}
             loading={"lazy"}
             src={{
-              src: image8HsCguIpl,
+              src: mandigidala8HsCguIpl,
               fullWidth: 1711,
               fullHeight: 1711,
               aspectRatio: undefined,

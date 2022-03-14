@@ -191,7 +191,7 @@
           "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
           "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicOrgTool.jsx",
           "importSpec": {
-            "modulePath": "../pages/remember/org-tool.jsx"
+            "modulePath": "../pages/remember/an-org-design-tool.jsx"
           },
           "cssFilePath": "plasmic/jeffdo_es/PlasmicOrgTool.module.css",
           "scheme": "blackbox",
@@ -210,6 +210,123 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "button"
+        },
+        {
+          "id": "9qnpA1HN2m",
+          "name": "BrandNavigator",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicBrandNavigator.jsx",
+          "importSpec": {
+            "modulePath": "../pages/remember/a-brand-navigator.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicBrandNavigator.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "tpGGTqAMcV",
+          "name": "Logistics",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicLogistics.jsx",
+          "importSpec": {
+            "modulePath": "../pages/remember/a-logistics-service.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicLogistics.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "aKFOcjoeGS",
+          "name": "CorporateSite",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicCorporateSite.jsx",
+          "importSpec": {
+            "modulePath": "../pages/remember/a-corporate-site.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicCorporateSite.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "MWrNArJlLj",
+          "name": "Facilitation",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicFacilitation.jsx",
+          "importSpec": {
+            "modulePath": "../pages/design-thinking-workshops.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicFacilitation.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "TUg6Mf9vnH",
+          "name": "Microapps",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicMicroapps.jsx",
+          "importSpec": {
+            "modulePath": "../pages/build-microapps.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicMicroapps.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "us8NkiEt0M",
+          "name": "CreativeCoding",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicCreativeCoding.jsx",
+          "importSpec": {
+            "modulePath": "../pages/creative-coding.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicCreativeCoding.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "LNRBt2aUzm",
+          "name": "_36DaysOfType",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/Plasmic_36DaysOfType.jsx",
+          "importSpec": {
+            "modulePath": "../pages/36-days-of-type.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/Plasmic_36DaysOfType.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "6NgyzpZAz-",
+          "name": "BackButton",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicBackButton.jsx",
+          "importSpec": {
+            "modulePath": "BackButton.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicBackButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "tThhXlSj4r",
+          "name": "Remember",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicRemember.jsx",
+          "importSpec": {
+            "modulePath": "../pages/remember.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicRemember.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -357,6 +474,16 @@
           "id": "4vkcnz2Ax",
           "name": "TwentytwoIcon",
           "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Twentytwo.jsx"
+        },
+        {
+          "id": "iy4A9uBWD",
+          "name": "PaintIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__Paint.jsx"
+        },
+        {
+          "id": "b3K-zpFY_4",
+          "name": "ArrowDownIcon",
+          "moduleFilePath": "plasmic/jeffdo_es/icons/PlasmicIcon__ArrowDown.jsx"
         }
       ],
       "images": [
@@ -367,8 +494,8 @@
         },
         {
           "id": "8HSCguIpl",
-          "name": "image",
-          "filePath": "plasmic/jeffdo_es/images/image.png"
+          "name": "mandigidala",
+          "filePath": "plasmic/jeffdo_es/images/mandigidala.png"
         },
         {
           "id": "9E8fl55ys",
@@ -379,6 +506,26 @@
           "id": "meo1PxVZ7",
           "name": "org-design",
           "filePath": "plasmic/jeffdo_es/images/orgDesign.png"
+        },
+        {
+          "id": "OgUr_0kDw",
+          "name": "orgtool-header",
+          "filePath": "plasmic/jeffdo_es/images/orgtoolHeader.png"
+        },
+        {
+          "id": "y3bRP8cp1",
+          "name": "orgtool-01.png",
+          "filePath": "plasmic/jeffdo_es/images/orgtool01Png.png"
+        },
+        {
+          "id": "O_V_r0nOy",
+          "name": "orgtool-03.png",
+          "filePath": "plasmic/jeffdo_es/images/orgtool03Png.png"
+        },
+        {
+          "id": "JIeMq-IOo",
+          "name": "orgtool-research.png",
+          "filePath": "plasmic/jeffdo_es/images/orgtoolResearchpng.png"
         }
       ],
       "indirect": false,

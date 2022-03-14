@@ -20,7 +20,7 @@ function Stripe_(props, ref) {
     ...rest
   } = props
   const [isHovered, setIsHovered] = useState(false)
-  const isBrowser = typeof window !== "undefined";
+  const isBrowser = typeof window !== "undefined"
   const mousePosition = useMousePosition()
   const [mobile, setMobile] = useState(undefined)
 
@@ -42,13 +42,13 @@ function Stripe_(props, ref) {
   }
 
   if (isBrowser) {
-    if (!mobile) {
+    if (!mobile && isHovered) {
       if (mousePosition.x > window.innerWidth / 2) {
         labelStyles["left"] = "auto"
-        labelStyles["right"] = window.innerWidth - mousePosition.x + 15
+        labelStyles["right"] = window.innerWidth - mousePosition.x + 5
         labelStyles["flexDirection"] = "row-reverse"
       } else {
-        labelStyles["left"] = mousePosition.x + 15
+        labelStyles["left"] = mousePosition.x + 5
         labelStyles["right"] = "auto"
         labelStyles["flexDirection"] = "row"
       }
@@ -58,14 +58,14 @@ function Stripe_(props, ref) {
     }
   }
 
-  const stripeLabel = (
+  const stripeLabel = (!lowlighted && labelIsVisible) ? (
     <div style={labelStyles}>
       {icon}
       {label}
     </div>
-  )
+  ) : null
 
-  const tooltipLabel = labelIsVisible ? [icon, label, icon] : null
+  const tooltipLabel = ( lowlighted || !labelIsVisible ) ? [icon, label, icon] : null
   const content = <Preview name={name} />
   const tooltip = useTooltip(
     color,

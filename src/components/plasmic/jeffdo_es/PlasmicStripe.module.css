@@ -50,10 +50,6 @@
   opacity: 0.9;
   outline: none;
 }
-.root:active {
-  transform: translateX(0px) translateY(2px) translateZ(0px);
-  opacity: 1;
-}
 .title {
   flex-direction: row;
   display: flex;
@@ -114,9 +110,6 @@
 }
 .root .title___focusVisibleWithin {
   outline: none;
-}
-.root:active .title {
-  transform: translateX(0px) translateY(1px) translateZ(0px);
 }
 .slotTargetLabel {
   text-align: center;

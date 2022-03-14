@@ -166,6 +166,9 @@ function PlasmicStripe__RenderFunc(props) {
             ? true
             : triggers.focusWithin_root
             ? true
+            : hasVariant(variants, "highlighted", "highlighted") &&
+              triggers.hover_root
+            ? true
             : triggers.hover_root &&
               hasVariant(globalVariants, "mode", "reveal")
             ? true
@@ -245,6 +248,9 @@ function PlasmicStripe__RenderFunc(props) {
           triggers.focusVisibleWithin_root
             ? true
             : triggers.focusWithin_root
+            ? true
+            : hasVariant(variants, "highlighted", "highlighted") &&
+              triggers.hover_root
             ? true
             : triggers.hover_root &&
               hasVariant(globalVariants, "mode", "reveal")

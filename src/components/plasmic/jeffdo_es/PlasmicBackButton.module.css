@@ -1,0 +1,53 @@
+.root {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+  position: relative;
+  transition-property: all;
+  transition-duration: 0.3s;
+  background: var(--token-R8vy1i-sY);
+  border-radius: 34px;
+  padding: var(--token-jA840K8cs) var(--token-AXW6MdvYn);
+  border-width: 1px;
+  border-style: none;
+}
+.root:hover {
+  background: var(--token--b5osXx1K);
+  transform: translateX(0px) translateY(-1px) translateZ(0px);
+  box-shadow: 0px 4px 16px 0px var(--token-QMayuc102);
+  border-color: var(--token--b5osXx1K);
+}
+.svg {
+  transition-property: all;
+  transition-duration: 0.3s;
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 2rem;
+  height: 2rem;
+  color: var(--token-3F-Dll6EN);
+  flex-shrink: 0;
+}
+.root:hover .svg {
+  color: var(--token-tze2JIV_u);
+  transform: translateX(-2px) translateY(0px) translateZ(0px);
+}
+.text {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  margin-left: var(--token-2B3TB9Igd);
+  transition-property: all;
+  transition-duration: 0.3s;
+  color: var(--token-3F-Dll6EN);
+}
+.root:hover .text {
+  color: var(--token-EkgtUgXeT);
+  transform: translateX(1px) translateY(0px) translateZ(0px);
+}

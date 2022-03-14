@@ -19,8 +19,8 @@ function IconButton_(props, ref) {
 
         onMouseOver={ () => setIsHovered(true) }
         onMouseOut={ () => setIsHovered(false) }
-        onFocus={ () => setIsHovered(true) }
-        onBlur={ () => setIsHovered(false) }
+        // onFocus={ () => setIsHovered(true) }
+        // onBlur={ () => setIsHovered(false) }
       />
     </>
   );

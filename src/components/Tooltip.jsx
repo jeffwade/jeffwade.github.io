@@ -4,7 +4,7 @@ import { PlasmicTooltip } from "./plasmic/jeffdo_es/PlasmicTooltip"
 function Tooltip_(props, ref) {
   const { mobile } = props;
 
-  let tooltip = 
+  let tooltip =
        <PlasmicTooltip
         root={{ ref }}
         {...props}

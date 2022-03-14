@@ -222,10 +222,10 @@
   max-width: 100%;
   position: relative;
 }
-.brandtool:global(.__wab_instance) {
+.ui:global(.__wab_instance) {
   max-width: 100%;
 }
-.brandtoolglobal_arrangement_float:global(.__wab_instance) {
+.uiglobal_arrangement_float:global(.__wab_instance) {
   width: auto;
   position: absolute;
   left: 6%;
@@ -238,14 +238,14 @@
   width: 1em;
   height: 1em;
 }
-.orgtool:global(.__wab_instance) {
+.ux:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   left: auto;
   top: auto;
   right: auto;
 }
-.orgtoolglobal_arrangement_float:global(.__wab_instance) {
+.uxglobal_arrangement_float:global(.__wab_instance) {
   position: absolute;
   left: auto;
   top: 15.89%;
@@ -307,14 +307,17 @@
   width: 1em;
   height: 1em;
 }
-.sprints:global(.__wab_instance) {
+.service:global(.__wab_instance) {
   max-width: 100%;
 }
-.sprintsglobal_arrangement_float:global(.__wab_instance) {
+.serviceglobal_arrangement_float:global(.__wab_instance) {
   width: auto;
   position: absolute;
   left: 0px;
   top: 0px;
+}
+.text__e0Mp7 {
+  width: auto;
 }
 .svg__hgkau {
   position: relative;
