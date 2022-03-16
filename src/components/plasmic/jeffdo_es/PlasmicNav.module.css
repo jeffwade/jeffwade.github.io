@@ -1,0 +1,104 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  min-width: 0;
+  padding: var(--token-2B3TB9Igd) var(--token-T237bDoLkZ);
+}
+@media (min-width: 768px) {
+  .root {
+    width: 100%;
+    min-width: 0;
+  }
+}
+.rootglobal_mode_dark {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  flex-row-gap: 0px;
+  padding: var(--token-2B3TB9Igd) var(--token-T237bDoLkZ);
+}
+.reveal:global(.__wab_instance) {
+  align-self: auto;
+}
+.revealglobal_mode_reveal:global(.__wab_instance) {
+  align-self: auto;
+}
+.svg__sqohL {
+  object-fit: cover;
+  max-width: 100%;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.svgglobal_mode_reveal__sqohLv94Jk {
+  object-fit: cover;
+  max-width: 100%;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.home {
+  display: flex;
+  cursor: pointer;
+}
+.homeglobal_mode_dark {
+  display: flex;
+  cursor: pointer;
+}
+.homeglobal_mode_reveal {
+  display: flex;
+  cursor: pointer;
+}
+.svg__g4Zs {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: var(--token-T237bDoLkZ);
+  height: var(--token-T237bDoLkZ);
+}
+.svgglobal_mode_dark__g4ZsJYvh {
+  color: var(--token-EkgtUgXeT);
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: var(--token-T237bDoLkZ);
+  height: var(--token-T237bDoLkZ);
+}
+.svgglobal_mode_reveal__g4Zsv94Jk {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: var(--token-T237bDoLkZ);
+  height: var(--token-T237bDoLkZ);
+}
+.svg___4Ydrm {
+  object-fit: cover;
+  max-width: 100%;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.svgglobal_mode_dark___4YdrmJYvh {
+  object-fit: cover;
+  max-width: 100%;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.svgglobal_mode_reveal___4Ydrmv94Jk {
+  object-fit: cover;
+  max-width: 100%;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}

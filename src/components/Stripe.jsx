@@ -4,6 +4,7 @@ import { PlasmicStripe } from "./plasmic/jeffdo_es/PlasmicStripe"
 import useTooltip from "../hooks/useTooltip"
 import useMousePosition from "../hooks/useMousePosition"
 import Preview from "../components/Preview"
+import ArrowRightIcon from "../components/plasmic/jeffdo_es/icons/PlasmicIcon__ArrowRight"
 
 function Stripe_(props, ref) {
   const {
@@ -45,27 +46,41 @@ function Stripe_(props, ref) {
     if (!mobile && isHovered) {
       if (mousePosition.x > window.innerWidth / 2) {
         labelStyles["left"] = "auto"
-        labelStyles["right"] = window.innerWidth - mousePosition.x + 5
+        labelStyles["right"] = window.innerWidth - mousePosition.x - 24
         labelStyles["flexDirection"] = "row-reverse"
       } else {
-        labelStyles["left"] = mousePosition.x + 5
+        labelStyles["left"] = mousePosition.x - 24
         labelStyles["right"] = "auto"
         labelStyles["flexDirection"] = "row"
       }
     } else {
-      labelStyles["left"] = "auto"
+      labelStyles["left"] = "calc(50vw - 200px)"
       labelStyles["right"] = "auto"
     }
   }
 
-  const stripeLabel = (!lowlighted && labelIsVisible) ? (
-    <div style={labelStyles}>
-      {icon}
-      {label}
-    </div>
-  ) : null
+  let stripeLabel = null
+  if (category === "work" && isHovered) {
+    stripeLabel = (
+      <div style={labelStyles}>
+         {lowlighted ? "work" : "see work samples"}
+        <ArrowRightIcon />
+      </div>
+    )
+    labelStyles["left"] = lowlighted ? "auto" : mousePosition.x - 24
+  } else if (!lowlighted && labelIsVisible) {
+    stripeLabel = (
+      <div style={labelStyles}>
+        {icon}
+        {label}
+      </div>
+    )
+  } else {
+    stripeLabel = null
+  }
 
-  const tooltipLabel = ( lowlighted || !labelIsVisible ) ? [icon, label, icon] : null
+  const tooltipLabel =
+    category === "work" || !labelIsVisible || lowlighted ? [icon, label, icon] : null
   const content = <Preview name={name} />
   const tooltip = useTooltip(
     color,

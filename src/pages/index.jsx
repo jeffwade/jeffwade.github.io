@@ -9,7 +9,7 @@ import { PlasmicHomepage } from "../components/plasmic/jeffdo_es/PlasmicHomepage
 
 function Homepage() {
   const [mode, setMode] = useState(["dark"])
-  const [reveal, setReveal] = useState(true)
+  const [reveal, setReveal] = useState(false)
   const [prevReveal, setPrevReveal] = useState(reveal)
   const [highlight, setHighlight] = useState(undefined)
 

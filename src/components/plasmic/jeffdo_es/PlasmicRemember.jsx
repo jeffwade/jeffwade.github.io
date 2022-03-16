@@ -9,14 +9,27 @@
 // Plasmic Project: mujoL4gD3qd1ezKDLZ31rZ
 // Component: tThhXlSj4r
 import * as React from "react"
+import * as p from "@plasmicapp/react-web"
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  ensureGlobalVariants,
 } from "@plasmicapp/react-web"
+import WorkCard from "../../WorkCard" // plasmic-import: IQmvc6tT46/component
+import IconButton from "../../IconButton" // plasmic-import: mEnM6zW3GD/component
+import { useScreenVariants as useScreenVariantsekypzdksLjd0F } from "./PlasmicGlobalVariant__Screen" // plasmic-import: EKYPZDKSLjd0F/globalVariant
+import { useMode } from "./PlasmicGlobalVariant__Mode" // plasmic-import: zulsK3o-3W/globalVariant
+import { useHighlight } from "./PlasmicGlobalVariant__Highlight" // plasmic-import: ntiwPmQAsH/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_jeffdo_es.module.css" // plasmic-import: mujoL4gD3qd1ezKDLZ31rZ/projectcss
 import * as sty from "./PlasmicRemember.module.css" // plasmic-import: tThhXlSj4r/css
+import EyeOpenIcon from "./icons/PlasmicIcon__EyeOpen" // plasmic-import: J7fJnmL4N/icon
+import EyeClosedIcon from "./icons/PlasmicIcon__EyeClosed" // plasmic-import: aBAB-JPNq/icon
+import JwSharpIcon from "./icons/PlasmicIcon__JwSharp" // plasmic-import: imnHY-_8sU/icon
+import NightIcon from "./icons/PlasmicIcon__Night" // plasmic-import: nS7MqAdlwl/icon
+import DayIcon from "./icons/PlasmicIcon__Day" // plasmic-import: 2cwRWiCxc/icon
 
 export const PlasmicRemember__VariantProps = new Array()
 
@@ -24,6 +37,12 @@ export const PlasmicRemember__ArgProps = new Array()
 
 function PlasmicRemember__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsekypzdksLjd0F(),
+    mode: useMode(),
+    highlight: useHighlight(),
+  })
+
   return (
     <React.Fragment>
       <style>{`
@@ -33,26 +52,253 @@ function PlasmicRemember__RenderFunc(props) {
       `}</style>
 
       <div className={projectcss.plasmic_page_wrapper}>
-        <div
+        <p.Stack
+          as={"div"}
           data-plasmic-name={"root"}
           data-plasmic-override={overrides.root}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
+          hasGap={true}
           className={classNames(
             projectcss.all,
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_tokens,
-            sty.root
+            sty.root,
+            {
+              [projectcss.global_mode_dark]: hasVariant(
+                globalVariants,
+                "mode",
+                "dark"
+              ),
+            }
           )}
-        />
+        >
+          <h1
+            data-plasmic-name={"h1"}
+            data-plasmic-override={overrides.h1}
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1
+            )}
+          >
+            {"jeff does remember"}
+          </h1>
+
+          {true ? (
+            <p.Stack
+              as={"div"}
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.columns)}
+            >
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.column__v0Llo)}
+              >
+                <WorkCard
+                  className={classNames("__wab_instance", sty.workCard__kObXz)}
+                  title={"an org design tool"}
+                />
+
+                <WorkCard
+                  className={classNames("__wab_instance", sty.workCard___6RwPh)}
+                />
+              </p.Stack>
+
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.column__amWpZ)}
+              >
+                <WorkCard
+                  className={classNames("__wab_instance", sty.workCard__mkFgA)}
+                />
+
+                <WorkCard
+                  className={classNames("__wab_instance", sty.workCard__dgCuN)}
+                />
+              </p.Stack>
+            </p.Stack>
+          ) : null}
+
+          <nav
+            data-plasmic-name={"nav"}
+            data-plasmic-override={overrides.nav}
+            className={classNames(projectcss.all, sty.nav)}
+          >
+            <IconButton
+              data-plasmic-name={"reveal"}
+              data-plasmic-override={overrides.reveal}
+              className={classNames("__wab_instance", sty.reveal, {
+                [sty.revealglobal_highlight_work]: hasVariant(
+                  globalVariants,
+                  "highlight",
+                  "work"
+                ),
+
+                [sty.revealglobal_mode_reveal]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
+                ),
+              })}
+              icon={
+                <p.PlasmicIcon
+                  PlasmicIconType={
+                    hasVariant(globalVariants, "mode", "reveal")
+                      ? EyeClosedIcon
+                      : EyeOpenIcon
+                  }
+                  className={classNames(projectcss.all, sty.svg___7EfG1, {
+                    [sty.svgglobal_mode_reveal___7EfG1V94Jk]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "reveal"
+                    ),
+                  })}
+                  cursor={
+                    hasVariant(globalVariants, "mode", "reveal")
+                      ? "pointer"
+                      : "pointer"
+                  }
+                  role={"img"}
+                />
+              }
+              label={
+                hasVariant(globalVariants, "highlight", "work")
+                  ? "reveal labels"
+                  : hasVariant(globalVariants, "mode", "reveal")
+                  ? "hide labels"
+                  : "reveal labels"
+              }
+            />
+
+            <IconButton
+              data-plasmic-name={"logo"}
+              data-plasmic-override={overrides.logo}
+              className={classNames("__wab_instance", sty.logo, {
+                [sty.logoglobal_mode_dark]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "dark"
+                ),
+
+                [sty.logoglobal_mode_reveal]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
+                ),
+              })}
+              icon={
+                <p.PlasmicIcon
+                  PlasmicIconType={
+                    hasVariant(globalVariants, "mode", "reveal")
+                      ? JwSharpIcon
+                      : hasVariant(globalVariants, "mode", "dark")
+                      ? JwSharpIcon
+                      : JwSharpIcon
+                  }
+                  className={classNames(projectcss.all, sty.svg__gg5Bj, {
+                    [sty.svgglobal_mode_dark__gg5BjJYvh]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "dark"
+                    ),
+
+                    [sty.svgglobal_mode_reveal__gg5Bjv94Jk]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "reveal"
+                    ),
+                  })}
+                  role={"img"}
+                />
+              }
+              label={
+                hasVariant(globalVariants, "mode", "reveal")
+                  ? ""
+                  : hasVariant(globalVariants, "mode", "dark")
+                  ? ""
+                  : ""
+              }
+            />
+
+            <IconButton
+              data-plasmic-name={"darkmode"}
+              data-plasmic-override={overrides.darkmode}
+              className={classNames("__wab_instance", sty.darkmode, {
+                [sty.darkmodeglobal_mode_dark]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "dark"
+                ),
+
+                [sty.darkmodeglobal_mode_reveal]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
+                ),
+              })}
+              icon={
+                <p.PlasmicIcon
+                  PlasmicIconType={
+                    hasVariant(globalVariants, "mode", "reveal")
+                      ? NightIcon
+                      : hasVariant(globalVariants, "mode", "dark")
+                      ? DayIcon
+                      : NightIcon
+                  }
+                  className={classNames(projectcss.all, sty.svg__cikJ, {
+                    [sty.svgglobal_mode_dark__cikJJYvh]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "dark"
+                    ),
+
+                    [sty.svgglobal_mode_reveal__cikJv94Jk]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "reveal"
+                    ),
+                  })}
+                  cursor={
+                    hasVariant(globalVariants, "mode", "reveal")
+                      ? "pointer"
+                      : hasVariant(globalVariants, "mode", "dark")
+                      ? "pointer"
+                      : "pointer"
+                  }
+                  role={"img"}
+                />
+              }
+              label={
+                hasVariant(globalVariants, "mode", "reveal")
+                  ? "switch to dark mode"
+                  : hasVariant(globalVariants, "mode", "dark")
+                  ? "switch to light mode"
+                  : "switch to dark mode"
+              }
+            />
+          </nav>
+        </p.Stack>
       </div>
     </React.Fragment>
   )
 }
 
 const PlasmicDescendants = {
-  root: ["root"],
+  root: ["root", "h1", "columns", "nav", "reveal", "logo", "darkmode"],
+  h1: ["h1"],
+  columns: ["columns"],
+  nav: ["nav", "reveal", "logo", "darkmode"],
+  reveal: ["reveal"],
+  logo: ["logo"],
+  darkmode: ["darkmode"],
 }
 
 function makeNodeComponent(nodeName) {
@@ -84,6 +330,12 @@ export const PlasmicRemember = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    h1: makeNodeComponent("h1"),
+    columns: makeNodeComponent("columns"),
+    nav: makeNodeComponent("nav"),
+    reveal: makeNodeComponent("reveal"),
+    logo: makeNodeComponent("logo"),
+    darkmode: makeNodeComponent("darkmode"),
     // Metadata about props expected for PlasmicRemember
     internalVariantProps: PlasmicRemember__VariantProps,
     internalArgProps: PlasmicRemember__ArgProps,

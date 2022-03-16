@@ -16,11 +16,8 @@ function IconButton_(props, ref) {
         label={ label }
         root={{ ref }}
         {...rest}
-
         onMouseOver={ () => setIsHovered(true) }
         onMouseOut={ () => setIsHovered(false) }
-        // onFocus={ () => setIsHovered(true) }
-        // onBlur={ () => setIsHovered(false) }
       />
     </>
   );

@@ -79,6 +79,12 @@ function PlasmicTooltip__RenderFunc(props) {
           [sty.slotTargetContentbg_blue]: hasVariant(variants, "bg", "blue"),
           [sty.slotTargetContentbg_grey]: hasVariant(variants, "bg", "grey"),
           [sty.slotTargetContentbg_mint]: hasVariant(variants, "bg", "mint"),
+          [sty.slotTargetContentbg_orange]: hasVariant(
+            variants,
+            "bg",
+            "orange"
+          ),
+
           [sty.slotTargetContentbg_purple]: hasVariant(
             variants,
             "bg",
@@ -86,6 +92,11 @@ function PlasmicTooltip__RenderFunc(props) {
           ),
 
           [sty.slotTargetContentbg_red]: hasVariant(variants, "bg", "red"),
+          [sty.slotTargetContentbg_yellow]: hasVariant(
+            variants,
+            "bg",
+            "yellow"
+          ),
         }),
       })}
     </div>

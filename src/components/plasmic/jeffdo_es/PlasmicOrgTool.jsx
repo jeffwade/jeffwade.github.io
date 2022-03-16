@@ -9,6 +9,8 @@
 // Plasmic Project: mujoL4gD3qd1ezKDLZ31rZ
 // Component: tKqf7q97A-
 import * as React from "react"
+import { Link } from "gatsby"
+import * as p from "@plasmicapp/react-web"
 import {
   hasVariant,
   classNames,
@@ -17,10 +19,18 @@ import {
   ensureGlobalVariants,
 } from "@plasmicapp/react-web"
 import CaseStudy from "../../CaseStudy" // plasmic-import: SiSovdu-fA/component
+import IconButton from "../../IconButton" // plasmic-import: mEnM6zW3GD/component
 import { useMode } from "./PlasmicGlobalVariant__Mode" // plasmic-import: zulsK3o-3W/globalVariant
+import { useArrangement } from "./PlasmicGlobalVariant__Arrangement" // plasmic-import: hhgYSeu_QK/globalVariant
+import { useScreenVariants as useScreenVariantsekypzdksLjd0F } from "./PlasmicGlobalVariant__Screen" // plasmic-import: EKYPZDKSLjd0F/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_jeffdo_es.module.css" // plasmic-import: mujoL4gD3qd1ezKDLZ31rZ/projectcss
 import * as sty from "./PlasmicOrgTool.module.css" // plasmic-import: tKqf7q97A-/css
+import EyeClosedIcon from "./icons/PlasmicIcon__EyeClosed" // plasmic-import: aBAB-JPNq/icon
+import EyeOpenIcon from "./icons/PlasmicIcon__EyeOpen" // plasmic-import: J7fJnmL4N/icon
+import JwSharpIcon from "./icons/PlasmicIcon__JwSharp" // plasmic-import: imnHY-_8sU/icon
+import NightIcon from "./icons/PlasmicIcon__Night" // plasmic-import: nS7MqAdlwl/icon
+import DayIcon from "./icons/PlasmicIcon__Day" // plasmic-import: 2cwRWiCxc/icon
 
 export const PlasmicOrgTool__VariantProps = new Array()
 
@@ -30,6 +40,8 @@ function PlasmicOrgTool__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props
   const globalVariants = ensureGlobalVariants({
     mode: useMode(),
+    arrangement: useArrangement(),
+    screen: useScreenVariantsekypzdksLjd0F(),
   })
 
   return (
@@ -62,10 +74,243 @@ function PlasmicOrgTool__RenderFunc(props) {
           )}
         >
           <CaseStudy
-            data-plasmic-name={"caseStudy"}
-            data-plasmic-override={overrides.caseStudy}
-            className={classNames("__wab_instance", sty.caseStudy)}
+            data-plasmic-name={"casestudy"}
+            data-plasmic-override={overrides.casestudy}
+            className={classNames("__wab_instance", sty.casestudy)}
           />
+
+          {(
+            hasVariant(globalVariants, "arrangement", "float")
+              ? true
+              : hasVariant(globalVariants, "mode", "dark")
+              ? true
+              : hasVariant(globalVariants, "screen", "desktopOnly")
+              ? true
+              : true
+          ) ? (
+            <nav
+              data-plasmic-name={"nav"}
+              data-plasmic-override={overrides.nav}
+              className={classNames(projectcss.all, sty.nav, {
+                [sty.navglobal_arrangement_float]: hasVariant(
+                  globalVariants,
+                  "arrangement",
+                  "float"
+                ),
+
+                [sty.navglobal_mode_dark]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "dark"
+                ),
+              })}
+            >
+              <IconButton
+                data-plasmic-name={"reveal"}
+                data-plasmic-override={overrides.reveal}
+                className={classNames("__wab_instance", sty.reveal, {
+                  [sty.revealglobal_mode_dark]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "dark"
+                  ),
+
+                  [sty.revealglobal_mode_reveal]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "reveal"
+                  ),
+                })}
+                icon={
+                  <p.PlasmicIcon
+                    PlasmicIconType={
+                      hasVariant(globalVariants, "mode", "reveal")
+                        ? EyeOpenIcon
+                        : hasVariant(globalVariants, "mode", "dark")
+                        ? EyeClosedIcon
+                        : hasVariant(globalVariants, "screen", "desktopOnly")
+                        ? EyeClosedIcon
+                        : EyeClosedIcon
+                    }
+                    className={classNames(projectcss.all, sty.svg__gfvE, {
+                      [sty.svgglobal_mode_dark__gfvEjYvh]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "dark"
+                      ),
+
+                      [sty.svgglobal_mode_reveal__gfvEv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                    cursor={
+                      hasVariant(globalVariants, "mode", "reveal")
+                        ? "pointer"
+                        : hasVariant(globalVariants, "mode", "dark")
+                        ? "pointer"
+                        : hasVariant(globalVariants, "screen", "desktopOnly")
+                        ? "pointer"
+                        : "pointer"
+                    }
+                    role={"img"}
+                  />
+                }
+                label={
+                  hasVariant(globalVariants, "mode", "reveal")
+                    ? "show images"
+                    : hasVariant(globalVariants, "mode", "dark")
+                    ? "hide images"
+                    : hasVariant(globalVariants, "screen", "desktopOnly")
+                    ? "hide images"
+                    : "hide images"
+                }
+              />
+
+              <p.PlasmicLink
+                data-plasmic-name={"home"}
+                data-plasmic-override={overrides.home}
+                className={classNames(projectcss.all, projectcss.a, sty.home, {
+                  [sty.homeglobal_mode_dark]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "dark"
+                  ),
+
+                  [sty.homeglobal_mode_reveal]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "reveal"
+                  ),
+                })}
+                component={Link}
+                href={"/"}
+                id={
+                  hasVariant(globalVariants, "mode", "reveal")
+                    ? "logo"
+                    : hasVariant(globalVariants, "mode", "dark")
+                    ? "logo"
+                    : "logo"
+                }
+                platform={"gatsby"}
+                title={
+                  hasVariant(globalVariants, "mode", "reveal")
+                    ? "jeff wade"
+                    : hasVariant(globalVariants, "mode", "dark")
+                    ? "jeff wade"
+                    : "jeff wade"
+                }
+              >
+                <IconButton
+                  data-plasmic-name={"logo"}
+                  data-plasmic-override={overrides.logo}
+                  className={classNames("__wab_instance", sty.logo, {
+                    [sty.logoglobal_mode_dark]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "dark"
+                    ),
+
+                    [sty.logoglobal_mode_reveal]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "reveal"
+                    ),
+                  })}
+                  icon={
+                    <p.PlasmicIcon
+                      PlasmicIconType={
+                        hasVariant(globalVariants, "mode", "reveal")
+                          ? JwSharpIcon
+                          : hasVariant(globalVariants, "mode", "dark")
+                          ? JwSharpIcon
+                          : JwSharpIcon
+                      }
+                      className={classNames(projectcss.all, sty.svg__zJi4L, {
+                        [sty.svgglobal_mode_dark__zJi4LjYvh]: hasVariant(
+                          globalVariants,
+                          "mode",
+                          "dark"
+                        ),
+
+                        [sty.svgglobal_mode_reveal__zJi4Lv94Jk]: hasVariant(
+                          globalVariants,
+                          "mode",
+                          "reveal"
+                        ),
+                      })}
+                      role={"img"}
+                    />
+                  }
+                  label={
+                    hasVariant(globalVariants, "mode", "reveal")
+                      ? ""
+                      : hasVariant(globalVariants, "mode", "dark")
+                      ? ""
+                      : ""
+                  }
+                />
+              </p.PlasmicLink>
+
+              <IconButton
+                data-plasmic-name={"darkmode"}
+                data-plasmic-override={overrides.darkmode}
+                className={classNames("__wab_instance", sty.darkmode, {
+                  [sty.darkmodeglobal_mode_dark]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "dark"
+                  ),
+
+                  [sty.darkmodeglobal_mode_reveal]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "reveal"
+                  ),
+                })}
+                icon={
+                  <p.PlasmicIcon
+                    PlasmicIconType={
+                      hasVariant(globalVariants, "mode", "reveal")
+                        ? NightIcon
+                        : hasVariant(globalVariants, "mode", "dark")
+                        ? DayIcon
+                        : NightIcon
+                    }
+                    className={classNames(projectcss.all, sty.svg__rQtLi, {
+                      [sty.svgglobal_mode_dark__rQtLijYvh]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "dark"
+                      ),
+
+                      [sty.svgglobal_mode_reveal__rQtLIv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                    cursor={
+                      hasVariant(globalVariants, "mode", "reveal")
+                        ? "pointer"
+                        : hasVariant(globalVariants, "mode", "dark")
+                        ? "pointer"
+                        : "pointer"
+                    }
+                    role={"img"}
+                  />
+                }
+                label={
+                  hasVariant(globalVariants, "mode", "reveal")
+                    ? "switch to dark mode"
+                    : hasVariant(globalVariants, "mode", "dark")
+                    ? "switch to light mode"
+                    : "switch to dark mode"
+                }
+              />
+            </nav>
+          ) : null}
         </div>
       </div>
     </React.Fragment>
@@ -73,8 +318,13 @@ function PlasmicOrgTool__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "caseStudy"],
-  caseStudy: ["caseStudy"],
+  root: ["root", "casestudy", "nav", "reveal", "home", "logo", "darkmode"],
+  casestudy: ["casestudy"],
+  nav: ["nav", "reveal", "home", "logo", "darkmode"],
+  reveal: ["reveal"],
+  home: ["home", "logo"],
+  logo: ["logo"],
+  darkmode: ["darkmode"],
 }
 
 function makeNodeComponent(nodeName) {
@@ -106,7 +356,12 @@ export const PlasmicOrgTool = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    caseStudy: makeNodeComponent("caseStudy"),
+    casestudy: makeNodeComponent("casestudy"),
+    nav: makeNodeComponent("nav"),
+    reveal: makeNodeComponent("reveal"),
+    home: makeNodeComponent("home"),
+    logo: makeNodeComponent("logo"),
+    darkmode: makeNodeComponent("darkmode"),
     // Metadata about props expected for PlasmicOrgTool
     internalVariantProps: PlasmicOrgTool__VariantProps,
     internalArgProps: PlasmicOrgTool__ArgProps,

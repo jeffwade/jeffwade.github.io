@@ -30,7 +30,7 @@
   max-width: 100%;
   width: 2rem;
   height: 2rem;
-  color: var(--token-3F-Dll6EN);
+  color: var(--token-mfRasWXgp);
   flex-shrink: 0;
 }
 .root:hover .svg {
@@ -45,7 +45,7 @@
   margin-left: var(--token-2B3TB9Igd);
   transition-property: all;
   transition-duration: 0.3s;
-  color: var(--token-3F-Dll6EN);
+  color: var(--token-mfRasWXgp);
 }
 .root:hover .text {
   color: var(--token-EkgtUgXeT);

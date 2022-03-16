@@ -472,7 +472,24 @@ function PlasmicHomepage__RenderFunc(props) {
                 })}
                 color={"purple"}
                 label={"† product design"}
-                symbol={"†"}
+                symbol={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__p8Pzp,
+                      {
+                        [sty.textglobal_highlight_work__p8PzPjCUoz]: hasVariant(
+                          globalVariants,
+                          "highlight",
+                          "work"
+                        ),
+                      }
+                    )}
+                  >
+                    {"†"}
+                  </div>
+                }
                 word={"design"}
               />
             }
@@ -513,124 +530,184 @@ function PlasmicHomepage__RenderFunc(props) {
                 })}
                 color={"purple"}
                 label={"* about jeff"}
+                symbol={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__r5O0R,
+                      {
+                        [sty.textglobal_highlight_about__r5O0RjOrod]:
+                          hasVariant(globalVariants, "highlight", "about"),
+                        [sty.textglobal_mode_reveal__r5O0Rv94Jk]: hasVariant(
+                          globalVariants,
+                          "mode",
+                          "reveal"
+                        ),
+                      }
+                    )}
+                  >
+                    {"*"}
+                  </div>
+                }
                 word={"Jeff"}
               />
             }
           />
 
-          <Stripe
-            data-plasmic-name={"ui"}
-            data-plasmic-override={overrides.ui}
-            category={"work"}
-            className={classNames("__wab_instance", sty.ui, {
-              [sty.uiglobal_arrangement_float]: hasVariant(
-                globalVariants,
-                "arrangement",
-                "float"
-              ),
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__jDnrf,
+              {
+                [sty.linkglobal_arrangement_float__jDnrfzZfig]: hasVariant(
+                  globalVariants,
+                  "arrangement",
+                  "float"
+                ),
+              }
+            )}
+            component={Link}
+            href={"/remember"}
+            platform={"gatsby"}
+          >
+            <Stripe
+              data-plasmic-name={"ui"}
+              data-plasmic-override={overrides.ui}
+              category={"work"}
+              className={classNames("__wab_instance", sty.ui, {
+                [sty.uiglobal_arrangement_float]: hasVariant(
+                  globalVariants,
+                  "arrangement",
+                  "float"
+                ),
 
-              [sty.uiglobal_highlight_about]: hasVariant(
-                globalVariants,
-                "highlight",
-                "about"
-              ),
+                [sty.uiglobal_highlight_about]: hasVariant(
+                  globalVariants,
+                  "highlight",
+                  "about"
+                ),
 
-              [sty.uiglobal_highlight_work]: hasVariant(
-                globalVariants,
-                "highlight",
-                "work"
-              ),
+                [sty.uiglobal_highlight_work]: hasVariant(
+                  globalVariants,
+                  "highlight",
+                  "work"
+                ),
 
-              [sty.uiglobal_mode_reveal]: hasVariant(
-                globalVariants,
-                "mode",
-                "reveal"
-              ),
-            })}
-            color={"orange"}
-            highlighted={
-              hasVariant(globalVariants, "highlight", "work") ? true : undefined
-            }
-            icon={
-              <PaintIcon
-                className={classNames(projectcss.all, sty.svg__laIzF)}
-                role={"img"}
-              />
-            }
-            label={"ui design"}
-            lowlighted={
-              hasVariant(globalVariants, "highlight", "about")
-                ? true
-                : undefined
-            }
-            name={"ui"}
-          />
+                [sty.uiglobal_mode_reveal]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
+                ),
+              })}
+              color={"orange"}
+              highlighted={
+                hasVariant(globalVariants, "highlight", "work")
+                  ? true
+                  : undefined
+              }
+              icon={
+                <PaintIcon
+                  className={classNames(projectcss.all, sty.svg__laIzF)}
+                  role={"img"}
+                />
+              }
+              label={"ui design"}
+              lowlighted={
+                hasVariant(globalVariants, "highlight", "about")
+                  ? true
+                  : undefined
+              }
+              name={"ui"}
+            />
+          </p.PlasmicLink>
 
-          <Stripe
-            data-plasmic-name={"ux"}
-            data-plasmic-override={overrides.ux}
-            category={"work"}
-            className={classNames("__wab_instance", sty.ux, {
-              [sty.uxglobal_arrangement_float]: hasVariant(
-                globalVariants,
-                "arrangement",
-                "float"
-              ),
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__vEyis,
+              {
+                [sty.linkglobal_arrangement_float__vEyisZZfig]: hasVariant(
+                  globalVariants,
+                  "arrangement",
+                  "float"
+                ),
+              }
+            )}
+            component={Link}
+            href={"/remember"}
+            platform={"gatsby"}
+          >
+            <Stripe
+              data-plasmic-name={"ux"}
+              data-plasmic-override={overrides.ux}
+              category={"work"}
+              className={classNames("__wab_instance", sty.ux, {
+                [sty.uxglobal_arrangement_float]: hasVariant(
+                  globalVariants,
+                  "arrangement",
+                  "float"
+                ),
 
-              [sty.uxglobal_highlight_about]: hasVariant(
-                globalVariants,
-                "highlight",
-                "about"
-              ),
+                [sty.uxglobal_highlight_about]: hasVariant(
+                  globalVariants,
+                  "highlight",
+                  "about"
+                ),
 
-              [sty.uxglobal_highlight_work]: hasVariant(
-                globalVariants,
-                "highlight",
-                "work"
-              ),
+                [sty.uxglobal_highlight_work]: hasVariant(
+                  globalVariants,
+                  "highlight",
+                  "work"
+                ),
 
-              [sty.uxglobal_mode_dark]: hasVariant(
-                globalVariants,
-                "mode",
-                "dark"
-              ),
+                [sty.uxglobal_mode_dark]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "dark"
+                ),
 
-              [sty.uxglobal_mode_reveal]: hasVariant(
-                globalVariants,
-                "mode",
-                "reveal"
-              ),
-            })}
-            color={"blue"}
-            highlighted={
-              hasVariant(globalVariants, "highlight", "work") ? true : undefined
-            }
-            icon={
-              <MapIcon
-                className={classNames(projectcss.all, sty.svg__ff02)}
-                role={"img"}
-              />
-            }
-            label={
-              true ? (
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__raQdW
-                  )}
-                >
-                  {"ux design"}
-                </div>
-              ) : null
-            }
-            lowlighted={
-              hasVariant(globalVariants, "highlight", "about")
-                ? true
-                : undefined
-            }
-            name={"ux"}
-          />
+                [sty.uxglobal_mode_reveal]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
+                ),
+              })}
+              color={"blue"}
+              highlighted={
+                hasVariant(globalVariants, "highlight", "work")
+                  ? true
+                  : undefined
+              }
+              icon={
+                <MapIcon
+                  className={classNames(projectcss.all, sty.svg__ff02)}
+                  role={"img"}
+                />
+              }
+              label={
+                true ? (
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__raQdW
+                    )}
+                  >
+                    {"ux design"}
+                  </div>
+                ) : null
+              }
+              lowlighted={
+                hasVariant(globalVariants, "highlight", "about")
+                  ? true
+                  : undefined
+              }
+              name={"ux"}
+            />
+          </p.PlasmicLink>
 
           <Stripe
             data-plasmic-name={"learnin"}
@@ -680,76 +757,96 @@ function PlasmicHomepage__RenderFunc(props) {
             name={"learnin"}
           />
 
-          <Stripe
-            data-plasmic-name={"service"}
-            data-plasmic-override={overrides.service}
-            category={"work"}
-            className={classNames("__wab_instance", sty.service, {
-              [sty.serviceglobal_arrangement_float]: hasVariant(
-                globalVariants,
-                "arrangement",
-                "float"
-              ),
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link___9FgV,
+              {
+                [sty.linkglobal_arrangement_float___9FgVZZfig]: hasVariant(
+                  globalVariants,
+                  "arrangement",
+                  "float"
+                ),
+              }
+            )}
+            component={Link}
+            href={"/remember"}
+            platform={"gatsby"}
+          >
+            <Stripe
+              data-plasmic-name={"service"}
+              data-plasmic-override={overrides.service}
+              category={"work"}
+              className={classNames("__wab_instance", sty.service, {
+                [sty.serviceglobal_arrangement_float]: hasVariant(
+                  globalVariants,
+                  "arrangement",
+                  "float"
+                ),
 
-              [sty.serviceglobal_highlight_about]: hasVariant(
-                globalVariants,
-                "highlight",
-                "about"
-              ),
+                [sty.serviceglobal_highlight_about]: hasVariant(
+                  globalVariants,
+                  "highlight",
+                  "about"
+                ),
 
-              [sty.serviceglobal_highlight_work]: hasVariant(
-                globalVariants,
-                "highlight",
-                "work"
-              ),
+                [sty.serviceglobal_highlight_work]: hasVariant(
+                  globalVariants,
+                  "highlight",
+                  "work"
+                ),
 
-              [sty.serviceglobal_mode_dark]: hasVariant(
-                globalVariants,
-                "mode",
-                "dark"
-              ),
+                [sty.serviceglobal_mode_dark]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "dark"
+                ),
 
-              [sty.serviceglobal_mode_reveal]: hasVariant(
-                globalVariants,
-                "mode",
-                "reveal"
-              ),
-            })}
-            color={"grey"}
-            highlighted={
-              hasVariant(globalVariants, "highlight", "work") ? true : undefined
-            }
-            icon={
-              <SprintsIcon
-                className={classNames(projectcss.all, sty.svg__hgkau)}
-                role={"img"}
-              />
-            }
-            label={
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__e0Mp7,
-                  {
-                    [sty.textglobal_highlight_work__e0Mp7JCUoz]: hasVariant(
-                      globalVariants,
-                      "highlight",
-                      "work"
-                    ),
-                  }
-                )}
-              >
-                {"service design"}
-              </div>
-            }
-            lowlighted={
-              hasVariant(globalVariants, "highlight", "about")
-                ? true
-                : undefined
-            }
-            name={"service"}
-          />
+                [sty.serviceglobal_mode_reveal]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "reveal"
+                ),
+              })}
+              color={"grey"}
+              highlighted={
+                hasVariant(globalVariants, "highlight", "work")
+                  ? true
+                  : undefined
+              }
+              icon={
+                <SprintsIcon
+                  className={classNames(projectcss.all, sty.svg__hgkau)}
+                  role={"img"}
+                />
+              }
+              label={
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__e0Mp7,
+                    {
+                      [sty.textglobal_highlight_work__e0Mp7JCUoz]: hasVariant(
+                        globalVariants,
+                        "highlight",
+                        "work"
+                      ),
+                    }
+                  )}
+                >
+                  {"service design"}
+                </div>
+              }
+              lowlighted={
+                hasVariant(globalVariants, "highlight", "about")
+                  ? true
+                  : undefined
+              }
+              name={"service"}
+            />
+          </p.PlasmicLink>
 
           <Stripe
             data-plasmic-name={"tracks"}

@@ -27,24 +27,24 @@ const useTooltip = (bg, label, content, minW, maxW, followMouse) => {
   if (isBrowser) {
     if (mousePosition.y > window.innerHeight / 2) {
       tooltipStyles["top"] = "auto"
-      tooltipStyles["bottom"] = window.innerHeight - mousePosition.y + 15
+      tooltipStyles["bottom"] = window.innerHeight - mousePosition.y + 40
     } else {
-      tooltipStyles["top"] = mousePosition.y + 15
+      tooltipStyles["top"] = mousePosition.y + 40
       tooltipStyles["bottom"] = "auto"
     }
 
     if (!mobile || (mobile && followMouse)) {
       if (mousePosition.x > window.innerWidth / 2) {
         tooltipStyles["left"] = "auto"
-        tooltipStyles["right"] = window.innerWidth - mousePosition.x + 15
+        tooltipStyles["right"] = window.innerWidth - mousePosition.x
       } else {
-        tooltipStyles["left"] = mousePosition.x + 15
+        tooltipStyles["left"] = mousePosition.x
         tooltipStyles["right"] = "auto"
       }
     } else {
       tooltipStyles["maxWidth"] = "80vw"
       tooltipStyles["left"] = "auto"
-      tooltipStyles["rigth"] = "auto"
+      tooltipStyles["right"] = "auto"
     }
   }
 
@@ -68,7 +68,7 @@ const useTooltip = (bg, label, content, minW, maxW, followMouse) => {
   const preview = [previewLabel, previewContent]
 
   return (
-    <Tooltip mobile={mobile} content={preview} bg={bg} style={tooltipStyles} />
+    <Tooltip content={preview} bg={bg} style={tooltipStyles} />
   )
 }
 

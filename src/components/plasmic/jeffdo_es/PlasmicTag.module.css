@@ -13,8 +13,7 @@
 }
 .rootstroke {
   background: none;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid var(--token-kfE5AuMht);
 }
 .rootflippabble {
   background: var(--token-R8vy1i-sY);

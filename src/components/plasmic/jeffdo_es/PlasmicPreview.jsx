@@ -158,6 +158,7 @@ function PlasmicPreview__RenderFunc(props) {
             ),
 
             value: args.words,
+            className: classNames(sty.slotTargetWords),
           })}
         </div>
       ) : null}

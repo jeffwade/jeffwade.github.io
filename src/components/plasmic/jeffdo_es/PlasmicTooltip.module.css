@@ -16,7 +16,6 @@
 }
 .rootbg_orange {
   background: var(--token-pHc0CSHPE);
-  min-width: 312px;
 }
 .rootbg_blue {
   background: var(--token-rbxblu3Hd);
@@ -30,8 +29,17 @@
 .rootbg_grey {
   background: var(--token-3F-Dll6EN);
 }
+.slotTargetContentbg_mint {
+  color: var(--token-mfRasWXgp);
+}
+.slotTargetContentbg_yellow {
+  color: var(--token-mfRasWXgp);
+}
+.slotTargetContentbg_orange {
+  color: var(--token-mfRasWXgp);
+}
 .slotTargetContentbg_blue {
-  color: var(--token-EkgtUgXeT);
+  color: var(--token-mfRasWXgp);
 }
 .slotTargetContentbg_red {
   color: var(--token-EkgtUgXeT);
@@ -47,5 +55,6 @@
   width: 100%;
   height: auto;
   max-width: 800px;
+  color: var(--token-mfRasWXgp);
   min-width: 0;
 }

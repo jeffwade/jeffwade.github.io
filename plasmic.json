@@ -327,6 +327,32 @@
           "cssFilePath": "plasmic/jeffdo_es/PlasmicRemember.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "oYHrOG4pQI",
+          "name": "Nav",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicNav.jsx",
+          "importSpec": {
+            "modulePath": "Nav.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicNav.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "IQmvc6tT46",
+          "name": "WorkCard",
+          "type": "managed",
+          "projectId": "mujoL4gD3qd1ezKDLZ31rZ",
+          "renderModuleFilePath": "plasmic/jeffdo_es/PlasmicWorkCard.jsx",
+          "importSpec": {
+            "modulePath": "WorkCard.jsx"
+          },
+          "cssFilePath": "plasmic/jeffdo_es/PlasmicWorkCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

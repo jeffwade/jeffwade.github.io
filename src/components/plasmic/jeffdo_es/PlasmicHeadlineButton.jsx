@@ -99,6 +99,12 @@ function PlasmicHeadlineButton__RenderFunc(props) {
               "mode",
               "dark"
             ),
+
+            [sty.slotTargetSymbolglobal_mode_reveal]: hasVariant(
+              globalVariants,
+              "mode",
+              "reveal"
+            ),
           }),
         })}
       </h1>

@@ -83,6 +83,10 @@ function PlasmicTag__RenderFunc(props) {
             "flippabble",
             "flippabble"
           ),
+
+          [sty.slotTargetLabelglobal_mode_dark_flippabble]:
+            hasVariant(variants, "flippabble", "flippabble") &&
+            hasVariant(globalVariants, "mode", "dark"),
         }),
       })}
     </div>

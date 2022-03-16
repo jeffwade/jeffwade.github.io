@@ -79,7 +79,7 @@ function PlasmicBackButton__RenderFunc(props) {
         data-plasmic-override={overrides.text}
         className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
       >
-        {"go back"}
+        {"case studies"}
       </div>
     </button>
   )

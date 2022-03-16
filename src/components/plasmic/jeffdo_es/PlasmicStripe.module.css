@@ -16,6 +16,9 @@
   border-width: 0px;
   border-style: none;
 }
+.rootcolor_grey {
+  cursor: pointer;
+}
 .roothighlighted {
   transform: translateX(0px) translateY(-1px) translateZ(0px);
   box-shadow: 0px 4px 11px 0px #bf69ea26;
@@ -26,6 +29,12 @@
 .rootlowlighted {
   opacity: 0.3;
   width: 120px;
+}
+.rootcolor_orange {
+  cursor: pointer;
+}
+.rootcolor_blue {
+  cursor: pointer;
 }
 .root:hover {
   transform: translateX(0px) translateY(-1px) translateZ(0px);
