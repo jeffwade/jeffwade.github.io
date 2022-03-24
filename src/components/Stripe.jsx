@@ -9,6 +9,7 @@ import ArrowRightIcon from "../components/plasmic/jeffdo_es/icons/PlasmicIcon__A
 function Stripe_(props, ref) {
   const {
     name,
+    href,
     label,
     icon,
     category,
@@ -16,7 +17,6 @@ function Stripe_(props, ref) {
     mode,
     highlighted,
     lowlighted,
-    revealed,
     labelIsVisible,
     ...rest
   } = props
@@ -24,6 +24,18 @@ function Stripe_(props, ref) {
   const isBrowser = typeof window !== "undefined"
   const mousePosition = useMousePosition()
   const [mobile, setMobile] = useState(undefined)
+
+  const words = [
+    "my name is jeff wade. i'm currently a design lead at bridger, in san diego, california.",
+    "i'm a fan of thinking through complex systems and mapping them to intuitive representations; shaping experiences that make sense.",
+    "i believe that form follows function follows form: the way something works should inform how it looks, which will influence how it's used.",
+    "my job is to guide the design process in a positive way, through facilitation, mentorship and rolling up my sleeves and diving in",
+    "working with global enterprises, local startups and many clients in between, i've designed digital products, crafted brand experiences and facilitated innovation workshops.",
+    "learning is my love language",
+    "i believe the primary rules of design (and life) are: relationships, relationships, relationships.",
+    "i sleep with my sketchbook next to my bed."
+  ];
+  const [currentWords, setCurrentWords] = useState(0);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)")
@@ -40,10 +52,13 @@ function Stripe_(props, ref) {
     alignItems: "center",
     overflow: "hidden",
     whiteSpace: "nowrap",
+    opacity: 100,
   }
 
+  // set the position of the striipe label based on the mouse position
+  //  
   if (isBrowser) {
-    if (!mobile && isHovered) {
+    if (!mobile) {
       if (mousePosition.x > window.innerWidth / 2) {
         labelStyles["left"] = "auto"
         labelStyles["right"] = window.innerWidth - mousePosition.x - 24
@@ -67,7 +82,13 @@ function Stripe_(props, ref) {
         <ArrowRightIcon />
       </div>
     )
-    labelStyles["left"] = lowlighted ? "auto" : mousePosition.x - 24
+  } else if ( name === "words" && isHovered ) {
+    stripeLabel = (
+      <div style={labelStyles}>
+         {lowlighted ? null : "more words"}
+        <ArrowRightIcon />
+      </div>
+    )
   } else if (!lowlighted && labelIsVisible) {
     stripeLabel = (
       <div style={labelStyles}>
@@ -79,9 +100,11 @@ function Stripe_(props, ref) {
     stripeLabel = null
   }
 
-  const tooltipLabel =
-    category === "work" || !labelIsVisible || lowlighted ? [icon, label, icon] : null
-  const content = <Preview name={name} />
+  let tooltipLabel =
+    category === "work" || !labelIsVisible || lowlighted ? [label, icon] : null
+
+  tooltipLabel = name === "words" ? [icon, label, `(${currentWords + 1}/${words.length})`] : tooltipLabel;
+  const content = (name==="words") ? <Preview name="words" words={words[currentWords]}/> : <Preview name={name} />
   const tooltip = useTooltip(
     color,
     tooltipLabel,
@@ -95,7 +118,12 @@ function Stripe_(props, ref) {
     <>
       {isHovered && tooltip}
       <PlasmicStripe
-        root={{ ref }}
+        {...rest}
+        root={{
+          ref,
+          as: href ? "a" : undefined,
+        }}
+        href={href}
         name={name}
         color={color}
         icon={null}
@@ -103,9 +131,13 @@ function Stripe_(props, ref) {
         mode={mode}
         highlighted={highlighted}
         lowlighted={lowlighted}
-        {...rest}
         label={stripeLabel}
-        onMouseOver={() => setIsHovered(true)}
+        onClick={() => {
+          setCurrentWords((currentWords + 1)%words.length);
+        }}
+        onMouseOver={() => {
+          setIsHovered(true);
+        }}
         onFocus={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
         onBlur={() => setIsHovered(false)}

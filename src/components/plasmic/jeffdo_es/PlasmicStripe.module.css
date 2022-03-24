@@ -19,13 +19,6 @@
 .rootcolor_grey {
   cursor: pointer;
 }
-.roothighlighted {
-  transform: translateX(0px) translateY(-1px) translateZ(0px);
-  box-shadow: 0px 4px 11px 0px #bf69ea26;
-  cursor: pointer;
-  backdrop-filter: blur(15px);
-  opacity: 1;
-}
 .rootlowlighted {
   opacity: 0.3;
   width: 120px;
@@ -35,6 +28,13 @@
 }
 .rootcolor_blue {
   cursor: pointer;
+}
+.roothighlighted {
+  transform: translateX(0px) translateY(-1px) translateZ(0px);
+  box-shadow: 0px 4px 11px 0px #bf69ea26;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+  opacity: 1;
 }
 .root:hover {
   transform: translateX(0px) translateY(-1px) translateZ(0px);

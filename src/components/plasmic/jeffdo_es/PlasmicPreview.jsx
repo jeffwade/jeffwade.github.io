@@ -55,6 +55,7 @@ function PlasmicPreview__RenderFunc(props) {
         projectcss.all,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
+        projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         sty.root,
         {
@@ -852,7 +853,7 @@ function PlasmicPreview__RenderFunc(props) {
               }
             )}
           >
-            {"taking a holistic, end-to-end approach "}
+            {"taking a holistic approach to products & brands"}
           </div>
 
           <div

@@ -153,7 +153,6 @@
 }
 .controls {
   flex-direction: column;
-  display: flex;
   position: fixed;
   width: 90vw;
   height: 85vh;
@@ -161,6 +160,7 @@
   background: #2b393cd9;
   left: 2vw;
   flex-shrink: 0;
+  display: none;
   padding: 8px;
 }
 .controls > :global(.__wab_flex-container) {

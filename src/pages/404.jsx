@@ -12,10 +12,8 @@ function _404() {
     const newMode = [...mode];
     if ( newMode.includes("reveal") ) {
       newMode.pop();
-      // setShowLabel(true);
     } else {
       newMode.push("reveal");
-      // setShowLabel(false);
     }
     setMode(newMode);
   };

@@ -14,6 +14,7 @@ import {
   hasVariant,
   classNames,
   createPlasmicElementProxy,
+  useTrigger,
   deriveRenderOpts,
   ensureGlobalVariants,
 } from "@plasmicapp/react-web"
@@ -25,10 +26,19 @@ import orgDesignMeo1PxVz7 from "./images/orgDesign.png" // plasmic-import: meo1P
 
 export const PlasmicWorkCard__VariantProps = new Array()
 
-export const PlasmicWorkCard__ArgProps = new Array("image", "title")
+export const PlasmicWorkCard__ArgProps = new Array(
+  "image",
+  "title",
+  "hoverText"
+)
 
 function PlasmicWorkCard__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props
+  const [isCardHover, triggerCardHoverProps] = useTrigger("useHover", {})
+  const triggers = {
+    hover_card: isCardHover,
+  }
+
   const globalVariants = ensureGlobalVariants({
     mode: useMode(),
   })
@@ -43,6 +53,7 @@ function PlasmicWorkCard__RenderFunc(props) {
         projectcss.all,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
+        projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         sty.card,
         "work-card",
@@ -52,43 +63,100 @@ function PlasmicWorkCard__RenderFunc(props) {
             "mode",
             "dark"
           ),
+
+          [projectcss.global_mode_reveal]: hasVariant(
+            globalVariants,
+            "mode",
+            "reveal"
+          ),
+
+          [sty.cardglobal_mode_dark_global_mode_reveal]:
+            hasVariant(globalVariants, "mode", "dark") &&
+            hasVariant(globalVariants, "mode", "reveal"),
+          [sty.cardglobal_mode_reveal]: hasVariant(
+            globalVariants,
+            "mode",
+            "reveal"
+          ),
         }
       )}
       tabIndex={0}
+      data-plasmic-trigger-props={[triggerCardHoverProps]}
     >
-      {p.renderPlasmicSlot({
-        defaultContents: (
-          <p.PlasmicImg
-            alt={""}
-            className={classNames(sty.img__lEXel)}
-            displayHeight={"100%"}
-            displayMaxHeight={"none"}
-            displayMaxWidth={"100%"}
-            displayMinHeight={"0"}
-            displayMinWidth={"0"}
-            displayWidth={"100%"}
-            loading={"lazy"}
-            src={{
-              src: orgDesignMeo1PxVz7,
-              fullWidth: 2880,
-              fullHeight: 2048,
-              aspectRatio: undefined,
-            }}
-          />
-        ),
+      {(hasVariant(globalVariants, "mode", "reveal") ? false : true)
+        ? p.renderPlasmicSlot({
+            defaultContents: (
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__lEXel)}
+                displayHeight={"100%"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: orgDesignMeo1PxVz7,
+                  fullWidth: 2880,
+                  fullHeight: 2048,
+                  aspectRatio: undefined,
+                }}
+              />
+            ),
 
-        value: args.image,
-      })}
+            value: args.image,
+          })
+        : null}
 
-      <div className={classNames(projectcss.all, sty.freeBox__nzVMu)}>
+      <div
+        className={classNames(projectcss.all, sty.freeBox__nzVMu, {
+          [sty.freeBoxglobal_mode_reveal__nzVMuv94Jk]: hasVariant(
+            globalVariants,
+            "mode",
+            "reveal"
+          ),
+        })}
+      >
         <div className={classNames(projectcss.all, sty.freeBox__haSw)}>
           {p.renderPlasmicSlot({
             defaultContents: "an org design tool",
             value: args.title,
-            className: classNames(sty.slotTargetTitle),
+            className: classNames(sty.slotTargetTitle, {
+              [sty.slotTargetTitleglobal_mode_reveal]: hasVariant(
+                globalVariants,
+                "mode",
+                "reveal"
+              ),
+            }),
           })}
         </div>
       </div>
+
+      {(triggers.hover_card ? true : true) ? (
+        <div
+          className={classNames(projectcss.all, sty.freeBox__uLcd4, {
+            [sty.freeBoxglobal_mode_dark_global_mode_reveal__uLcd4JYvhV94Jk]:
+              hasVariant(globalVariants, "mode", "dark") &&
+              hasVariant(globalVariants, "mode", "reveal"),
+            [sty.freeBoxglobal_mode_reveal__uLcd4V94Jk]: hasVariant(
+              globalVariants,
+              "mode",
+              "reveal"
+            ),
+          })}
+        >
+          {p.renderPlasmicSlot({
+            defaultContents: "coming soon",
+            value: args.hoverText,
+            className: classNames(sty.slotTargetHoverText, {
+              [sty.slotTargetHoverTextglobal_mode_dark_global_mode_reveal]:
+                hasVariant(globalVariants, "mode", "dark") &&
+                hasVariant(globalVariants, "mode", "reveal"),
+            }),
+          })}
+        </div>
+      ) : null}
     </div>
   )
 }

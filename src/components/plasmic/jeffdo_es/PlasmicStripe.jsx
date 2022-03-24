@@ -26,7 +26,6 @@ import ArrowRightIcon from "./icons/PlasmicIcon__ArrowRight" // plasmic-import: 
 
 export const PlasmicStripe__VariantProps = new Array(
   "color",
-  "revealed",
   "highlighted",
   "lowlighted"
 )
@@ -72,6 +71,7 @@ function PlasmicStripe__RenderFunc(props) {
         projectcss.button,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
+        projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         sty.root,
         {
@@ -107,8 +107,6 @@ function PlasmicStripe__RenderFunc(props) {
             "lowlighted",
             "lowlighted"
           ),
-
-          [sty.rootrevealed]: hasVariant(variants, "revealed", "revealed"),
         }
       )}
       id={args.name}
@@ -157,8 +155,6 @@ function PlasmicStripe__RenderFunc(props) {
             "lowlighted",
             "lowlighted"
           ),
-
-          [sty.titlerevealed]: hasVariant(variants, "revealed", "revealed"),
         })}
       >
         {(
@@ -173,8 +169,6 @@ function PlasmicStripe__RenderFunc(props) {
               hasVariant(globalVariants, "mode", "reveal")
             ? true
             : triggers.hover_root
-            ? false
-            : hasVariant(variants, "revealed", "revealed")
             ? true
             : hasVariant(variants, "highlighted", "highlighted")
             ? true
@@ -235,12 +229,6 @@ function PlasmicStripe__RenderFunc(props) {
                   "highlighted",
                   "highlighted"
                 ),
-
-                [sty.slotTargetLabelrevealed]: hasVariant(
-                  variants,
-                  "revealed",
-                  "revealed"
-                ),
               }),
             })
           : null}
@@ -256,8 +244,6 @@ function PlasmicStripe__RenderFunc(props) {
               hasVariant(globalVariants, "mode", "reveal")
             ? true
             : triggers.hover_root
-            ? false
-            : hasVariant(variants, "revealed", "revealed")
             ? true
             : hasVariant(variants, "highlighted", "highlighted")
             ? true
@@ -323,12 +309,6 @@ function PlasmicStripe__RenderFunc(props) {
                   variants,
                   "highlighted",
                   "highlighted"
-                ),
-
-                [sty.slotTargetIconrevealed]: hasVariant(
-                  variants,
-                  "revealed",
-                  "revealed"
                 ),
               }),
             })

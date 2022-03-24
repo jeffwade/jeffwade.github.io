@@ -45,9 +45,9 @@
   margin-left: var(--token-2B3TB9Igd);
   transition-property: all;
   transition-duration: 0.3s;
-  color: var(--token-mfRasWXgp);
+  color: var(--token-3F-Dll6EN);
 }
 .root:hover .text {
-  color: var(--token-EkgtUgXeT);
   transform: translateX(1px) translateY(0px) translateZ(0px);
+  color: var(--token-HCE3dosEr);
 }

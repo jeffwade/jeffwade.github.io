@@ -552,6 +552,36 @@
           "id": "JIeMq-IOo",
           "name": "orgtool-research.png",
           "filePath": "plasmic/jeffdo_es/images/orgtoolResearchpng.png"
+        },
+        {
+          "id": "7st4ob6VJ",
+          "name": "absolute flight",
+          "filePath": "plasmic/jeffdo_es/images/absoluteFlight.png"
+        },
+        {
+          "id": "lQjd9xtUP",
+          "name": "homebank",
+          "filePath": "plasmic/jeffdo_es/images/homebank.jpeg"
+        },
+        {
+          "id": "n5LfcRGsG",
+          "name": "design system",
+          "filePath": "plasmic/jeffdo_es/images/designSystem.png"
+        },
+        {
+          "id": "ixIW820KF",
+          "name": "logistics",
+          "filePath": "plasmic/jeffdo_es/images/logistics.png"
+        },
+        {
+          "id": "LcRWsB4si",
+          "name": "biotech",
+          "filePath": "plasmic/jeffdo_es/images/biotech.png"
+        },
+        {
+          "id": "o2bv1_FGl",
+          "name": "brandsite-sketch",
+          "filePath": "plasmic/jeffdo_es/images/brandsiteSketch.jpeg"
         }
       ],
       "indirect": false,
@@ -587,9 +617,10 @@
       }
     ]
   },
+  "wrapPagesWithGlobalContexts": true,
   "gatsbyConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.174",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.174/dist/plasmic.schema.json"
+  "cliVersion": "0.1.175",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.175/dist/plasmic.schema.json"
 }

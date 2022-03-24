@@ -228,20 +228,6 @@
 .textglobal_highlight_about__r5O0RjOrod {
   color: var(--token-tze2JIV_u);
 }
-.link__jDnrf {
-  display: flex;
-  width: auto;
-}
-@media (min-width: 768px) {
-  .link__jDnrf {
-    cursor: pointer;
-  }
-}
-.linkglobal_arrangement_float__jDnrfzZfig {
-  position: absolute;
-  top: 72.2%;
-  left: 6%;
-}
 .ui:global(.__wab_instance) {
   max-width: 100%;
   min-height: 36px;
@@ -250,13 +236,14 @@
   .ui:global(.__wab_instance) {
     min-height: 48px;
     height: 48px;
+    flex-shrink: 0;
   }
-}
-.uiglobal_highlight_about:global(.__wab_instance) {
-  flex-shrink: 0;
 }
 .uiglobal_arrangement_float:global(.__wab_instance) {
   width: auto;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 .svg__laIzF {
   position: relative;
@@ -264,26 +251,6 @@
   max-width: 100%;
   width: 1em;
   height: 1em;
-}
-.link__vEyis {
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
-  display: flex;
-  width: auto;
-}
-@media (min-width: 768px) {
-  .link__vEyis {
-    cursor: pointer;
-  }
-}
-.linkglobal_arrangement_float__vEyisZZfig {
-  position: absolute;
-  top: 15.89%;
-  left: auto;
-  right: 4.27%;
-  z-index: 1;
 }
 .ux:global(.__wab_instance) {
   max-width: 100%;
@@ -293,13 +260,14 @@
   .ux:global(.__wab_instance) {
     min-height: 48px;
     height: 48px;
+    flex-shrink: 0;
   }
-}
-.uxglobal_highlight_about:global(.__wab_instance) {
-  flex-shrink: 0;
 }
 .uxglobal_arrangement_float:global(.__wab_instance) {
   width: auto;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 .text__raQdW {
   display: block;
@@ -355,20 +323,6 @@
   width: 1em;
   height: 1em;
 }
-.link___9FgV {
-  display: flex;
-  width: auto;
-}
-@media (min-width: 768px) {
-  .link___9FgV {
-    cursor: pointer;
-  }
-}
-.linkglobal_arrangement_float___9FgVZZfig {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
 .service:global(.__wab_instance) {
   max-width: 100%;
   min-height: 36px;
@@ -377,13 +331,14 @@
   .service:global(.__wab_instance) {
     height: 48px;
     min-height: 48px;
+    flex-shrink: 0;
   }
-}
-.serviceglobal_highlight_about:global(.__wab_instance) {
-  flex-shrink: 0;
 }
 .serviceglobal_arrangement_float:global(.__wab_instance) {
   width: auto;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 .text__e0Mp7 {
   width: auto;

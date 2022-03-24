@@ -9,6 +9,7 @@
 // Plasmic Project: mujoL4gD3qd1ezKDLZ31rZ
 // Component: tThhXlSj4r
 import * as React from "react"
+import { Link } from "gatsby"
 import * as p from "@plasmicapp/react-web"
 import {
   hasVariant,
@@ -25,11 +26,17 @@ import { useHighlight } from "./PlasmicGlobalVariant__Highlight" // plasmic-impo
 import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_jeffdo_es.module.css" // plasmic-import: mujoL4gD3qd1ezKDLZ31rZ/projectcss
 import * as sty from "./PlasmicRemember.module.css" // plasmic-import: tThhXlSj4r/css
-import EyeOpenIcon from "./icons/PlasmicIcon__EyeOpen" // plasmic-import: J7fJnmL4N/icon
 import EyeClosedIcon from "./icons/PlasmicIcon__EyeClosed" // plasmic-import: aBAB-JPNq/icon
+import EyeOpenIcon from "./icons/PlasmicIcon__EyeOpen" // plasmic-import: J7fJnmL4N/icon
 import JwSharpIcon from "./icons/PlasmicIcon__JwSharp" // plasmic-import: imnHY-_8sU/icon
 import NightIcon from "./icons/PlasmicIcon__Night" // plasmic-import: nS7MqAdlwl/icon
 import DayIcon from "./icons/PlasmicIcon__Day" // plasmic-import: 2cwRWiCxc/icon
+import orgDesignMeo1PxVz7 from "./images/orgDesign.png" // plasmic-import: meo1PxVZ7/picture
+import homebankLQjd9XtUp from "./images/homebank.jpeg" // plasmic-import: lQjd9xtUP/picture
+import brandsiteSketchO2Bv1FGl from "./images/brandsiteSketch.jpeg" // plasmic-import: o2bv1_FGl/picture
+import designSystemN5LfcRGsG from "./images/designSystem.png" // plasmic-import: n5LfcRGsG/picture
+import logisticsIxIw820Kf from "./images/logistics.png" // plasmic-import: ixIW820KF/picture
+import biotechLcRWsB4Si from "./images/biotech.png" // plasmic-import: LcRWsB4si/picture
 
 export const PlasmicRemember__VariantProps = new Array()
 
@@ -63,6 +70,7 @@ function PlasmicRemember__RenderFunc(props) {
             projectcss.all,
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
+            projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             sty.root,
             {
@@ -70,6 +78,18 @@ function PlasmicRemember__RenderFunc(props) {
                 globalVariants,
                 "mode",
                 "dark"
+              ),
+
+              [sty.rootglobal_mode_dark]: hasVariant(
+                globalVariants,
+                "mode",
+                "dark"
+              ),
+
+              [sty.rootglobal_mode_reveal]: hasVariant(
+                globalVariants,
+                "mode",
+                "reveal"
               ),
             }
           )}
@@ -88,48 +108,400 @@ function PlasmicRemember__RenderFunc(props) {
           </h1>
 
           {true ? (
-            <p.Stack
-              as={"div"}
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.columns)}
+            <div
+              data-plasmic-name={"freeBox"}
+              data-plasmic-override={overrides.freeBox}
+              className={classNames(projectcss.all, sty.freeBox)}
             >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.column__v0Llo)}
-              >
-                <WorkCard
-                  className={classNames("__wab_instance", sty.workCard__kObXz)}
-                  title={"an org design tool"}
-                />
+              {true ? (
+                <p.Stack
+                  as={"div"}
+                  data-plasmic-name={"columns"}
+                  data-plasmic-override={overrides.columns}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.columns, {
+                    [sty.columnsglobal_mode_reveal]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "reveal"
+                    ),
+                  })}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.column__v0Llo, {
+                      [sty.columnglobal_mode_reveal__v0LlOv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                  >
+                    <WorkCard
+                      data-plasmic-name={"case1"}
+                      data-plasmic-override={overrides.case1}
+                      className={classNames("__wab_instance", sty.case1, {
+                        [sty.case1global_mode_reveal]: hasVariant(
+                          globalVariants,
+                          "mode",
+                          "reveal"
+                        ),
+                      })}
+                      hoverText={
+                        true ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___0SXGf,
+                              {
+                                [sty.textglobal_mode_dark___0SXGfJYvh]:
+                                  hasVariant(globalVariants, "mode", "dark"),
+                                [sty.textglobal_mode_reveal___0SXGfv94Jk]:
+                                  hasVariant(globalVariants, "mode", "reveal"),
+                              }
+                            )}
+                          >
+                            {"coming soon"}
+                          </div>
+                        ) : null
+                      }
+                      image={
+                        (
+                          hasVariant(globalVariants, "mode", "reveal")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__yrMAw, {
+                              [sty.imgglobal_mode_dark__yrMAwJYvh]: hasVariant(
+                                globalVariants,
+                                "mode",
+                                "dark"
+                              ),
 
-                <WorkCard
-                  className={classNames("__wab_instance", sty.workCard___6RwPh)}
-                />
-              </p.Stack>
+                              [sty.imgglobal_mode_reveal__yrMAwv94Jk]:
+                                hasVariant(globalVariants, "mode", "reveal"),
+                            })}
+                            displayHeight={"100%"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? "440px"
+                                : "100%"
+                            }
+                            loading={"lazy"}
+                            src={{
+                              src: orgDesignMeo1PxVz7,
+                              fullWidth: 2880,
+                              fullHeight: 2048,
+                              aspectRatio: undefined,
+                            }}
+                          />
+                        ) : null
+                      }
+                      title={"an org design tool"}
+                    />
 
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.column__amWpZ)}
-              >
-                <WorkCard
-                  className={classNames("__wab_instance", sty.workCard__mkFgA)}
-                />
+                    <WorkCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.workCard__dgCuN,
+                        {
+                          [sty.workCardglobal_mode_reveal__dgCuNv94Jk]:
+                            hasVariant(globalVariants, "mode", "reveal"),
+                        }
+                      )}
+                      image={
+                        (
+                          hasVariant(globalVariants, "mode", "reveal")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__j8E8P, {
+                              [sty.imgglobal_mode_reveal__j8E8Pv94Jk]:
+                                hasVariant(globalVariants, "mode", "reveal"),
+                            })}
+                            displayHeight={"100%"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? "440px"
+                                : "100%"
+                            }
+                            loading={"lazy"}
+                            src={{
+                              src: homebankLQjd9XtUp,
+                              fullWidth: 2048,
+                              fullHeight: 1536,
+                              aspectRatio: undefined,
+                            }}
+                          />
+                        ) : null
+                      }
+                      title={"a mortgage portal"}
+                    />
 
-                <WorkCard
-                  className={classNames("__wab_instance", sty.workCard__dgCuN)}
-                />
-              </p.Stack>
-            </p.Stack>
+                    <WorkCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.workCard__eN9Yd,
+                        {
+                          [sty.workCardglobal_mode_reveal__eN9YDv94Jk]:
+                            hasVariant(globalVariants, "mode", "reveal"),
+                        }
+                      )}
+                      image={
+                        (
+                          hasVariant(globalVariants, "mode", "reveal")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__lAitF, {
+                              [sty.imgglobal_mode_reveal__lAitFv94Jk]:
+                                hasVariant(globalVariants, "mode", "reveal"),
+                            })}
+                            displayHeight={"100%"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? "440px"
+                                : "100%"
+                            }
+                            loading={"lazy"}
+                            src={{
+                              src: brandsiteSketchO2Bv1FGl,
+                              fullWidth: 4096,
+                              fullHeight: 3069,
+                              aspectRatio: undefined,
+                            }}
+                          />
+                        ) : null
+                      }
+                      title={"a global brand navigator"}
+                    />
+                  </p.Stack>
+
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.column__amWpZ)}
+                  >
+                    <WorkCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.workCard___6RwPh,
+                        {
+                          [sty.workCardglobal_mode_reveal___6RwPHv94Jk]:
+                            hasVariant(globalVariants, "mode", "reveal"),
+                        }
+                      )}
+                      image={
+                        (
+                          hasVariant(globalVariants, "mode", "reveal")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__mWe99, {
+                              [sty.imgglobal_mode_reveal__mWe99V94Jk]:
+                                hasVariant(globalVariants, "mode", "reveal"),
+                            })}
+                            displayHeight={"100%"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? "440px"
+                                : "100%"
+                            }
+                            loading={"lazy"}
+                            src={{
+                              src: designSystemN5LfcRGsG,
+                              fullWidth: 880,
+                              fullHeight: 513,
+                              aspectRatio: undefined,
+                            }}
+                          />
+                        ) : null
+                      }
+                      title={"a product design system"}
+                    />
+
+                    <WorkCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.workCard__mkFgA,
+                        {
+                          [sty.workCardglobal_mode_reveal__mkFgAv94Jk]:
+                            hasVariant(globalVariants, "mode", "reveal"),
+                        }
+                      )}
+                      image={
+                        (
+                          hasVariant(globalVariants, "mode", "reveal")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__kv7Eq, {
+                              [sty.imgglobal_mode_reveal__kv7EQv94Jk]:
+                                hasVariant(globalVariants, "mode", "reveal"),
+                            })}
+                            displayHeight={"100%"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? "440px"
+                                : "100%"
+                            }
+                            loading={"lazy"}
+                            src={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? {
+                                    src: logisticsIxIw820Kf,
+                                    fullWidth: 968,
+                                    fullHeight: 722,
+                                    aspectRatio: undefined,
+                                  }
+                                : {
+                                    src: logisticsIxIw820Kf,
+                                    fullWidth: 968,
+                                    fullHeight: 722,
+                                    aspectRatio: undefined,
+                                  }
+                            }
+                          />
+                        ) : null
+                      }
+                      title={"an ecomm logistics service"}
+                    />
+
+                    <WorkCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.workCard__bMvGu,
+                        {
+                          [sty.workCardglobal_mode_reveal__bMvGuv94Jk]:
+                            hasVariant(globalVariants, "mode", "reveal"),
+                        }
+                      )}
+                      image={
+                        (
+                          hasVariant(globalVariants, "mode", "reveal")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__fKio8, {
+                              [sty.imgglobal_mode_reveal__fKio8V94Jk]:
+                                hasVariant(globalVariants, "mode", "reveal"),
+                            })}
+                            displayHeight={"100%"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? "440px"
+                                : "100%"
+                            }
+                            loading={"lazy"}
+                            src={{
+                              src: biotechLcRWsB4Si,
+                              fullWidth: 1024,
+                              fullHeight: 748,
+                              aspectRatio: undefined,
+                            }}
+                          />
+                        ) : null
+                      }
+                      title={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__utVr0
+                          )}
+                        >
+                          {"a biotech account manager"}
+                        </div>
+                      }
+                    />
+                  </p.Stack>
+                </p.Stack>
+              ) : null}
+            </div>
           ) : null}
 
           <nav
             data-plasmic-name={"nav"}
             data-plasmic-override={overrides.nav}
-            className={classNames(projectcss.all, sty.nav)}
+            className={classNames(projectcss.all, sty.nav, {
+              [sty.navglobal_mode_dark]: hasVariant(
+                globalVariants,
+                "mode",
+                "dark"
+              ),
+
+              [sty.navglobal_mode_reveal]: hasVariant(
+                globalVariants,
+                "mode",
+                "reveal"
+              ),
+            })}
           >
             <IconButton
               data-plasmic-name={"reveal"}
@@ -139,6 +511,12 @@ function PlasmicRemember__RenderFunc(props) {
                   globalVariants,
                   "highlight",
                   "work"
+                ),
+
+                [sty.revealglobal_mode_dark]: hasVariant(
+                  globalVariants,
+                  "mode",
+                  "dark"
                 ),
 
                 [sty.revealglobal_mode_reveal]: hasVariant(
@@ -151,10 +529,16 @@ function PlasmicRemember__RenderFunc(props) {
                 <p.PlasmicIcon
                   PlasmicIconType={
                     hasVariant(globalVariants, "mode", "reveal")
-                      ? EyeClosedIcon
-                      : EyeOpenIcon
+                      ? EyeOpenIcon
+                      : EyeClosedIcon
                   }
                   className={classNames(projectcss.all, sty.svg___7EfG1, {
+                    [sty.svgglobal_mode_dark___7EfG1JYvh]: hasVariant(
+                      globalVariants,
+                      "mode",
+                      "dark"
+                    ),
+
                     [sty.svgglobal_mode_reveal___7EfG1V94Jk]: hasVariant(
                       globalVariants,
                       "mode",
@@ -173,60 +557,68 @@ function PlasmicRemember__RenderFunc(props) {
                 hasVariant(globalVariants, "highlight", "work")
                   ? "reveal labels"
                   : hasVariant(globalVariants, "mode", "reveal")
-                  ? "hide labels"
-                  : "reveal labels"
+                  ? "show images"
+                  : "hide images"
               }
             />
 
-            <IconButton
-              data-plasmic-name={"logo"}
-              data-plasmic-override={overrides.logo}
-              className={classNames("__wab_instance", sty.logo, {
-                [sty.logoglobal_mode_dark]: hasVariant(
-                  globalVariants,
-                  "mode",
-                  "dark"
-                ),
+            <p.PlasmicLink
+              data-plasmic-name={"backHome"}
+              data-plasmic-override={overrides.backHome}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.backHome,
+                {
+                  [sty.backHomeglobal_mode_dark]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "dark"
+                  ),
+                }
+              )}
+              component={Link}
+              href={"/design"}
+              platform={"gatsby"}
+              title={"go back"}
+            >
+              <IconButton
+                data-plasmic-name={"logo"}
+                data-plasmic-override={overrides.logo}
+                className={classNames("__wab_instance", sty.logo, {
+                  [sty.logoglobal_mode_dark]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "dark"
+                  ),
 
-                [sty.logoglobal_mode_reveal]: hasVariant(
-                  globalVariants,
-                  "mode",
-                  "reveal"
-                ),
-              })}
-              icon={
-                <p.PlasmicIcon
-                  PlasmicIconType={
-                    hasVariant(globalVariants, "mode", "reveal")
-                      ? JwSharpIcon
-                      : hasVariant(globalVariants, "mode", "dark")
-                      ? JwSharpIcon
-                      : JwSharpIcon
-                  }
-                  className={classNames(projectcss.all, sty.svg__gg5Bj, {
-                    [sty.svgglobal_mode_dark__gg5BjJYvh]: hasVariant(
-                      globalVariants,
-                      "mode",
-                      "dark"
-                    ),
+                  [sty.logoglobal_mode_reveal]: hasVariant(
+                    globalVariants,
+                    "mode",
+                    "reveal"
+                  ),
+                })}
+                icon={
+                  <JwSharpIcon
+                    className={classNames(projectcss.all, sty.svg__gg5Bj, {
+                      [sty.svgglobal_mode_dark__gg5BjJYvh]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "dark"
+                      ),
 
-                    [sty.svgglobal_mode_reveal__gg5Bjv94Jk]: hasVariant(
-                      globalVariants,
-                      "mode",
-                      "reveal"
-                    ),
-                  })}
-                  role={"img"}
-                />
-              }
-              label={
-                hasVariant(globalVariants, "mode", "reveal")
-                  ? ""
-                  : hasVariant(globalVariants, "mode", "dark")
-                  ? ""
-                  : ""
-              }
-            />
+                      [sty.svgglobal_mode_reveal__gg5Bjv94Jk]: hasVariant(
+                        globalVariants,
+                        "mode",
+                        "reveal"
+                      ),
+                    })}
+                    role={"img"}
+                  />
+                }
+                label={"go back"}
+              />
+            </p.PlasmicLink>
 
             <IconButton
               data-plasmic-name={"darkmode"}
@@ -247,9 +639,7 @@ function PlasmicRemember__RenderFunc(props) {
               icon={
                 <p.PlasmicIcon
                   PlasmicIconType={
-                    hasVariant(globalVariants, "mode", "reveal")
-                      ? NightIcon
-                      : hasVariant(globalVariants, "mode", "dark")
+                    hasVariant(globalVariants, "mode", "dark")
                       ? DayIcon
                       : NightIcon
                   }
@@ -277,9 +667,7 @@ function PlasmicRemember__RenderFunc(props) {
                 />
               }
               label={
-                hasVariant(globalVariants, "mode", "reveal")
-                  ? "switch to dark mode"
-                  : hasVariant(globalVariants, "mode", "dark")
+                hasVariant(globalVariants, "mode", "dark")
                   ? "switch to light mode"
                   : "switch to dark mode"
               }
@@ -292,11 +680,26 @@ function PlasmicRemember__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h1", "columns", "nav", "reveal", "logo", "darkmode"],
+  root: [
+    "root",
+    "h1",
+    "freeBox",
+    "columns",
+    "case1",
+    "nav",
+    "reveal",
+    "backHome",
+    "logo",
+    "darkmode",
+  ],
+
   h1: ["h1"],
-  columns: ["columns"],
-  nav: ["nav", "reveal", "logo", "darkmode"],
+  freeBox: ["freeBox", "columns", "case1"],
+  columns: ["columns", "case1"],
+  case1: ["case1"],
+  nav: ["nav", "reveal", "backHome", "logo", "darkmode"],
   reveal: ["reveal"],
+  backHome: ["backHome", "logo"],
   logo: ["logo"],
   darkmode: ["darkmode"],
 }
@@ -331,9 +734,12 @@ export const PlasmicRemember = Object.assign(
   {
     // Helper components rendering sub-elements
     h1: makeNodeComponent("h1"),
+    freeBox: makeNodeComponent("freeBox"),
     columns: makeNodeComponent("columns"),
+    case1: makeNodeComponent("case1"),
     nav: makeNodeComponent("nav"),
     reveal: makeNodeComponent("reveal"),
+    backHome: makeNodeComponent("backHome"),
     logo: makeNodeComponent("logo"),
     darkmode: makeNodeComponent("darkmode"),
     // Metadata about props expected for PlasmicRemember

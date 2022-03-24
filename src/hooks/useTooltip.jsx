@@ -54,9 +54,9 @@ const useTooltip = (bg, label, content, minW, maxW, followMouse) => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "flex-end",
         gap: "1rem",
-        padding: "1rem",
+        padding: "0.5rem",
       }}
     >
       {label}

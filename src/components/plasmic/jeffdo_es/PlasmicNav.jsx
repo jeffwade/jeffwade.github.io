@@ -20,6 +20,7 @@ import {
 } from "@plasmicapp/react-web"
 import IconButton from "../../IconButton" // plasmic-import: mEnM6zW3GD/component
 import { useMode } from "./PlasmicGlobalVariant__Mode" // plasmic-import: zulsK3o-3W/globalVariant
+import { useScreenVariants as useScreenVariantsekypzdksLjd0F } from "./PlasmicGlobalVariant__Screen" // plasmic-import: EKYPZDKSLjd0F/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css"
 import * as projectcss from "./plasmic_jeffdo_es.module.css" // plasmic-import: mujoL4gD3qd1ezKDLZ31rZ/projectcss
 import * as sty from "./PlasmicNav.module.css" // plasmic-import: oYHrOG4pQI/css
@@ -37,6 +38,7 @@ function PlasmicNav__RenderFunc(props) {
   const { variants, args, overrides, forNode } = props
   const globalVariants = ensureGlobalVariants({
     mode: useMode(),
+    screen: useScreenVariantsekypzdksLjd0F(),
   })
 
   return (hasVariant(globalVariants, "mode", "dark") ? true : true) ? (
@@ -49,6 +51,7 @@ function PlasmicNav__RenderFunc(props) {
         projectcss.all,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
+        projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         sty.root,
         {
@@ -62,6 +65,12 @@ function PlasmicNav__RenderFunc(props) {
             globalVariants,
             "mode",
             "dark"
+          ),
+
+          [sty.rootglobal_mode_reveal]: hasVariant(
+            globalVariants,
+            "mode",
+            "reveal"
           ),
         }
       )}

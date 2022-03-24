@@ -9,8 +9,8 @@ import { PlasmicHomepage } from "../components/plasmic/jeffdo_es/PlasmicHomepage
 
 function Homepage() {
   const [mode, setMode] = useState(["dark"])
-  const [reveal, setReveal] = useState(false)
-  const [prevReveal, setPrevReveal] = useState(reveal)
+  const [revealed, setRevealed] = useState(false)
+  const [prevRevealed, setPrevRevealed] = useState(revealed)
   const [highlight, setHighlight] = useState(undefined)
 
   const toggleDarkMode = () => {
@@ -29,28 +29,28 @@ function Homepage() {
 
     if (hl === cat) {
       setHighlight(undefined)
-      if (prevReveal && !newMode.includes("reveal")) {
+      if (prevRevealed && !newMode.includes("reveal")) {
         newMode.push("reveal")
-      } else if (!prevReveal && newMode.includes("reveal")) {
+      } else if (!prevRevealed && newMode.includes("reveal")) {
         newMode.pop()
       }
-      setReveal(prevReveal)
+      setRevealed(prevRevealed)
 
     } else {
-      setPrevReveal(reveal)
+      setPrevRevealed(revealed)
       switch (cat) {
         case "about":
           setHighlight("about")
           if (!mode.includes("reveal")) {
             newMode.push("reveal")
-            setReveal(true)
+            setRevealed(true)
           }
           break
         case "work":
           setHighlight("work")
           if (!mode.includes("reveal")) {
             newMode.push("reveal")
-            setReveal(true)
+            setRevealed(true)
           }
           break
         default:
@@ -60,16 +60,16 @@ function Homepage() {
     setMode(newMode)
   }
 
-  const toggleReveal = () => {
+  const toggleRevealed = () => {
     const newMode = [...mode]
     if (newMode.includes("reveal")) {
       newMode.pop()
-      setReveal(false)
-      setPrevReveal(false)
+      setRevealed(false)
+      setPrevRevealed(false)
     } else {
       newMode.push("reveal")
-      setReveal(true)
-      setPrevReveal(true)
+      setRevealed(true)
+      setPrevRevealed(true)
     }
     setMode(newMode)
   }
@@ -82,38 +82,40 @@ function Homepage() {
             // onClick={( highlight !== undefined ) && ( () => toggleHighlight() )}
             jeff={{
               onClick: () => toggleHighlight("about"),
-              label: highlight === "about" ? "* reset" : "* about jeff",
             }}
             design={{
               onClick: () => toggleHighlight("work"),
-              label: highlight === "work" ? "* reset" : "† product design",
             }}
             reveal={{
-              onClick: () => toggleReveal(),
+              onClick: () => toggleRevealed(),
             }}
             darkmode={{
               onClick: () => toggleDarkMode(),
             }}
             likeness={{
-              labelIsVisible: reveal,
+              labelIsVisible: revealed,
             }}
             words={{
-              labelIsVisible: reveal,
+              labelIsVisible: revealed,
+
             }}
             ui={{
-              labelIsVisible: reveal,
+              labelIsVisible: revealed,
+              href: "/remember",
             }}
             ux={{
-              labelIsVisible: reveal,
+              labelIsVisible: revealed,
+              href: "/remember",
             }}
             learnin={{
-              labelIsVisible: reveal,
+              labelIsVisible: revealed,
             }}
             service={{
-              labelIsVisible: reveal,
+              labelIsVisible: revealed,
+              href: "/remember",
             }}
             tracks={{
-              labelIsVisible: reveal,
+              labelIsVisible: revealed,
             }}
           />
         </ArrangementContext.Provider>

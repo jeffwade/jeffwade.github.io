@@ -13,7 +13,14 @@
 @media (min-width: 768px) {
   .root {
     width: 100%;
+    height: auto;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-row-gap: 0px;
     min-width: 0;
+    padding: var(--token-2B3TB9Igd) var(--token-T237bDoLkZ);
   }
 }
 .rootglobal_mode_dark {
@@ -21,10 +28,22 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
-  width: auto;
+  width: 100%;
   height: auto;
   max-width: 100%;
   flex-row-gap: 0px;
+  min-width: 0;
+  padding: var(--token-2B3TB9Igd) var(--token-T237bDoLkZ);
+}
+.rootglobal_mode_reveal {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-row-gap: 0px;
+  min-width: 0;
   padding: var(--token-2B3TB9Igd) var(--token-T237bDoLkZ);
 }
 .reveal:global(.__wab_instance) {
