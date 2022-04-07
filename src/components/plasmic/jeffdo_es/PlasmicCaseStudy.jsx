@@ -574,7 +574,9 @@ function PlasmicCaseStudy__RenderFunc(props) {
               >
                 {p.renderPlasmicSlot({
                   defaultContents: (
-                    <div
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__t1Txf)}
                     >
                       <h4
@@ -589,7 +591,9 @@ function PlasmicCaseStudy__RenderFunc(props) {
                       </h4>
 
                       {true ? (
-                        <div
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.freeBox__uWjBd
@@ -612,10 +616,10 @@ function PlasmicCaseStudy__RenderFunc(props) {
                             className={classNames(sty.img__dbx1Y)}
                             displayHeight={"auto"}
                             displayMaxHeight={"none"}
-                            displayMaxWidth={"50%"}
+                            displayMaxWidth={"100%"}
                             displayMinHeight={"0"}
                             displayMinWidth={"0"}
-                            displayWidth={"auto"}
+                            displayWidth={"100%"}
                             loading={"lazy"}
                             src={{
                               src: orgtoolResearchpngJIeMqIOo,
@@ -624,7 +628,7 @@ function PlasmicCaseStudy__RenderFunc(props) {
                               aspectRatio: undefined,
                             }}
                           />
-                        </div>
+                        </p.Stack>
                       ) : null}
 
                       <div
@@ -645,7 +649,7 @@ function PlasmicCaseStudy__RenderFunc(props) {
                           }
                         </div>
                       </div>
-                    </div>
+                    </p.Stack>
                   ),
 
                   value: args.work1,
@@ -682,9 +686,7 @@ function PlasmicCaseStudy__RenderFunc(props) {
                               sty.text__uOads
                             )}
                           >
-                            {
-                              "Over the course of several weeks, we carried out dozens of interviews with core OrgTool users and business stakeholders to understand their goals and pain points."
-                            }
+                            {"after cataloguing the user research"}
                           </div>
                         </div>
                       ),

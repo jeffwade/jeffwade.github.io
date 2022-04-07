@@ -34,9 +34,13 @@ import DayIcon from "./icons/PlasmicIcon__Day" // plasmic-import: 2cwRWiCxc/icon
 import orgDesignMeo1PxVz7 from "./images/orgDesign.png" // plasmic-import: meo1PxVZ7/picture
 import homebankLQjd9XtUp from "./images/homebank.jpeg" // plasmic-import: lQjd9xtUP/picture
 import brandsiteSketchO2Bv1FGl from "./images/brandsiteSketch.jpeg" // plasmic-import: o2bv1_FGl/picture
+import pharma3VZaG6Tpr from "./images/pharma.png" // plasmic-import: 3VZaG6tpr/picture
+import playbook7RfihwsQv from "./images/playbook.png" // plasmic-import: 7RfihwsQv/picture
 import designSystemN5LfcRGsG from "./images/designSystem.png" // plasmic-import: n5LfcRGsG/picture
 import logisticsIxIw820Kf from "./images/logistics.png" // plasmic-import: ixIW820KF/picture
 import biotechLcRWsB4Si from "./images/biotech.png" // plasmic-import: LcRWsB4si/picture
+import kcdotcomH434Mgfvc from "./images/kcdotcom.jpeg" // plasmic-import: H434MGFVC/picture
+import microapps6CjPrr3 from "./images/microapps.png" // plasmic-import: 6cj__prr3/picture
 
 export const PlasmicRemember__VariantProps = new Array()
 
@@ -188,7 +192,7 @@ function PlasmicRemember__RenderFunc(props) {
                             displayHeight={"100%"}
                             displayMaxHeight={"none"}
                             displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
+                            displayMinHeight={"227px"}
                             displayMinWidth={"0"}
                             displayWidth={
                               hasVariant(
@@ -230,6 +234,12 @@ function PlasmicRemember__RenderFunc(props) {
                           <p.PlasmicImg
                             alt={""}
                             className={classNames(sty.img__j8E8P, {
+                              [sty.imgglobal_mode_dark__j8E8PJYvh]: hasVariant(
+                                globalVariants,
+                                "mode",
+                                "dark"
+                              ),
+
                               [sty.imgglobal_mode_reveal__j8E8Pv94Jk]:
                                 hasVariant(globalVariants, "mode", "reveal"),
                             })}
@@ -265,6 +275,12 @@ function PlasmicRemember__RenderFunc(props) {
                         "__wab_instance",
                         sty.workCard__eN9Yd,
                         {
+                          [sty.workCardglobal_mode_dark__eN9YdjYvh]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "dark"
+                          ),
+
                           [sty.workCardglobal_mode_reveal__eN9YDv94Jk]:
                             hasVariant(globalVariants, "mode", "reveal"),
                         }
@@ -278,6 +294,12 @@ function PlasmicRemember__RenderFunc(props) {
                           <p.PlasmicImg
                             alt={""}
                             className={classNames(sty.img__lAitF, {
+                              [sty.imgglobal_mode_dark__lAitFjYvh]: hasVariant(
+                                globalVariants,
+                                "mode",
+                                "dark"
+                              ),
+
                               [sty.imgglobal_mode_reveal__lAitFv94Jk]:
                                 hasVariant(globalVariants, "mode", "reveal"),
                             })}
@@ -307,6 +329,121 @@ function PlasmicRemember__RenderFunc(props) {
                       }
                       title={"a global brand navigator"}
                     />
+
+                    {(
+                      hasVariant(globalVariants, "mode", "dark") ? true : true
+                    ) ? (
+                      <WorkCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.workCard___0NGeK,
+                          {
+                            [sty.workCardglobal_mode_dark___0NGeKjYvh]:
+                              hasVariant(globalVariants, "mode", "dark"),
+                            [sty.workCardglobal_mode_reveal___0NGeKv94Jk]:
+                              hasVariant(globalVariants, "mode", "reveal"),
+                          }
+                        )}
+                        image={
+                          (
+                            hasVariant(globalVariants, "mode", "reveal")
+                              ? true
+                              : true
+                          ) ? (
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__doT7G, {
+                                [sty.imgglobal_mode_dark__doT7GJYvh]:
+                                  hasVariant(globalVariants, "mode", "dark"),
+                                [sty.imgglobal_mode_reveal__doT7Gv94Jk]:
+                                  hasVariant(globalVariants, "mode", "reveal"),
+                              })}
+                              displayHeight={"100%"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={
+                                hasVariant(globalVariants, "mode", "dark")
+                                  ? "256px"
+                                  : "227px"
+                              }
+                              displayMinWidth={"0"}
+                              displayWidth={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "desktopOnly"
+                                )
+                                  ? "440px"
+                                  : "100%"
+                              }
+                              loading={"lazy"}
+                              src={{
+                                src: pharma3VZaG6Tpr,
+                                fullWidth: 3274,
+                                fullHeight: 1808,
+                                aspectRatio: undefined,
+                              }}
+                            />
+                          ) : null
+                        }
+                        title={"a genetic test order manager"}
+                      />
+                    ) : null}
+                    {(
+                      hasVariant(globalVariants, "mode", "dark") ? true : true
+                    ) ? (
+                      <WorkCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.workCard__ayaBx,
+                          {
+                            [sty.workCardglobal_mode_dark__ayaBxJYvh]:
+                              hasVariant(globalVariants, "mode", "dark"),
+                            [sty.workCardglobal_mode_reveal__ayaBxv94Jk]:
+                              hasVariant(globalVariants, "mode", "reveal"),
+                          }
+                        )}
+                        image={
+                          (
+                            hasVariant(globalVariants, "mode", "reveal")
+                              ? true
+                              : true
+                          ) ? (
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__lXTlN, {
+                                [sty.imgglobal_mode_dark__lXTlNjYvh]:
+                                  hasVariant(globalVariants, "mode", "dark"),
+                                [sty.imgglobal_mode_reveal__lXTlNv94Jk]:
+                                  hasVariant(globalVariants, "mode", "reveal"),
+                              })}
+                              displayHeight={"100%"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "desktopOnly"
+                                )
+                                  ? "440px"
+                                  : "100%"
+                              }
+                              loading={"lazy"}
+                              src={{
+                                src: playbook7RfihwsQv,
+                                fullWidth: 2732,
+                                fullHeight: 2048,
+                                aspectRatio: undefined,
+                              }}
+                            />
+                          ) : null
+                        }
+                        title={"a sales playbook"}
+                      />
+                    ) : null}
                   </p.Stack>
 
                   <p.Stack
@@ -338,7 +475,7 @@ function PlasmicRemember__RenderFunc(props) {
                             displayHeight={"100%"}
                             displayMaxHeight={"none"}
                             displayMaxWidth={"100%"}
-                            displayMinHeight={"0"}
+                            displayMinHeight={"227px"}
                             displayMinWidth={"0"}
                             displayWidth={
                               hasVariant(
@@ -380,6 +517,12 @@ function PlasmicRemember__RenderFunc(props) {
                           <p.PlasmicImg
                             alt={""}
                             className={classNames(sty.img__kv7Eq, {
+                              [sty.imgglobal_mode_dark__kv7EqjYvh]: hasVariant(
+                                globalVariants,
+                                "mode",
+                                "dark"
+                              ),
+
                               [sty.imgglobal_mode_reveal__kv7EQv94Jk]:
                                 hasVariant(globalVariants, "mode", "reveal"),
                             })}
@@ -428,6 +571,12 @@ function PlasmicRemember__RenderFunc(props) {
                         "__wab_instance",
                         sty.workCard__bMvGu,
                         {
+                          [sty.workCardglobal_mode_dark__bMvGuJYvh]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "dark"
+                          ),
+
                           [sty.workCardglobal_mode_reveal__bMvGuv94Jk]:
                             hasVariant(globalVariants, "mode", "reveal"),
                         }
@@ -441,6 +590,12 @@ function PlasmicRemember__RenderFunc(props) {
                           <p.PlasmicImg
                             alt={""}
                             className={classNames(sty.img__fKio8, {
+                              [sty.imgglobal_mode_dark__fKio8JYvh]: hasVariant(
+                                globalVariants,
+                                "mode",
+                                "dark"
+                              ),
+
                               [sty.imgglobal_mode_reveal__fKio8V94Jk]:
                                 hasVariant(globalVariants, "mode", "reveal"),
                             })}
@@ -476,9 +631,142 @@ function PlasmicRemember__RenderFunc(props) {
                             sty.text__utVr0
                           )}
                         >
-                          {"a biotech account manager"}
+                          {"a biotech account tool"}
                         </div>
                       }
+                    />
+
+                    <WorkCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.workCard__srwfn,
+                        {
+                          [sty.workCardglobal_mode_dark__srwfnjYvh]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "dark"
+                          ),
+
+                          [sty.workCardglobal_mode_reveal__srwfNv94Jk]:
+                            hasVariant(globalVariants, "mode", "reveal"),
+                        }
+                      )}
+                      image={
+                        (
+                          hasVariant(globalVariants, "mode", "reveal")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__vbt9P, {
+                              [sty.imgglobal_mode_dark__vbt9PJYvh]: hasVariant(
+                                globalVariants,
+                                "mode",
+                                "dark"
+                              ),
+
+                              [sty.imgglobal_mode_reveal__vbt9Pv94Jk]:
+                                hasVariant(globalVariants, "mode", "reveal"),
+                            })}
+                            displayHeight={"100%"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? "440px"
+                                : "320px"
+                            }
+                            loading={"lazy"}
+                            src={{
+                              src: kcdotcomH434Mgfvc,
+                              fullWidth: 1767,
+                              fullHeight: 4096,
+                              aspectRatio: undefined,
+                            }}
+                          />
+                        ) : null
+                      }
+                      title={"a corporate website"}
+                    />
+
+                    <WorkCard
+                      className={classNames(
+                        "__wab_instance",
+                        sty.workCard__h1ZKj,
+                        {
+                          [sty.workCardglobal_mode_dark__h1ZKjjYvh]: hasVariant(
+                            globalVariants,
+                            "mode",
+                            "dark"
+                          ),
+
+                          [sty.workCardglobal_mode_reveal__h1ZKJv94Jk]:
+                            hasVariant(globalVariants, "mode", "reveal"),
+                        }
+                      )}
+                      image={
+                        (
+                          hasVariant(globalVariants, "mode", "reveal")
+                            ? true
+                            : true
+                        ) ? (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__gXkj, {
+                              [sty.imgglobal_mode_dark__gXkjjYvh]: hasVariant(
+                                globalVariants,
+                                "mode",
+                                "dark"
+                              ),
+
+                              [sty.imgglobal_mode_reveal__gXkJv94Jk]:
+                                hasVariant(globalVariants, "mode", "reveal"),
+                            })}
+                            displayHeight={"100%"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={
+                              hasVariant(globalVariants, "mode", "dark")
+                                ? "256px"
+                                : "0"
+                            }
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant(
+                                globalVariants,
+                                "screen",
+                                "desktopOnly"
+                              )
+                                ? "440px"
+                                : "320px"
+                            }
+                            loading={"lazy"}
+                            src={
+                              hasVariant(globalVariants, "mode", "dark")
+                                ? {
+                                    src: microapps6CjPrr3,
+                                    fullWidth: 3840,
+                                    fullHeight: 2160,
+                                    aspectRatio: undefined,
+                                  }
+                                : {
+                                    src: microapps6CjPrr3,
+                                    fullWidth: 3840,
+                                    fullHeight: 2160,
+                                    aspectRatio: undefined,
+                                  }
+                            }
+                          />
+                        ) : null
+                      }
+                      title={"a lot of microapps"}
                     />
                   </p.Stack>
                 </p.Stack>

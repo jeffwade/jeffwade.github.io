@@ -9,6 +9,7 @@
 // Plasmic Project: mujoL4gD3qd1ezKDLZ31rZ
 // Component: IQmvc6tT46
 import * as React from "react"
+import { Link } from "gatsby"
 import * as p from "@plasmicapp/react-web"
 import {
   hasVariant,
@@ -29,7 +30,8 @@ export const PlasmicWorkCard__VariantProps = new Array()
 export const PlasmicWorkCard__ArgProps = new Array(
   "image",
   "title",
-  "hoverText"
+  "hoverText",
+  "href"
 )
 
 function PlasmicWorkCard__RenderFunc(props) {
@@ -44,13 +46,14 @@ function PlasmicWorkCard__RenderFunc(props) {
   })
 
   return (
-    <div
+    <p.PlasmicLink
       data-plasmic-name={"card"}
       data-plasmic-override={overrides.card}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
         projectcss.all,
+        projectcss.a,
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
@@ -70,6 +73,12 @@ function PlasmicWorkCard__RenderFunc(props) {
             "reveal"
           ),
 
+          [sty.cardglobal_mode_dark]: hasVariant(
+            globalVariants,
+            "mode",
+            "dark"
+          ),
+
           [sty.cardglobal_mode_dark_global_mode_reveal]:
             hasVariant(globalVariants, "mode", "dark") &&
             hasVariant(globalVariants, "mode", "reveal"),
@@ -80,6 +89,9 @@ function PlasmicWorkCard__RenderFunc(props) {
           ),
         }
       )}
+      component={Link}
+      href={args.href}
+      platform={"gatsby"}
       tabIndex={0}
       data-plasmic-trigger-props={[triggerCardHoverProps]}
     >
@@ -157,7 +169,7 @@ function PlasmicWorkCard__RenderFunc(props) {
           })}
         </div>
       ) : null}
-    </div>
+    </p.PlasmicLink>
   )
 }
 

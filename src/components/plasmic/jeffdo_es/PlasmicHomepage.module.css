@@ -393,6 +393,7 @@
   align-items: stretch;
   backdrop-filter: blur(6px);
   flex-row-gap: 0px;
+  -webkit-backdrop-filter: blur(6px);
   padding: var(--token-2B3TB9Igd) var(--token-T237bDoLkZ);
 }
 .navglobal_arrangement_float {

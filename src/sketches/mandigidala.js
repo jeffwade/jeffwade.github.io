@@ -1,6 +1,6 @@
 const sketch = (p) => {
   // 'variables
-  let fillColor, strokeColor, scrimColor, bgColor, breathColor;
+  let fillColor, strokeColor, scrimColor, bgColor;
   let _primary = {h: 171, s: 98, b: 76, a: 90};
   let _stroke = {h: 162, s: 4, b: 6, a: 20, w: 2};
   let _secondary = {h: 200, s: 75, b: 3, a: 2};
@@ -47,7 +47,7 @@ const sketch = (p) => {
 
   const initializeCanvas = () => {
     const frameSize = (p.windowWidth > p.windowHeight) ? 0.6*p.windowHeight : 0.8*p.windowWidth;
-    let cnvs = p.createCanvas(frameSize, frameSize);
+    p.createCanvas(frameSize, frameSize);
 
     // 'initializations
     margin = p.width/marginScalar;
@@ -147,13 +147,11 @@ const sketch = (p) => {
 
   // 'breathe
   const breathe = (_set, _margin, _breathRate) => {
-    // breathColor = p.color(_primary.h, _breath.s, _primary.b, _breath.a);
     p.push();
       // p.noStroke();
       p.stroke(fillColor);
       p.strokeWeight(_breath.w);
       p.noFill();
-      // p.fill(breathColor);
       switch (_set) {
         case "center":
           p.circle(p.width/2, p.height/2, _breathRate);
@@ -165,6 +163,13 @@ const sketch = (p) => {
           p.circle(_margin, p.height-_margin, _breathRate);
           break;
         case "all":
+          p.circle(p.width/2, p.height/2, _breathRate);
+          p.circle(_margin, _margin, _breathRate);
+          p.circle(p.width-_margin, _margin, _breathRate);
+          p.circle(p.width-_margin, p.height-_margin, _breathRate);
+          p.circle(_margin, p.height-_margin, _breathRate);
+          break;
+        default:
           p.circle(p.width/2, p.height/2, _breathRate);
           p.circle(_margin, _margin, _breathRate);
           p.circle(p.width-_margin, _margin, _breathRate);
@@ -197,7 +202,7 @@ const sketch = (p) => {
     isStraight = ( p.keyCode === (p.ALT || p.OPTION) ) ? !isStraight : isStraight;
     secondaryToggle = ( p.keyCode === p.SHIFT ) ? !secondaryToggle : secondaryToggle;
 
-    // ( p.key === 'p' ) ? isPlaying ? pause() : play() : null;
+    // (( p.key === 'p' ) ? isPlaying ? pause() : play() : null);
      isPlaying = ( p.key === 'p' ) ? !isPlaying : isPlaying;
 
     // up and down arrows to change the number of movers
@@ -332,14 +337,15 @@ const sketch = (p) => {
     radius = p.map(newRadius, 1, Math.floor(p.width/6), 1, Math.floor(p.width/6), true);
   };
 
-  const play = () => {
-    p.loop();
-  };
+//   const play = () => {
+//     p.loop();
+//   };
 
-  const pause = () => {
-    p.noLoop();
-    isPlaying = false;
-  };
+
+//   const pause = () => {
+//     p.noLoop();
+//     isPlaying = false;
+//   };
 
   const filename = () => {
     return `mandigidala-${points}-${complications}-${reflections}-${initRotation}-${frameCount}`;

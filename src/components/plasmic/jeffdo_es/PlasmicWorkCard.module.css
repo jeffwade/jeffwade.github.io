@@ -14,12 +14,8 @@
   cursor: pointer;
   transition-property: all;
   transition-duration: 0.3s;
-  min-height: 240px;
   border-radius: 12px;
   padding: var(--token-jA840K8cs);
-}
-.cardglobal_mode_reveal {
-  height: auto;
 }
 .card:hover {
   transform: scaleX(1.01) scaleY(1.01) scaleZ(1) translateX(0px)
@@ -80,7 +76,8 @@
   align-items: center;
   backdrop-filter: blur(4px);
   display: none;
-  padding: 8px;
+  -webkit-backdrop-filter: blur(4px);
+  padding: var(--token-AXW6MdvYn);
 }
 .card:hover .freeBox__uLcd4 {
   display: flex;

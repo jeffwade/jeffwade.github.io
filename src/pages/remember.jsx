@@ -7,16 +7,16 @@ import { PlasmicRemember } from "../components/plasmic/jeffdo_es/PlasmicRemember
 
 function Remember() {
   const [mode, setMode] = useState(["dark"])
-  const [revealed, setRevealed] = useState(false)
+  const [hidden, setHidden] = useState(false)
 
   const toggleRevealed = () => {
     const newMode = [...mode]
     if (newMode.includes("reveal")) {
       newMode.pop()
-      setRevealed(false)
+      setHidden(false)
     } else {
       newMode.push("reveal")
-      setRevealed(true)
+      setHidden(true)
     }
     setMode(newMode)
   }
@@ -33,7 +33,7 @@ function Remember() {
 
 
   return (
-    <ArrangementContext.Provider value={revealed}>
+    <ArrangementContext.Provider value={hidden}>
       <HighlightContext.Provider value={undefined}>
         <ModeContext.Provider value={mode}>
           <PlasmicRemember
@@ -44,8 +44,8 @@ function Remember() {
               onClick: () => toggleDarkMode(),
             }}
             case1={{
-              hoverText: "robust organizational design tool for enterprise clients.",
-              href: "/an-org-design-tool",
+              hoverText: hidden ? "coming soon" : <>robust organizational structure-mapping and transformation planning for enterprise clients</>,
+              href: "/remember/an-org-design-tool",
             }}
           />
         </ModeContext.Provider>

@@ -474,7 +474,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 color={"purple"}
                 label={
                   hasVariant(globalVariants, "highlight", "work")
-                    ? "close 'em"
+                    ? "close product design"
                     : "† product design"
                 }
                 symbol={
@@ -536,7 +536,7 @@ function PlasmicHomepage__RenderFunc(props) {
                 color={"purple"}
                 label={
                   hasVariant(globalVariants, "highlight", "about")
-                    ? "about face"
+                    ? "close about jeff"
                     : "* about jeff"
                 }
                 symbol={

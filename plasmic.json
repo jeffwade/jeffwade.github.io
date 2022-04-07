@@ -582,6 +582,31 @@
           "id": "o2bv1_FGl",
           "name": "brandsite-sketch",
           "filePath": "plasmic/jeffdo_es/images/brandsiteSketch.jpeg"
+        },
+        {
+          "id": "H434MGFVC",
+          "name": "kcdotcom",
+          "filePath": "plasmic/jeffdo_es/images/kcdotcom.jpeg"
+        },
+        {
+          "id": "3VZaG6tpr",
+          "name": "pharma",
+          "filePath": "plasmic/jeffdo_es/images/pharma.png"
+        },
+        {
+          "id": "7RfihwsQv",
+          "name": "playbook",
+          "filePath": "plasmic/jeffdo_es/images/playbook.png"
+        },
+        {
+          "id": "rXa2FmKO4",
+          "name": "videos",
+          "filePath": "plasmic/jeffdo_es/images/videos.png"
+        },
+        {
+          "id": "6cj__prr3",
+          "name": "microapps",
+          "filePath": "plasmic/jeffdo_es/images/microapps.png"
         }
       ],
       "indirect": false,
