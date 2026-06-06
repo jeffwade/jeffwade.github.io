@@ -1,0 +1,45 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-black: #2B393C;
+  --color-grey: #2B393C;
+  --color-white: #F0F2F2;
+  --color-grey-text: #F0F2F2;
+  --color-mint: #0FEEBB;
+  --color-dark-mint: #1D7B75;
+  --color-red: #F14A21;
+  --color-orange: #FA9826;
+  --color-yellow: #D6E437;
+  --color-green: #36F53A;
+  --color-blue: #71BDED;
+  --color-purple: #BF69EA;
+  --color-haze: #FFFFFF40;
+  --color-grey-haze: #F0F2F266;
+  --color-scrim: #2B393CD9;
+  --color-purple-shadow: #BF69EA0D;
+  --font-family-body: IBM Plex Mono;
+  --font-family-headline: Rasa;
+  --font-family-heading: Inter;
+  --font-family-mono: Inconsolata;
+  --font-size-caption: 0.75rem;
+  --font-size-caption-2: 0.75rem;
+  --font-size-base: 1rem;
+  --font-size-base-font-150: 1.5rem;
+  --font-size-double: 2rem;
+  --font-size-triple: 3rem;
+  --font-size-quadruple: 4rem;
+  --font-size-five: 5rem;
+  --font-size-headline: 7rem;
+  --font-size-case-study-title: 4rem;
+  --font-size-base-150: 1.5rem;
+  --spacing-quarter: 0.25rem;
+  --spacing-half: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-base-150: 1.5rem;
+  --spacing-double: 2rem;
+  --spacing-triple: 3rem;
+  --spacing-four: 4rem;
+  --spacing-five: 5rem;
+}

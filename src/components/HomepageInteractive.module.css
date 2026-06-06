@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  gap: var(--spacing-half);
+  background: var(--color-white);
+  padding: var(--spacing-triple) var(--spacing-double) var(--spacing-four);
+}
+
+.dark {
+  background: var(--color-black);
+}
+
+.dark .text {
+  color: var(--color-white);
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(6px);
+  padding: var(--spacing-half) var(--spacing-double);
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-half);
+}

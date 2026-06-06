@@ -1,0 +1,60 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-base);
+  width: 100%;
+  max-width: 100%;
+  background: var(--color-grey);
+  box-shadow: 0px 4px 16px 0px var(--color-purple-shadow);
+  border-radius: 4px;
+  padding: var(--spacing-half) var(--spacing-base);
+  z-index: 10;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .root {
+    width: auto;
+  }
+}
+
+.iconGroup {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  padding: 8px;
+}
+
+.icon36 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-grey-text);
+}
+
+.icon22 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-purple);
+}
+
+.text {
+  font-size: var(--font-size-base);
+  color: var(--color-grey-text);
+  white-space: pre-line;
+}
+
+.arrow {
+  color: var(--color-grey-text);
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
