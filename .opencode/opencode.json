@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/nemotron-3-ultra-free",
+  "agent": {
+    "explore": {
+      "model": "opencode/deepseek-v4-flash-free",
+      "description": "Fast codebase searches, finding files"
+    },
+    "general": {
+      "model": "opencode/nemotron-3-ultra-free",
+      "description": "Multi-step tasks, refactoring, implementation"
+    },
+    "vision": {
+      "model": "opencode/minimax-m3-free",
+      "description": "Design tasks: UI screenshots, visual verification, design review, visual QA, multimodal analysis"
+    }
+  },
+  "mcp": {
+    "pencil": {
+      "command": [
+        "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+        "--app",
+        "desktop"
+      ],
+      "enabled": true,
+      "type": "local"
+    }
+  }
+}
+

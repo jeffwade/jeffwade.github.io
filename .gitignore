@@ -21,3 +21,9 @@ pnpm-debug.log*
 
 # typescript
 *.tsbuildinfo
+
+# agents
+.opencode/tool-output/
+
+# temporary support files
+_support/
